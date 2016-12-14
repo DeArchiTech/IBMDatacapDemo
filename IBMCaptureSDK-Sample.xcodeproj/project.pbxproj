@@ -13,6 +13,9 @@
 		220153681DEF92DE00B1085F /* IBMCaptureUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		2211FC541E01E12E00F669A9 /* BoxContentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2211FC531E01E12E00F669A9 /* BoxContentSDK.framework */; };
+		2258C0AE1E01C1BB00CF0E41 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2258C0AD1E01C1BB00CF0E41 /* podfile */; };
+		6C22525D0F978D7FDA517437 /* Pods_IBMCaptureSDK_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10CF9214EEA0455E90D26B3 /* Pods_IBMCaptureSDK_Sample.framework */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
@@ -73,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2211FC531E01E12E00F669A9 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "Pods/../build/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
+		2258C0AD1E01C1BB00CF0E41 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMIDRecognitionViewController.swift; sourceTree = "<group>"; };
 		784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMMRZDecodingViewController.swift; sourceTree = "<group>"; };
 		784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMPassportPresenter.swift; sourceTree = "<group>"; };
@@ -118,8 +123,11 @@
 		78766A961C5A49BB0026DD68 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78766A991C5A49BB0026DD68 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		78766ACF1C5A4A4C0026DD68 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		882A9A67BF773DF95622733A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		B76076201C68B03C00927117 /* IBMCaptureSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IBMCaptureSDK.framework; sourceTree = "<group>"; };
 		B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IBMCaptureUISDK.framework; sourceTree = "<group>"; };
+		E26B5840C92DC7597F5EBE70 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		F10CF9214EEA0455E90D26B3 /* Pods_IBMCaptureSDK_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMCaptureSDK_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F908CD3A1C3E7553009CBCCB /* IBMCaptureSDK-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBMCaptureSDK-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2211FC541E01E12E00F669A9 /* BoxContentSDK.framework in Frameworks */,
+				6C22525D0F978D7FDA517437 /* Pods_IBMCaptureSDK_Sample.framework in Frameworks */,
 				220153651DEF92DE00B1085F /* IBMCaptureSDK.framework in Frameworks */,
 				220153671DEF92DE00B1085F /* IBMCaptureUISDK.framework in Frameworks */,
 			);
@@ -246,11 +256,32 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		7E5661873FBFA8028B3BF1C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				882A9A67BF773DF95622733A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */,
+				E26B5840C92DC7597F5EBE70 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F614E957940341B4AF299E69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2211FC531E01E12E00F669A9 /* BoxContentSDK.framework */,
+				F10CF9214EEA0455E90D26B3 /* Pods_IBMCaptureSDK_Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F908CD311C3E7553009CBCCB = {
 			isa = PBXGroup;
 			children = (
 				78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */,
 				F908CD3B1C3E7553009CBCCB /* Products */,
+				2258C0AD1E01C1BB00CF0E41 /* podfile */,
+				7E5661873FBFA8028B3BF1C8 /* Pods */,
+				F614E957940341B4AF299E69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,12 +300,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F908CD571C3E7553009CBCCB /* Build configuration list for PBXNativeTarget "IBMCaptureSDK-Sample" */;
 			buildPhases = (
+				3AC6A3E03805DD18ECFE4CD9 /* [CP] Check Pods Manifest.lock */,
 				B76076471C68FFDA00927117 /* Check presence of frameworks */,
 				F908CD361C3E7553009CBCCB /* Sources */,
 				F908CD371C3E7553009CBCCB /* Frameworks */,
 				F908CD381C3E7553009CBCCB /* Resources */,
 				B76076241C68B04500927117 /* Strip Frameworks */,
 				220153691DEF92DE00B1085F /* Embed Frameworks */,
+				A4B69EAE8FDDF7FFE2B2D96B /* [CP] Embed Pods Frameworks */,
+				3F6F490A2B71566FE129D472 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2258C0AE1E01C1BB00CF0E41 /* podfile in Resources */,
 				2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */,
 				2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */,
 				78766AA11C5A49BB0026DD68 /* barcode_ean_128.jpg in Resources */,
@@ -351,6 +386,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3AC6A3E03805DD18ECFE4CD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F6F490A2B71566FE129D472 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B69EAE8FDDF7FFE2B2D96B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B76076241C68B04500927117 /* Strip Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,6 +607,7 @@
 		};
 		F908CD581C3E7553009CBCCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882A9A67BF773DF95622733A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -534,14 +615,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/box-ios-sdk",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "IBMCaptureSDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaptureUISDK,
+					"$(inherited)",
 					"-framework",
 					IBMCaptureSDK,
+					"-framework",
+					IBMCaptureUISDK,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.IBMDatacapDemoReva;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
@@ -553,6 +637,7 @@
 		};
 		F908CD591C3E7553009CBCCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26B5840C92DC7597F5EBE70 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -560,14 +645,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/box-ios-sdk",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "IBMCaptureSDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaptureUISDK,
+					"$(inherited)",
 					"-framework",
 					IBMCaptureSDK,
+					"-framework",
+					IBMCaptureUISDK,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.IBMDatacapDemoReva;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
