@@ -1,0 +1,6 @@
+framework module Pods_IBMCaptureSDK_Sample {
+  umbrella header "Pods-IBMCaptureSDK-Sample-umbrella.h"
+
+  export *
+  module * { export * }
+}
