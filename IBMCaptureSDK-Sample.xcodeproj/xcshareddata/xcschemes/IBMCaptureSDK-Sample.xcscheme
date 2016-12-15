@@ -56,6 +56,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2279A1541E03294E00E453E8"
+               BuildableName = "IBMCaptureSDK-SampleTests.xctest"
+               BlueprintName = "IBMCaptureSDK-SampleTests"
+               ReferencedContainer = "container:IBMCaptureSDK-Sample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

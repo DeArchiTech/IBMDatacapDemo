@@ -13,6 +13,12 @@
 		220153681DEF92DE00B1085F /* IBMCaptureUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
+		223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
+		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
+		2279A1581E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */; };
 		22FCB41F1E02222C00716B53 /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 22FCB41E1E02222C00716B53 /* Frameworks */; };
 		36E1FF6A355A9750C5BBE8B1 /* Pods_IBMCaptureSDK_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545416088AD3FE7FF367F20 /* Pods_IBMCaptureSDK_Sample.framework */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
@@ -59,6 +65,16 @@
 		78766AD01C5A4A4C0026DD68 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 78766ACF1C5A4A4C0026DD68 /* tessdata */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2279A15A1E03294F00E453E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F908CD321C3E7553009CBCCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F908CD391C3E7553009CBCCB;
+			remoteInfo = "IBMCaptureSDK-Sample";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		220153691DEF92DE00B1085F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -75,6 +91,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
+		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMCaptureSDK_SampleTests.swift; sourceTree = "<group>"; };
+		2279A1591E03294F00E453E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FCB41E1E02222C00716B53 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		58AEB377E78E5D0DF8099895 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMIDRecognitionViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +150,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2279A1521E03294E00E453E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */,
+				223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F908CD371C3E7553009CBCCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +172,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */,
+				2279A1591E03294F00E453E8 /* Info.plist */,
+			);
+			path = "IBMCaptureSDK-SampleTests";
+			sourceTree = "<group>";
+		};
 		78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +211,7 @@
 				784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */,
 				784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */,
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
+				2279A14F1E03293800E453E8 /* BoxService.swift */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -264,6 +303,7 @@
 		F908CD311C3E7553009CBCCB = {
 			isa = PBXGroup;
 			children = (
+				2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */,
 				22FCB41E1E02222C00716B53 /* Frameworks */,
 				78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */,
 				F908CD3B1C3E7553009CBCCB /* Products */,
@@ -276,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F908CD3A1C3E7553009CBCCB /* IBMCaptureSDK-Sample.app */,
+				2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,6 +333,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2279A1541E03294E00E453E8 /* IBMCaptureSDK-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2279A15C1E03294F00E453E8 /* Build configuration list for PBXNativeTarget "IBMCaptureSDK-SampleTests" */;
+			buildPhases = (
+				2279A1511E03294E00E453E8 /* Sources */,
+				2279A1521E03294E00E453E8 /* Frameworks */,
+				2279A1531E03294E00E453E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2279A15B1E03294F00E453E8 /* PBXTargetDependency */,
+			);
+			name = "IBMCaptureSDK-SampleTests";
+			productName = "IBMCaptureSDK-SampleTests";
+			productReference = 2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F908CD391C3E7553009CBCCB /* IBMCaptureSDK-Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F908CD571C3E7553009CBCCB /* Build configuration list for PBXNativeTarget "IBMCaptureSDK-Sample" */;
@@ -321,10 +380,16 @@
 		F908CD321C3E7553009CBCCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Future Workshops";
 				TargetAttributes = {
+					2279A1541E03294E00E453E8 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J9T57DG7T3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F908CD391C3E7553009CBCCB;
+					};
 					F908CD391C3E7553009CBCCB = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = J9T57DG7T3;
@@ -345,11 +410,21 @@
 			projectRoot = "";
 			targets = (
 				F908CD391C3E7553009CBCCB /* IBMCaptureSDK-Sample */,
+				2279A1541E03294E00E453E8 /* IBMCaptureSDK-SampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2279A1531E03294E00E453E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */,
+				223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F908CD381C3E7553009CBCCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,6 +534,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2279A1511E03294E00E453E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2279A1581E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F908CD361C3E7553009CBCCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +559,7 @@
 				78766AB51C5A49BB0026DD68 /* IBMEditPageImageViewController.swift in Sources */,
 				784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */,
 				78766AB91C5A49BB0026DD68 /* IBMOCRViewController.swift in Sources */,
+				2279A1501E03293800E453E8 /* BoxService.swift in Sources */,
 				78766AAE1C5A49BB0026DD68 /* IBMBarcodeTableViewController.swift in Sources */,
 				784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */,
 				78766AB01C5A49BB0026DD68 /* IBMBatchTableViewController.swift in Sources */,
@@ -490,6 +574,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2279A15B1E03294F00E453E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F908CD391C3E7553009CBCCB /* IBMCaptureSDK-Sample */;
+			targetProxy = 2279A15A1E03294F00E453E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		78766A7F1C5A49BB0026DD68 /* IBMStoryboard.storyboard */ = {
@@ -511,6 +603,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2279A15D1E03294F00E453E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = J9T57DG7T3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "IBMCaptureSDK-SampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gml.io.IBMCaptureSDK-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBMCaptureSDK-Sample.app/IBMCaptureSDK-Sample";
+			};
+			name = Debug;
+		};
+		2279A15E1E03294F00E453E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = J9T57DG7T3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "IBMCaptureSDK-SampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gml.io.IBMCaptureSDK-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBMCaptureSDK-Sample.app/IBMCaptureSDK-Sample";
+			};
+			name = Release;
+		};
 		F908CD551C3E7553009CBCCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -657,6 +794,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2279A15C1E03294F00E453E8 /* Build configuration list for PBXNativeTarget "IBMCaptureSDK-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2279A15D1E03294F00E453E8 /* Debug */,
+				2279A15E1E03294F00E453E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F908CD351C3E7553009CBCCB /* Build configuration list for PBXProject "IBMCaptureSDK-Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
