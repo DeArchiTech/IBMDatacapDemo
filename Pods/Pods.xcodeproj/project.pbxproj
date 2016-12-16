@@ -44,7 +44,7 @@
 		2337F06CF677D5342137557A8E08A578 /* BOXCollaborationUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2095E55D1794767C0D0BB9B4A544D606 /* BOXCollaborationUpdateRequest.m */; };
 		25AB1FDBC8A4FC7B2A443E4A5CA0C6EE /* BOXContentClient+Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = C212428F8B371E8DD04D3233C27C692C /* BOXContentClient+Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272BB686BB08D2D6AEAF303F1D9D1BCB /* BOXFileCommentsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E0FE4DFA1254C65258D4F15D338FF /* BOXFileCommentsRequest.m */; };
-		27584E30F714A2F7CD4E0987F01183E4 /* BoxContentSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D05D79CB47657B5BE6607A32C34135E /* BoxContentSDKResources.bundle */; };
+		27584E30F714A2F7CD4E0987F01183E4 /* BoxContentSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB0F596A8E9208754DFAA3A85925EEA9 /* BoxContentSDKResources.bundle */; };
 		2823682056D4A2EAEA852FD8D1ED2420 /* BOXAppUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 408817CDD74DD3F08D2FD7C79D726769 /* BOXAppUserSession.m */; };
 		29C352B8F6F5871CDA678AE097EFE9BB /* BOXAPIAccessTokenDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F525CB0F29084197D3C26C55930A2EA /* BOXAPIAccessTokenDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29FD5256242CC8E77C5B7E7E964C6135 /* BOXBookmarkCopyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 49936A9BDF8485DE0A6C31D1514EAE6F /* BOXBookmarkCopyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +59,7 @@
 		2F06137A388778EEAE211A1FD0BEAC4F /* BOXAppUserSession.h in Headers */ = {isa = PBXBuildFile; fileRef = AB28AC1AE0D72A492D732B629C6B5F48 /* BOXAppUserSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F6FE7C42E9C124CBF46B3AAD2927FEB /* BOXBookmarkUnshareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 029BB9ACFEF55F744BA5EFE37E2BA55E /* BOXBookmarkUnshareRequest.m */; };
 		2F83E9DEA7E7053672F0C40A14CB02C0 /* BOXContentClient+Collaboration.h in Headers */ = {isa = PBXBuildFile; fileRef = BED4E7F0E4776259D5F8EDDE8B010795 /* BOXContentClient+Collaboration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B932A81222AE433636A657D130767D /* Pods-IBMCaptureSDK-SampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 924E02CFDFE42F5685FD87E6B49F342E /* Pods-IBMCaptureSDK-SampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E2EF867F9A85ED8A1DB0F8BE1ADCC2 /* BOXEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B15C74FA27621E1414A86A6E2D903B85 /* BOXEvent.m */; };
 		342A4C4B63E8F7A464473BE2572264B8 /* BOXContentClient+SharedLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 524EBA2AAC82A6EE7A37189BC20E7E02 /* BOXContentClient+SharedLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35489FD46B67B8A4C62E9700D2975EDD /* BOXKeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B493BFA71C7F9A5E99F1B7CBC4EE42A /* BOXKeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -67,7 +68,7 @@
 		35FCF6C791B1A18087DF92A25D45D134 /* BOXFileVersionsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F24B4441547F02F17C14A3068B50EAF2 /* BOXFileVersionsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3733C7E8081E0EB4548A36397F2B6723 /* BOXContentClient+Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 2768C0C726CA29EEC6829F0CC220AB64 /* BOXContentClient+Search.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389DF599F6ADB6A398DEC40425003DCB /* NSString+BOXURLHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7EC30F43EF8ACF27E8097240DA3B1D /* NSString+BOXURLHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39080BF1E9506227272CF887708BA891 /* Pods-IBMCaptureSDK-Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5A837E800BD80F7EA5B0248CC1A75 /* Pods-IBMCaptureSDK-Sample-dummy.m */; };
+		39080BF1E9506227272CF887708BA891 /* Pods-IBMCaptureSDK-Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773947A95C5B5B63B024C42F2A7A328C /* Pods-IBMCaptureSDK-Sample-dummy.m */; };
 		3969952A01D8A61229CBE0E633F1A20D /* BOXBookmarkCommentsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9421C98FC1352D3F74C10B939BF37B8F /* BOXBookmarkCommentsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39E67E6F1A27374A9F63016F761CB1F9 /* BOXCollaborationRemoveRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A846ECC3E33D3586CA6C71101FD022A /* BOXCollaborationRemoveRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B9E31AF9E853710B6D9EBFB76DB3D23 /* BOXSharedLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C0480FB75ECAE129CA87A18AA9C1 /* BOXSharedLink.m */; };
@@ -173,7 +174,7 @@
 		9618F00D03F27E3CC60301BC5F9C7F77 /* BOXSharedItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F49310231799BC8160D700CC2A2D5 /* BOXSharedItemRequest.m */; };
 		967BF6C65B81B5869CD9610C4D1701C8 /* BOXContentClient+Collaboration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B11BD50F973934F7261A3C44441E09A /* BOXContentClient+Collaboration.m */; };
 		974D1BE19AB02DEFD92E7BD2F6124BA1 /* BOXAPIOAuth2ToJSONOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E3FA40E1B08F41CB214BC1DCFF59006E /* BOXAPIOAuth2ToJSONOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		978C393580996746ED9386ECB2E4576A /* Pods-IBMCaptureSDK-Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDCC6D1F61AC512DDBCB2291E215FA49 /* Pods-IBMCaptureSDK-Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		978C393580996746ED9386ECB2E4576A /* Pods-IBMCaptureSDK-Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F815427079759731478A3C4ACBD791 /* Pods-IBMCaptureSDK-Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9899C9E066F742345505B547122B3E42 /* BOXContentClient+Bookmark.h in Headers */ = {isa = PBXBuildFile; fileRef = F90D3CCF38D19D4AF1FA254A755D81C5 /* BOXContentClient+Bookmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99035BDD1C661E514D046D09410C6D9B /* NSError+BOXContentSDKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BEAA21DDF76994E50A24435E9E4FD7 /* NSError+BOXContentSDKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99542075D1E205194F1F421702407943 /* BOXFolderShareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CEA8917FA610DBFBBC1D326151CA2 /* BOXFolderShareRequest.m */; };
@@ -220,7 +221,9 @@
 		BFA41029DC4547348C2C09F7517B352A /* BOXFileDeleteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E9138F37B310E6EAA2E764A0406011 /* BOXFileDeleteRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1FA6AE4298D8E3D995FBD077F6A3AAE /* box-ios-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2233C171A8364CE6062954C965A1EEA9 /* box-ios-sdk-dummy.m */; };
 		C37D94B1293EDC5CACD40314C74046A1 /* BOXCommentUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D3B1BF78B96172C4FB60F2C5E20235 /* BOXCommentUpdateRequest.m */; };
+		C3C31B3C1EC7A4156EB39D4D2BB8437A /* Pods-IBMCaptureSDK-SampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C7FD9E8B65E638DAC43A5E1733C54D /* Pods-IBMCaptureSDK-SampleTests-dummy.m */; };
 		C46BB7500925407D8ACCEEC5FFB0BF04 /* BOXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D29526A4FFD9E15770319F4204D8E1B0 /* BOXModel.m */; };
+		C4E01F968881FDC7519487940F1A4665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEA1E907DFCC9A5C59E0BC6F13EDDC4 /* Foundation.framework */; };
 		C515913B1759A54CC03E9BDDC01A24AC /* BOXAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388690B0EF51128507BAC91E2DD7FFA4 /* BOXAuthorizationViewController.m */; };
 		C85F8E580A376E8CC3D9A0FC94D82DBF /* BOXBookmarkRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 026C6D37537EBC302877338C77A46626 /* BOXBookmarkRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C864ECE9ABDCDBBBEC567331ADF0F237 /* BOXCommentDeleteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DBBE89C8BA6D0DB82C45C0768FC79F71 /* BOXCommentDeleteRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -309,6 +312,13 @@
 			remoteGlobalIDString = 7C3F3DFB0A94CC4930ADE9466FB1C404;
 			remoteInfo = "box-ios-sdk-BoxContentSDKResources";
 		};
+		6D373B18B275A98B952CFCFC6F6A83D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C900705B74BFF1F58DF15A8D77CACDF;
+			remoteInfo = "box-ios-sdk";
+		};
 		D330771A3391CD7E40F8D5412117B663 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -328,14 +338,13 @@
 		05A5FDAE214360E8823D16D9EE40EABB /* BOXMetadataDeleteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXMetadataDeleteRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataDeleteRequest.h; sourceTree = "<group>"; };
 		081849965F9E6214A4949DE3A2073F43 /* NSJSONSerialization+BOXContentSDKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+BOXContentSDKAdditions.m"; path = "BoxContentSDK/BoxContentSDK/Categories/NSJSONSerialization+BOXContentSDKAdditions.m"; sourceTree = "<group>"; };
 		0829CB47BB91276A0E609EA7832F3D06 /* NSError+BOXContentSDKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+BOXContentSDKAdditions.m"; path = "BoxContentSDK/BoxContentSDK/Categories/NSError+BOXContentSDKAdditions.m"; sourceTree = "<group>"; };
-		0A33FD2F5132839326CD5D352627D05C /* Pods-IBMCaptureSDK-Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMCaptureSDK-Sample-acknowledgements.plist"; sourceTree = "<group>"; };
 		0BA7F85428A0DF0CC641A0ED8F364049 /* BOXAPIDataOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAPIDataOperation.m; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIDataOperation.m; sourceTree = "<group>"; };
+		0C83B1FF5C79E6FC147C8575FE3ECE8F /* Pods-IBMCaptureSDK-SampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMCaptureSDK-SampleTests.modulemap"; sourceTree = "<group>"; };
 		0C8A3A7AD2C8DFD901D5C4ACC55D6816 /* box-ios-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "box-ios-sdk-umbrella.h"; sourceTree = "<group>"; };
 		0F4DDBD7660283E97F83C34C34166B17 /* BOXFileUpdateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileUpdateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileUpdateRequest.h; sourceTree = "<group>"; };
 		11A50A820239AAD11523C78FB54C1B8D /* BOXAPIDataOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIDataOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIDataOperation.h; sourceTree = "<group>"; };
 		11C0F812FE1F566654A3EE6E2B771333 /* UIDevice+BOXContentSDKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+BOXContentSDKAdditions.m"; path = "BoxContentSDK/BoxContentSDK/Categories/UIDevice+BOXContentSDKAdditions.m"; sourceTree = "<group>"; };
 		136BD084881D2B94F6E345F87CBAA95E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
-		14C9710014F0399008426570FC105606 /* Pods-IBMCaptureSDK-Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMCaptureSDK-Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1565EDDB45BAC3E069F64FE2FBD946A3 /* BOXParallelAPIQueueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXParallelAPIQueueManager.m; path = BoxContentSDK/BoxContentSDK/QueueManagers/BOXParallelAPIQueueManager.m; sourceTree = "<group>"; };
 		166D8040A225627C1F6AB11694259B46 /* BOXAssetInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAssetInputStream.h; path = BoxContentSDK/BoxContentSDK/Models/BOXAssetInputStream.h; sourceTree = "<group>"; };
 		16834183EC3A1D70F726245BF0F88BCA /* BOXCommentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCommentRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXCommentRequest.h; sourceTree = "<group>"; };
@@ -343,6 +352,7 @@
 		18854983B6512A903E572BC29F509A9A /* NSURL+BOXURLHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+BOXURLHelper.h"; path = "BoxContentSDK/BoxContentSDK/Categories/NSURL+BOXURLHelper.h"; sourceTree = "<group>"; };
 		199912E733256968BA4E0799CB4C6281 /* BOXMetadataKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXMetadataKeyValue.m; path = BoxContentSDK/BoxContentSDK/Models/BOXMetadataKeyValue.m; sourceTree = "<group>"; };
 		19FC4858CCF110AAB3DD2C34E24AE0C7 /* BOXItemArrayRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXItemArrayRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXItemArrayRequest.h; sourceTree = "<group>"; };
+		1A62343504C48A038346367EBA226FD5 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		1A99659AEE6A68589F018F4E9353C85F /* BOXBookmarkShareRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXBookmarkShareRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXBookmarkShareRequest.h; sourceTree = "<group>"; };
 		1B11BD50F973934F7261A3C44441E09A /* BOXContentClient+Collaboration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Collaboration.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Collaboration.m"; sourceTree = "<group>"; };
 		1B441F89AD845F6580A8E988696C852D /* BOXFolderItemsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFolderItemsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderItemsRequest.m; sourceTree = "<group>"; };
@@ -357,6 +367,7 @@
 		2233C171A8364CE6062954C965A1EEA9 /* box-ios-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "box-ios-sdk-dummy.m"; sourceTree = "<group>"; };
 		225F01995BDD33767C5501278B7309B4 /* BOXAbstractSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAbstractSession.h; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAbstractSession.h; sourceTree = "<group>"; };
 		247A63C63BCA55777C75E0F331822CDF /* BOXContentClient+Folder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOXContentClient+Folder.h"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Folder.h"; sourceTree = "<group>"; };
+		2531BF61D5617DF127D3EF107F76F9A8 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		260AFA9A24A1D785CB41D59477DFDA1B /* BOXFileLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileLock.m; path = BoxContentSDK/BoxContentSDK/Models/BOXFileLock.m; sourceTree = "<group>"; };
 		26BEAA21DDF76994E50A24435E9E4FD7 /* NSError+BOXContentSDKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+BOXContentSDKAdditions.h"; path = "BoxContentSDK/BoxContentSDK/Categories/NSError+BOXContentSDKAdditions.h"; sourceTree = "<group>"; };
 		274E9086DC1AC180215B9669744635DD /* BOXContentClient+Comment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOXContentClient+Comment.h"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Comment.h"; sourceTree = "<group>"; };
@@ -367,7 +378,6 @@
 		2BED54C31B1786699387C0C9EDA3C85F /* BOXCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCollection.h; path = BoxContentSDK/BoxContentSDK/Models/BOXCollection.h; sourceTree = "<group>"; };
 		2C31E6876CDBA775CC0AE0C2B5AB1FCE /* BOXFileThumbnailRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileThumbnailRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileThumbnailRequest.h; sourceTree = "<group>"; };
 		2C58DF3D59B535187D1AB7BA1EE4F260 /* BOXFileLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileLock.h; path = BoxContentSDK/BoxContentSDK/Models/BOXFileLock.h; sourceTree = "<group>"; };
-		2C632DDCBCA5CB409213E14E63916BC0 /* Pods-IBMCaptureSDK-Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-Sample-frameworks.sh"; sourceTree = "<group>"; };
 		2CF5E6164A28A6DFA7A6CB148C41BAD0 /* BOXFolderPaginatedItemsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolderPaginatedItemsRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderPaginatedItemsRequest.h; sourceTree = "<group>"; };
 		2E7470CEA10C78EF4D883E01D8FD0DDC /* BOXBookmarkDeleteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXBookmarkDeleteRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXBookmarkDeleteRequest.h; sourceTree = "<group>"; };
 		2EC74D584020310E60B880B2775FCDC8 /* BOXCollaboration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCollaboration.h; path = BoxContentSDK/BoxContentSDK/Models/BOXCollaboration.h; sourceTree = "<group>"; };
@@ -376,6 +386,7 @@
 		30E9138F37B310E6EAA2E764A0406011 /* BOXFileDeleteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileDeleteRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileDeleteRequest.h; sourceTree = "<group>"; };
 		315EB3606CFA48DAFD2201A45BC23CE9 /* BOXMetadataCreateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXMetadataCreateRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataCreateRequest.m; sourceTree = "<group>"; };
 		31EF1E2CF612E9CB2857B3FF28CA2A4A /* BOXAPIQueueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAPIQueueManager.m; path = BoxContentSDK/BoxContentSDK/QueueManagers/BOXAPIQueueManager.m; sourceTree = "<group>"; };
+		331E18CF339FC8FF014C5ABC6913611A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		333A2B0755235CC1B91563F500737F2E /* BOXContentClient+User.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+User.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+User.m"; sourceTree = "<group>"; };
 		333DBE04EACE4FF07F25761D402515A6 /* BOXContentClient+User.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOXContentClient+User.h"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+User.h"; sourceTree = "<group>"; };
 		33FBADE078C84AC5C6231F73F3F1F462 /* BOXUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXUser.h; path = BoxContentSDK/BoxContentSDK/Models/BOXUser.h; sourceTree = "<group>"; };
@@ -385,10 +396,10 @@
 		388690B0EF51128507BAC91E2DD7FFA4 /* BOXAuthorizationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAuthorizationViewController.m; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAuthorizationViewController.m; sourceTree = "<group>"; };
 		3A58FD51A28F3A8B84F017F717CAD303 /* BOXAPIMultipartToJSONOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIMultipartToJSONOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIMultipartToJSONOperation.h; sourceTree = "<group>"; };
 		3AEF43620042CF14867DB42773703D33 /* BOXCollaborationCreateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCollaborationCreateRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollaborationCreateRequest.m; sourceTree = "<group>"; };
+		3BF54A2BE32C86D1E9980485715771B3 /* Pods-IBMCaptureSDK-SampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMCaptureSDK-SampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3BF98B30CEE7A023DDC874A41836D75C /* BOXRequestWithSharedLinkHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXRequestWithSharedLinkHeader.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXRequestWithSharedLinkHeader.m; sourceTree = "<group>"; };
 		3C9E7A98FDECD5586AB0586DEE88BD35 /* BOXFolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolder.h; path = BoxContentSDK/BoxContentSDK/Models/BOXFolder.h; sourceTree = "<group>"; };
 		3DA34A3494FE829D254F456B01BA2E98 /* BOXEnterprise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXEnterprise.m; path = BoxContentSDK/BoxContentSDK/Models/BOXEnterprise.m; sourceTree = "<group>"; };
-		40575570A4EF83CF43E768A8A6D446DE /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		408817CDD74DD3F08D2FD7C79D726769 /* BOXAppUserSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAppUserSession.m; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAppUserSession.m; sourceTree = "<group>"; };
 		4249036288FB488EACF37BA73AFC0A51 /* BOXSharedLinkHeadersHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXSharedLinkHeadersHelper.m; path = BoxContentSDK/BoxContentSDK/Helper/BOXSharedLinkHeadersHelper.m; sourceTree = "<group>"; };
 		449E597A245788D3B2002480BBCFCE6E /* BOXDispatchHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXDispatchHelper.h; path = BoxContentSDK/BoxContentSDK/Helper/BOXDispatchHelper.h; sourceTree = "<group>"; };
@@ -416,7 +427,7 @@
 		542307936B004A8D409AC3A3F1ACDD03 /* BOXTrashedItemArrayRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXTrashedItemArrayRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXTrashedItemArrayRequest.m; sourceTree = "<group>"; };
 		5490C0480FB75ECAE129CA87A18AA9C1 /* BOXSharedLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXSharedLink.m; path = BoxContentSDK/BoxContentSDK/Models/BOXSharedLink.m; sourceTree = "<group>"; };
 		54DB8508A6E03FB81590F23CE927F474 /* BOXFolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFolder.m; path = BoxContentSDK/BoxContentSDK/Models/BOXFolder.m; sourceTree = "<group>"; };
-		55C0FF99E09146521C9EC18A2966D76F /* Pods-IBMCaptureSDK-Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMCaptureSDK-Sample.modulemap"; sourceTree = "<group>"; };
+		55799C5835B53FE0E6A207831A4D3567 /* Pods-IBMCaptureSDK-Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMCaptureSDK-Sample-acknowledgements.plist"; sourceTree = "<group>"; };
 		55F36498235FB032B337D0BBB49406F9 /* BOXSharedLinkHeadersDefaultManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXSharedLinkHeadersDefaultManager.h; path = BoxContentSDK/BoxContentSDK/Protocols/BOXSharedLinkHeadersDefaultManager.h; sourceTree = "<group>"; };
 		583102C63B7EC05A4690967E4A4498F4 /* BOXAPIAuthenticatedOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAPIAuthenticatedOperation.m; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIAuthenticatedOperation.m; sourceTree = "<group>"; };
 		5866E74BF074D560A24CDAE5CE7E11FF /* NSString+BOXURLHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BOXURLHelper.m"; path = "BoxContentSDK/BoxContentSDK/Categories/NSString+BOXURLHelper.m"; sourceTree = "<group>"; };
@@ -445,10 +456,12 @@
 		67C0801498EABEE67A35139668CED600 /* BOXRequest_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXRequest_Private.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXRequest_Private.h; sourceTree = "<group>"; };
 		67CF7D02D76BB1BAC4E60AF6B1CA29E1 /* BOXItemSetCollectionsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXItemSetCollectionsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXItemSetCollectionsRequest.m; sourceTree = "<group>"; };
 		67FBF5C189C59E4CE769ED438C661962 /* box-ios-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "box-ios-sdk-prefix.pch"; sourceTree = "<group>"; };
+		68F815427079759731478A3C4ACBD791 /* Pods-IBMCaptureSDK-Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMCaptureSDK-Sample-umbrella.h"; sourceTree = "<group>"; };
 		694F1A510AEA155DD11CCA02C5424338 /* BOXFolderShareRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolderShareRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderShareRequest.h; sourceTree = "<group>"; };
 		6A0C2AD6673E395C0BA66894E4D11882 /* BOXAbstractSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAbstractSession.m; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAbstractSession.m; sourceTree = "<group>"; };
 		6B612846E843753A64432DCF4DD60F0E /* BOXMetadataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXMetadataRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataRequest.h; sourceTree = "<group>"; };
 		6BFBA69D5917C0CFF47B64E71F4DE373 /* BOXFileUploadRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileUploadRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileUploadRequest.h; sourceTree = "<group>"; };
+		6CB5570C4AC0D03322438C349A77745A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E1810EB20BE1B497C88F5E1C8FDB773 /* BOXEventsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXEventsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXEventsRequest.m; sourceTree = "<group>"; };
 		6F46ECE06B757820F047030703A31F3A /* BOXCollectionListRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCollectionListRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollectionListRequest.m; sourceTree = "<group>"; };
 		6F911B64CCEBD198D71A3A41293E1F55 /* BOXCollaborationRemoveRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCollaborationRemoveRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollaborationRemoveRequest.m; sourceTree = "<group>"; };
@@ -456,12 +469,15 @@
 		6FC2B913F7A1CA9A93A967DFA2F69C37 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		708A522CA04E76D2374C56A4C93AA68B /* BOXMetadataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXMetadataRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataRequest.m; sourceTree = "<group>"; };
 		709CC7B3CF356E907B7D34C07921ABFC /* BOXFileUploadNewVersionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileUploadNewVersionRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileUploadNewVersionRequest.m; sourceTree = "<group>"; };
+		70BA12992D5F887B5ABC0946BF2EA637 /* BoxContentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BoxContentSDK.framework; path = "box-ios-sdk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712FDEA66AC2BAD08E9F5922F8617ED8 /* BOXAPIAppUsersAuthOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAPIAppUsersAuthOperation.m; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIAppUsersAuthOperation.m; sourceTree = "<group>"; };
 		71D7500D46F58A9F5547F4F2E2A02FC9 /* BOXMetadataCreateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXMetadataCreateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataCreateRequest.h; sourceTree = "<group>"; };
 		72C514F810A5A1D0198263F593E8514B /* BOXContentClient+Folder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Folder.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Folder.m"; sourceTree = "<group>"; };
-		7359D2B3870C0AB3484DEDD981D0AA40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7509D718D8442B9CA1619C8FEC3C100C /* BOXDispatchHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXDispatchHelper.m; path = BoxContentSDK/BoxContentSDK/Helper/BOXDispatchHelper.m; sourceTree = "<group>"; };
 		7580B0CF54B3F1731AB315EBFAAD64A4 /* BOXEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXEvent.h; path = BoxContentSDK/BoxContentSDK/Models/BOXEvent.h; sourceTree = "<group>"; };
+		75AF4782E770BD8E3AD763F6EFCE67A8 /* Pods-IBMCaptureSDK-Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-Sample-frameworks.sh"; sourceTree = "<group>"; };
+		773947A95C5B5B63B024C42F2A7A328C /* Pods-IBMCaptureSDK-Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMCaptureSDK-Sample-dummy.m"; sourceTree = "<group>"; };
+		7801B9584556588559D6767019EFAB53 /* Pods-IBMCaptureSDK-Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMCaptureSDK-Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		799D0A813C699619DB36C646E05670AF /* BOXEventsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXEventsRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXEventsRequest.h; sourceTree = "<group>"; };
 		7A1EB68F55790801861D5093C0818AAC /* BOXContentClient+Event.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Event.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Event.m"; sourceTree = "<group>"; };
 		7AF0F243C067C47286F496B87A915142 /* BOXTrashedItemArrayRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXTrashedItemArrayRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXTrashedItemArrayRequest.h; sourceTree = "<group>"; };
@@ -487,6 +503,7 @@
 		88578C1813C2F1DC843405C91349F16D /* BOXAppToAppMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAppToAppMessage.h; path = BoxContentSDK/BoxContentSDK/AppToApp/BOXAppToAppMessage.h; sourceTree = "<group>"; };
 		88878914A4E2B64B6FF06EEC303186F8 /* BOXAPIJSONPatchOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAPIJSONPatchOperation.m; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIJSONPatchOperation.m; sourceTree = "<group>"; };
 		8A6B56D3B66070343A03CE4DE697C204 /* BOXAPIAuthenticatedOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIAuthenticatedOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIAuthenticatedOperation.h; sourceTree = "<group>"; };
+		8A727796FD70D4E5BEFFA75E5189D496 /* Pods-IBMCaptureSDK-SampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-SampleTests-frameworks.sh"; sourceTree = "<group>"; };
 		8BA58D45435402CBD9FDBEC4096E770E /* BOXContentClient+Collection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Collection.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Collection.m"; sourceTree = "<group>"; };
 		8BF64323E59D439C6C345100E208B403 /* BOXCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCollection.m; path = BoxContentSDK/BoxContentSDK/Models/BOXCollection.m; sourceTree = "<group>"; };
 		8C4F63727F5AF12B52F84E68760AB129 /* BOXHashHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXHashHelper.m; path = BoxContentSDK/BoxContentSDK/External/HashHelper/BOXHashHelper.m; sourceTree = "<group>"; };
@@ -497,6 +514,7 @@
 		9005D85D5DD7773224B15C5EC745B2E7 /* BOXBookmarkShareRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXBookmarkShareRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXBookmarkShareRequest.m; sourceTree = "<group>"; };
 		9185E49FC7275F1BCA7533FD82CDD5CA /* BOXContentClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXContentClient.h; path = BoxContentSDK/BoxContentSDK/Clients/BOXContentClient.h; sourceTree = "<group>"; };
 		918796B66C9260B68ACE3FEB6BC3966B /* BOXMetadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXMetadata.m; path = BoxContentSDK/BoxContentSDK/Models/BOXMetadata.m; sourceTree = "<group>"; };
+		924E02CFDFE42F5685FD87E6B49F342E /* Pods-IBMCaptureSDK-SampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMCaptureSDK-SampleTests-umbrella.h"; sourceTree = "<group>"; };
 		9264F83C09FAAB01871CEE1B6F6F347F /* BOXBookmarkUpdateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXBookmarkUpdateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXBookmarkUpdateRequest.h; sourceTree = "<group>"; };
 		936698FA743F2C9D232CA3080FEA44E6 /* BOXSharedLinkStorageProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXSharedLinkStorageProtocol.h; path = BoxContentSDK/BoxContentSDK/Protocols/BOXSharedLinkStorageProtocol.h; sourceTree = "<group>"; };
 		939F008221CC136A01D657D8FEB56775 /* BOXMetadataTemplateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXMetadataTemplateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataTemplateRequest.h; sourceTree = "<group>"; };
@@ -508,9 +526,9 @@
 		94D5B5754B7C58675CFB90B74BA87E9F /* BOXContentSDKConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXContentSDKConstants.m; path = BoxContentSDK/BoxContentSDK/BOXContentSDKConstants.m; sourceTree = "<group>"; };
 		957CB98BCB94843FBDDDB58A6C7E4685 /* BOXMetadataUpdateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXMetadataUpdateRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXMetadataUpdateRequest.m; sourceTree = "<group>"; };
 		967F3C9C0468725E615A0C21B68BF6D5 /* BOXCommentAddRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCommentAddRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCommentAddRequest.m; sourceTree = "<group>"; };
+		96CB43AC086DDD1B9A412A29C95988DC /* Pods_IBMCaptureSDK_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMCaptureSDK_Sample.framework; path = "Pods-IBMCaptureSDK-Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DAB035652FB70DB252F87CD034995C /* BOXAppToAppMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAppToAppMessage.m; path = BoxContentSDK/BoxContentSDK/AppToApp/BOXAppToAppMessage.m; sourceTree = "<group>"; };
 		99B3079E5A5693E2BC867CDB22E71881 /* BOXBookmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXBookmark.h; path = BoxContentSDK/BoxContentSDK/Models/BOXBookmark.h; sourceTree = "<group>"; };
-		99F5A837E800BD80F7EA5B0248CC1A75 /* Pods-IBMCaptureSDK-Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMCaptureSDK-Sample-dummy.m"; sourceTree = "<group>"; };
 		9A350485BBAEE5050F2C2CA060778705 /* BOXFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFile.m; path = BoxContentSDK/BoxContentSDK/Models/BOXFile.m; sourceTree = "<group>"; };
 		9A87E478B3EDA1E00F95BD38775133D3 /* BOXAssetInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAssetInputStream.m; path = BoxContentSDK/BoxContentSDK/Models/BOXAssetInputStream.m; sourceTree = "<group>"; };
 		9B88C6F1BC8F490CD0900ECD3FA5AD8F /* BOXFolderPaginatedItemsRequest_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolderPaginatedItemsRequest_Private.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderPaginatedItemsRequest_Private.h; sourceTree = "<group>"; };
@@ -518,9 +536,7 @@
 		9C80B4508A6B9F9BEDE1EA03531F714D /* BOXFileVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileVersion.h; path = BoxContentSDK/BoxContentSDK/Models/BOXFileVersion.h; sourceTree = "<group>"; };
 		9CA15346A49136171DF4A36645B95859 /* ResourceBundle-BoxContentSDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BoxContentSDKResources-Info.plist"; sourceTree = "<group>"; };
 		9CEF4C1EF5B5C664F01BA756955C9C2D /* BOXKeychainItemWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXKeychainItemWrapper.h; path = BoxContentSDK/BoxContentSDK/External/KeychainItemWrapper/BOXKeychainItemWrapper.h; sourceTree = "<group>"; };
-		9D05D79CB47657B5BE6607A32C34135E /* BoxContentSDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BoxContentSDKResources.bundle; path = BoxContentSDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E02F4DF89B5B3C953B979376F27E5E4 /* BOXTrashedFolderRestoreRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXTrashedFolderRestoreRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXTrashedFolderRestoreRequest.h; sourceTree = "<group>"; };
-		9E880D1CD081A8E018F0172DBDABB51C /* Pods-IBMCaptureSDK-Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-Sample-resources.sh"; sourceTree = "<group>"; };
 		9EDA10B07A160E10107548E0F45AD6A3 /* BOXItemShareRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXItemShareRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXItemShareRequest.h; sourceTree = "<group>"; };
 		A02607678FB38BB99DE477847A51123E /* BOXFileShareRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileShareRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileShareRequest.m; sourceTree = "<group>"; };
 		A0D3B1BF78B96172C4FB60F2C5E20235 /* BOXCommentUpdateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCommentUpdateRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCommentUpdateRequest.m; sourceTree = "<group>"; };
@@ -529,17 +545,21 @@
 		A14678A0718E4BF701D8E6F76D6268ED /* BOXContentClient+File.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOXContentClient+File.h"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+File.h"; sourceTree = "<group>"; };
 		A2C8CB1F567BC1AC44C3388C6A201452 /* BOXFolderCreateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolderCreateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderCreateRequest.h; sourceTree = "<group>"; };
 		A324E04047B544E3148062CF84345892 /* BOXFileUploadNewVersionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileUploadNewVersionRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileUploadNewVersionRequest.h; sourceTree = "<group>"; };
+		A333F30091AD68742AB2D48740C0D7D9 /* Pods-IBMCaptureSDK-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		A3F3414F2DBD28221C4812F58A78A87F /* BOXFileCommentsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileCommentsRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileCommentsRequest.h; sourceTree = "<group>"; };
 		A47FF461EF699BF8247DE4813ABE9802 /* BOXSerialAPIQueueManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXSerialAPIQueueManager.h; path = BoxContentSDK/BoxContentSDK/QueueManagers/BOXSerialAPIQueueManager.h; sourceTree = "<group>"; };
 		A49CEA8917FA610DBFBBC1D326151CA2 /* BOXFolderShareRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFolderShareRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderShareRequest.m; sourceTree = "<group>"; };
+		A4AE52855E0619A6B85620DDECF15872 /* Pods-IBMCaptureSDK-SampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMCaptureSDK-SampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A862F02577D321C67FAE84BCDD8EF429 /* BOXOAuth2Session.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXOAuth2Session.m; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXOAuth2Session.m; sourceTree = "<group>"; };
+		A87B83700543CA91EF1F819F609E4337 /* Pods-IBMCaptureSDK-Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMCaptureSDK-Sample.modulemap"; sourceTree = "<group>"; };
 		A928D18E789F5B630A2055884FAA15ED /* BOXEventsAdminLogsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXEventsAdminLogsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXEventsAdminLogsRequest.m; sourceTree = "<group>"; };
 		A9326A07478358244CE3B910EA75E598 /* BOXFileVersionPromoteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileVersionPromoteRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileVersionPromoteRequest.h; sourceTree = "<group>"; };
 		A948C467E9D1B82A6D5C65EF1CBA90A4 /* BOXHashHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXHashHelper.h; path = BoxContentSDK/BoxContentSDK/External/HashHelper/BOXHashHelper.h; sourceTree = "<group>"; };
-		AA7C1E3DCF1AA605C627FB9FD58A2FCC /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		A966186267DD8811CB87F53471269030 /* Pods-IBMCaptureSDK-SampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-SampleTests-resources.sh"; sourceTree = "<group>"; };
 		AB28AC1AE0D72A492D732B629C6B5F48 /* BOXAppUserSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAppUserSession.h; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAppUserSession.h; sourceTree = "<group>"; };
 		AB698AB49A379EDF209E79D9EDABD01D /* BOXAppToAppAnnotationKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAppToAppAnnotationKeys.h; path = BoxContentSDK/BoxContentSDK/AppToApp/BOXAppToAppAnnotationKeys.h; sourceTree = "<group>"; };
 		ABD651FF1CC123F6F08A266C99D1624B /* BOXUserRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXUserRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXUserRequest.h; sourceTree = "<group>"; };
+		AE91CFA64C21A258C3884792B723EFB1 /* Pods-IBMCaptureSDK-Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMCaptureSDK-Sample-resources.sh"; sourceTree = "<group>"; };
 		AEDBFF8A93A231ADC9E44AA2DF8FC938 /* BOXSharedItemRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXSharedItemRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXSharedItemRequest.h; sourceTree = "<group>"; };
 		AF5E78CE82C4F343E462D6A62952FAC1 /* BOXAPIOperation_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIOperation_Private.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIOperation_Private.h; sourceTree = "<group>"; };
 		AFD77261DD4AB18135F6900B84F49150 /* BOXAPIAppUsersAuthOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIAppUsersAuthOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIAppUsersAuthOperation.h; sourceTree = "<group>"; };
@@ -554,6 +574,7 @@
 		B6EDADCD67BB27C1086C33B3BDEAF68F /* BOXParallelAPIQueueManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXParallelAPIQueueManager.h; path = BoxContentSDK/BoxContentSDK/QueueManagers/BOXParallelAPIQueueManager.h; sourceTree = "<group>"; };
 		B6F040D4B8D3A2A0A96DB838BF0FDADD /* BOXItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXItem.h; path = BoxContentSDK/BoxContentSDK/Models/BOXItem.h; sourceTree = "<group>"; };
 		B751E9B6A3096218435ACD06F92D418D /* BOXSearchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXSearchRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXSearchRequest.h; sourceTree = "<group>"; };
+		B7C7FD9E8B65E638DAC43A5E1733C54D /* Pods-IBMCaptureSDK-SampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMCaptureSDK-SampleTests-dummy.m"; sourceTree = "<group>"; };
 		B8479238BA1125A15D92A827D6E42A39 /* BOXContentClient+Search.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Search.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Search.m"; sourceTree = "<group>"; };
 		B9B1C0AA70A18EFEA9B153277BDB5515 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = BoxContentSDK/BoxContentSDKResources/en.lproj; sourceTree = "<group>"; };
 		B9EB5A196385943EEACBE7CE59B38465 /* BOXCollectionListRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCollectionListRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollectionListRequest.h; sourceTree = "<group>"; };
@@ -571,6 +592,7 @@
 		C63840932427504C1FC53D52F55CB294 /* BOXFileThumbnailRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileThumbnailRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileThumbnailRequest.m; sourceTree = "<group>"; };
 		C8D74265A2207EC9EE79CAD148BFBA12 /* BOXCollaborationCreateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCollaborationCreateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollaborationCreateRequest.h; sourceTree = "<group>"; };
 		C8EFA2FBC7FE82C942E45843B238C3FF /* BOXAPIJSONPatchOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIJSONPatchOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIJSONPatchOperation.h; sourceTree = "<group>"; };
+		CB0F596A8E9208754DFAA3A85925EEA9 /* BoxContentSDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BoxContentSDKResources.bundle; path = BoxContentSDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91C4384BE445870E8D5DC766F2DCE6 /* BOXFolderCollaborationsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFolderCollaborationsRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFolderCollaborationsRequest.h; sourceTree = "<group>"; };
 		CF42E93574D07BD59DB4E8D3863EE140 /* BOXMetadataUpdateTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXMetadataUpdateTask.h; path = BoxContentSDK/BoxContentSDK/Models/BOXMetadataUpdateTask.h; sourceTree = "<group>"; };
 		CF5E1680F77C371F3F77ED335B9E5694 /* BOXBookmarkUnshareRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXBookmarkUnshareRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXBookmarkUnshareRequest.h; sourceTree = "<group>"; };
@@ -590,7 +612,6 @@
 		DBBE89C8BA6D0DB82C45C0768FC79F71 /* BOXCommentDeleteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCommentDeleteRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXCommentDeleteRequest.h; sourceTree = "<group>"; };
 		DBD2BD516116386C9C09ADC08DECB728 /* BOXContentClient+Bookmark.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BOXContentClient+Bookmark.m"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Bookmark.m"; sourceTree = "<group>"; };
 		DC13590E0522BED27B3465A9F07056FE /* BOXContentClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXContentClient_Private.h; path = BoxContentSDK/BoxContentSDK/Clients/BOXContentClient_Private.h; sourceTree = "<group>"; };
-		DDCC6D1F61AC512DDBCB2291E215FA49 /* Pods-IBMCaptureSDK-Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMCaptureSDK-Sample-umbrella.h"; sourceTree = "<group>"; };
 		DE339B07F01EE47D5E4EED4B2A47553E /* BOXFileUnshareRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileUnshareRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileUnshareRequest.m; sourceTree = "<group>"; };
 		DEAEBAB1801B96CCA25EC3DB03026885 /* BOXAppToAppAnnotationBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXAppToAppAnnotationBuilder.m; path = BoxContentSDK/BoxContentSDK/AppToApp/BOXAppToAppAnnotationBuilder.m; sourceTree = "<group>"; };
 		DEB2098C5078ED421450A8B216BC9E9A /* BOXOAuth2Session.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXOAuth2Session.h; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXOAuth2Session.h; sourceTree = "<group>"; };
@@ -600,11 +621,12 @@
 		E3FA40E1B08F41CB214BC1DCFF59006E /* BOXAPIOAuth2ToJSONOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAPIOAuth2ToJSONOperation.h; path = BoxContentSDK/BoxContentSDK/Operations/BOXAPIOAuth2ToJSONOperation.h; sourceTree = "<group>"; };
 		E6953D1AD07D2A862FC734023583115D /* BOXAuthorizationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXAuthorizationViewController.h; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXAuthorizationViewController.h; sourceTree = "<group>"; };
 		E76F57CF2EAFA3AB80714B8433CB798B /* BOXPreflightCheckRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXPreflightCheckRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXPreflightCheckRequest.m; sourceTree = "<group>"; };
+		E79B4B09DCC99702E71A0E968B0973D1 /* Pods_IBMCaptureSDK_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMCaptureSDK_SampleTests.framework; path = "Pods-IBMCaptureSDK-SampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99E60FCECBBC93A2F36AFAE8F51853C /* BOXFileVersionsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileVersionsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileVersionsRequest.m; sourceTree = "<group>"; };
-		EB67A810CFD1389C563D0ACF125DBBCF /* BoxContentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BoxContentSDK.framework; path = "box-ios-sdk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8B9485DE3705B4D997C696329591B5 /* BOXParallelOAuth2Session.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXParallelOAuth2Session.m; path = BoxContentSDK/BoxContentSDK/OAuth2/BOXParallelOAuth2Session.m; sourceTree = "<group>"; };
 		EC3CD7FBA61A34FB12C63A4BF69C268E /* BOXCommentUpdateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXCommentUpdateRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXCommentUpdateRequest.h; sourceTree = "<group>"; };
 		ED6F546571B1584A14116A6B0443AAD8 /* BOXFileVersionPromoteRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXFileVersionPromoteRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileVersionPromoteRequest.m; sourceTree = "<group>"; };
+		EF1B1E023A3FB8623B640D262BB9C554 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6123F3FA6540CDCDAA8CF422622595 /* BOXSerialAPIQueueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXSerialAPIQueueManager.m; path = BoxContentSDK/BoxContentSDK/QueueManagers/BOXSerialAPIQueueManager.m; sourceTree = "<group>"; };
 		F24B4441547F02F17C14A3068B50EAF2 /* BOXFileVersionsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileVersionsRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileVersionsRequest.h; sourceTree = "<group>"; };
 		F3AFCF303D9E50350318478CEF9FC296 /* BOXUser_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXUser_Private.h; path = BoxContentSDK/BoxContentSDK/Models/BOXUser_Private.h; sourceTree = "<group>"; };
@@ -619,7 +641,6 @@
 		F8C9FCEFADC9B208E0E4FFF507897DDB /* BOXRequestWithSharedLinkHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXRequestWithSharedLinkHeader.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXRequestWithSharedLinkHeader.h; sourceTree = "<group>"; };
 		F90D3CCF38D19D4AF1FA254A755D81C5 /* BOXContentClient+Bookmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOXContentClient+Bookmark.h"; path = "BoxContentSDK/BoxContentSDK/Clients/BOXContentClient+Bookmark.h"; sourceTree = "<group>"; };
 		F9F9A9D6BA3D5591DACEC782BBD87B70 /* BOXFileShareRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXFileShareRequest.h; path = BoxContentSDK/BoxContentSDK/Requests/BOXFileShareRequest.h; sourceTree = "<group>"; };
-		FA52F23CB8BE51AAB88BA148FE3E96D3 /* Pods_IBMCaptureSDK_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMCaptureSDK_Sample.framework; path = "Pods-IBMCaptureSDK-Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8B9E8E89047D86D5E9EF693A45ABCC /* BOXCollectionItemsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOXCollectionItemsRequest.m; path = BoxContentSDK/BoxContentSDK/Requests/BOXCollectionItemsRequest.m; sourceTree = "<group>"; };
 		FBB983EF6249814898D48E597F39F3FD /* BOXEnterprise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXEnterprise.h; path = BoxContentSDK/BoxContentSDK/Models/BOXEnterprise.h; sourceTree = "<group>"; };
 		FC97F8653E3E9AC4D6AD5153BCB7D0F4 /* BOXComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOXComment.h; path = BoxContentSDK/BoxContentSDK/Models/BOXComment.h; sourceTree = "<group>"; };
@@ -648,6 +669,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA59C8C04A7B6ECBEFCE522B4083F880 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4E01F968881FDC7519487940F1A4665 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F88A60F8731AAFEA58980B216F237804 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,20 +687,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1075C8DF67C8CFAF8EDFAA8815D454A4 /* Pods-IBMCaptureSDK-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CB5570C4AC0D03322438C349A77745A /* Info.plist */,
+				0C83B1FF5C79E6FC147C8575FE3ECE8F /* Pods-IBMCaptureSDK-SampleTests.modulemap */,
+				3BF54A2BE32C86D1E9980485715771B3 /* Pods-IBMCaptureSDK-SampleTests-acknowledgements.markdown */,
+				A4AE52855E0619A6B85620DDECF15872 /* Pods-IBMCaptureSDK-SampleTests-acknowledgements.plist */,
+				B7C7FD9E8B65E638DAC43A5E1733C54D /* Pods-IBMCaptureSDK-SampleTests-dummy.m */,
+				8A727796FD70D4E5BEFFA75E5189D496 /* Pods-IBMCaptureSDK-SampleTests-frameworks.sh */,
+				A966186267DD8811CB87F53471269030 /* Pods-IBMCaptureSDK-SampleTests-resources.sh */,
+				924E02CFDFE42F5685FD87E6B49F342E /* Pods-IBMCaptureSDK-SampleTests-umbrella.h */,
+				2531BF61D5617DF127D3EF107F76F9A8 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */,
+				A333F30091AD68742AB2D48740C0D7D9 /* Pods-IBMCaptureSDK-SampleTests.release.xcconfig */,
+			);
+			name = "Pods-IBMCaptureSDK-SampleTests";
+			path = "Target Support Files/Pods-IBMCaptureSDK-SampleTests";
+			sourceTree = "<group>";
+		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7214C887C3269C5574EA74FDD2FA249F /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		24619F2BC5577DAFD6EEBBE8A7473842 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9DD4489BD9B28893F11393149A8D8338 /* Pods-IBMCaptureSDK-Sample */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		44656D424DC852F61DF1971E80A99E32 /* Pods */ = {
@@ -706,37 +745,38 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
 				44656D424DC852F61DF1971E80A99E32 /* Pods */,
-				83186AA05A4F3C7C5C6FA3AEAD79234F /* Products */,
-				24619F2BC5577DAFD6EEBBE8A7473842 /* Targets Support Files */,
+				A59616BE1E4493C8893599D83B428332 /* Products */,
+				CEA544DA56494E7ACAF54F4BF427D831 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83186AA05A4F3C7C5C6FA3AEAD79234F /* Products */ = {
+		92ADFC92A56E2E2448E3B596D296BB00 /* Pods-IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				EB67A810CFD1389C563D0ACF125DBBCF /* BoxContentSDK.framework */,
-				9D05D79CB47657B5BE6607A32C34135E /* BoxContentSDKResources.bundle */,
-				FA52F23CB8BE51AAB88BA148FE3E96D3 /* Pods_IBMCaptureSDK_Sample.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9DD4489BD9B28893F11393149A8D8338 /* Pods-IBMCaptureSDK-Sample */ = {
-			isa = PBXGroup;
-			children = (
-				7359D2B3870C0AB3484DEDD981D0AA40 /* Info.plist */,
-				55C0FF99E09146521C9EC18A2966D76F /* Pods-IBMCaptureSDK-Sample.modulemap */,
-				14C9710014F0399008426570FC105606 /* Pods-IBMCaptureSDK-Sample-acknowledgements.markdown */,
-				0A33FD2F5132839326CD5D352627D05C /* Pods-IBMCaptureSDK-Sample-acknowledgements.plist */,
-				99F5A837E800BD80F7EA5B0248CC1A75 /* Pods-IBMCaptureSDK-Sample-dummy.m */,
-				2C632DDCBCA5CB409213E14E63916BC0 /* Pods-IBMCaptureSDK-Sample-frameworks.sh */,
-				9E880D1CD081A8E018F0172DBDABB51C /* Pods-IBMCaptureSDK-Sample-resources.sh */,
-				DDCC6D1F61AC512DDBCB2291E215FA49 /* Pods-IBMCaptureSDK-Sample-umbrella.h */,
-				40575570A4EF83CF43E768A8A6D446DE /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */,
-				AA7C1E3DCF1AA605C627FB9FD58A2FCC /* Pods-IBMCaptureSDK-Sample.release.xcconfig */,
+				EF1B1E023A3FB8623B640D262BB9C554 /* Info.plist */,
+				A87B83700543CA91EF1F819F609E4337 /* Pods-IBMCaptureSDK-Sample.modulemap */,
+				7801B9584556588559D6767019EFAB53 /* Pods-IBMCaptureSDK-Sample-acknowledgements.markdown */,
+				55799C5835B53FE0E6A207831A4D3567 /* Pods-IBMCaptureSDK-Sample-acknowledgements.plist */,
+				773947A95C5B5B63B024C42F2A7A328C /* Pods-IBMCaptureSDK-Sample-dummy.m */,
+				75AF4782E770BD8E3AD763F6EFCE67A8 /* Pods-IBMCaptureSDK-Sample-frameworks.sh */,
+				AE91CFA64C21A258C3884792B723EFB1 /* Pods-IBMCaptureSDK-Sample-resources.sh */,
+				68F815427079759731478A3C4ACBD791 /* Pods-IBMCaptureSDK-Sample-umbrella.h */,
+				331E18CF339FC8FF014C5ABC6913611A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */,
+				1A62343504C48A038346367EBA226FD5 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */,
 			);
 			name = "Pods-IBMCaptureSDK-Sample";
 			path = "Target Support Files/Pods-IBMCaptureSDK-Sample";
+			sourceTree = "<group>";
+		};
+		A59616BE1E4493C8893599D83B428332 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70BA12992D5F887B5ABC0946BF2EA637 /* BoxContentSDK.framework */,
+				CB0F596A8E9208754DFAA3A85925EEA9 /* BoxContentSDKResources.bundle */,
+				96CB43AC086DDD1B9A412A29C95988DC /* Pods_IBMCaptureSDK_Sample.framework */,
+				E79B4B09DCC99702E71A0E968B0973D1 /* Pods_IBMCaptureSDK_SampleTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B32297D8AE306886B4E38C044C6F6C0B /* box-ios-sdk */ = {
@@ -1036,6 +1076,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		CEA544DA56494E7ACAF54F4BF427D831 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				92ADFC92A56E2E2448E3B596D296BB00 /* Pods-IBMCaptureSDK-Sample */,
+				1075C8DF67C8CFAF8EDFAA8815D454A4 /* Pods-IBMCaptureSDK-SampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		E3E881A745A548D62B7187EA03F3D51F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1228,6 +1277,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		878FE33CDBBEBC9880CD7C3A3F058786 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B932A81222AE433636A657D130767D /* Pods-IBMCaptureSDK-SampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1247,7 +1304,7 @@
 			);
 			name = "box-ios-sdk";
 			productName = "box-ios-sdk";
-			productReference = EB67A810CFD1389C563D0ACF125DBBCF /* BoxContentSDK.framework */;
+			productReference = 70BA12992D5F887B5ABC0946BF2EA637 /* BoxContentSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4764CC8342551502281A23AE631970A2 /* Pods-IBMCaptureSDK-Sample */ = {
@@ -1265,7 +1322,7 @@
 			);
 			name = "Pods-IBMCaptureSDK-Sample";
 			productName = "Pods-IBMCaptureSDK-Sample";
-			productReference = FA52F23CB8BE51AAB88BA148FE3E96D3 /* Pods_IBMCaptureSDK_Sample.framework */;
+			productReference = 96CB43AC086DDD1B9A412A29C95988DC /* Pods_IBMCaptureSDK_Sample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7C3F3DFB0A94CC4930ADE9466FB1C404 /* box-ios-sdk-BoxContentSDKResources */ = {
@@ -1282,8 +1339,26 @@
 			);
 			name = "box-ios-sdk-BoxContentSDKResources";
 			productName = "box-ios-sdk-BoxContentSDKResources";
-			productReference = 9D05D79CB47657B5BE6607A32C34135E /* BoxContentSDKResources.bundle */;
+			productReference = CB0F596A8E9208754DFAA3A85925EEA9 /* BoxContentSDKResources.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		C2B10878F144531474F94454715F071A /* Pods-IBMCaptureSDK-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98C4346F5682619CE8EA55857334D90A /* Build configuration list for PBXNativeTarget "Pods-IBMCaptureSDK-SampleTests" */;
+			buildPhases = (
+				A63497BE7D59440D77188FF4CF9AD533 /* Sources */,
+				BA59C8C04A7B6ECBEFCE522B4083F880 /* Frameworks */,
+				878FE33CDBBEBC9880CD7C3A3F058786 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				478E6E8F5306A77BDC4224749CCAC5AD /* PBXTargetDependency */,
+			);
+			name = "Pods-IBMCaptureSDK-SampleTests";
+			productName = "Pods-IBMCaptureSDK-SampleTests";
+			productReference = E79B4B09DCC99702E71A0E968B0973D1 /* Pods_IBMCaptureSDK_SampleTests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -1302,13 +1377,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 83186AA05A4F3C7C5C6FA3AEAD79234F /* Products */;
+			productRefGroup = A59616BE1E4493C8893599D83B428332 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3C900705B74BFF1F58DF15A8D77CACDF /* box-ios-sdk */,
 				7C3F3DFB0A94CC4930ADE9466FB1C404 /* box-ios-sdk-BoxContentSDKResources */,
 				4764CC8342551502281A23AE631970A2 /* Pods-IBMCaptureSDK-Sample */,
+				C2B10878F144531474F94454715F071A /* Pods-IBMCaptureSDK-SampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1337,6 +1413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63497BE7D59440D77188FF4CF9AD533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C31B3C1EC7A4156EB39D4D2BB8437A /* Pods-IBMCaptureSDK-SampleTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1493,6 +1577,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		478E6E8F5306A77BDC4224749CCAC5AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "box-ios-sdk";
+			target = 3C900705B74BFF1F58DF15A8D77CACDF /* box-ios-sdk */;
+			targetProxy = 6D373B18B275A98B952CFCFC6F6A83D8 /* PBXContainerItemProxy */;
+		};
 		6F11AE1463B97351BFBF5D5157E21B93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "box-ios-sdk";
@@ -1571,7 +1661,7 @@
 		};
 		2422A049161F9B39B9844A7022F276D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA7C1E3DCF1AA605C627FB9FD58A2FCC /* Pods-IBMCaptureSDK-Sample.release.xcconfig */;
+			baseConfigurationReference = 1A62343504C48A038346367EBA226FD5 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1636,9 +1726,44 @@
 			};
 			name = Debug;
 		};
+		5924A1384CEC2B70E7E57DA1BBE8B22B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A333F30091AD68742AB2D48740C0D7D9 /* Pods-IBMCaptureSDK-SampleTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IBMCaptureSDK-SampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IBMCaptureSDK-SampleTests/Pods-IBMCaptureSDK-SampleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IBMCaptureSDK_SampleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5F85B4715151625A1D87328256F3765B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40575570A4EF83CF43E768A8A6D446DE /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */;
+			baseConfigurationReference = 331E18CF339FC8FF014C5ABC6913611A /* Pods-IBMCaptureSDK-Sample.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1685,6 +1810,41 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8FECD23EB5392DF719F04E398170367B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2531BF61D5617DF127D3EF107F76F9A8 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IBMCaptureSDK-SampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IBMCaptureSDK-SampleTests/Pods-IBMCaptureSDK-SampleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IBMCaptureSDK_SampleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1786,6 +1946,15 @@
 			buildConfigurations = (
 				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
 				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98C4346F5682619CE8EA55857334D90A /* Build configuration list for PBXNativeTarget "Pods-IBMCaptureSDK-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FECD23EB5392DF719F04E398170367B /* Debug */,
+				5924A1384CEC2B70E7E57DA1BBE8B22B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

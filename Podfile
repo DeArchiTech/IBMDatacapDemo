@@ -6,3 +6,7 @@ workspace 'MyWorkspace'
 target 'IBMCaptureSDK-Sample' do
 pod 'box-ios-sdk'
 end
+
+target 'IBMCaptureSDK-SampleTests' do
+pod 'box-ios-sdk'
+end

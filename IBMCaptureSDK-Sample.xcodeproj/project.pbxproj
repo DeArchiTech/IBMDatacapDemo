@@ -18,9 +18,8 @@
 		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
-		2279A1581E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */; };
+		2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceTest.swift */; };
 		22FCB41F1E02222C00716B53 /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 22FCB41E1E02222C00716B53 /* Frameworks */; };
-		36E1FF6A355A9750C5BBE8B1 /* Pods_IBMCaptureSDK_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545416088AD3FE7FF367F20 /* Pods_IBMCaptureSDK_Sample.framework */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
@@ -93,7 +92,7 @@
 /* Begin PBXFileReference section */
 		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMCaptureSDK_SampleTests.swift; sourceTree = "<group>"; };
+		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
 		2279A1591E03294F00E453E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FCB41E1E02222C00716B53 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		58AEB377E78E5D0DF8099895 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,17 +164,24 @@
 			files = (
 				220153651DEF92DE00B1085F /* IBMCaptureSDK.framework in Frameworks */,
 				220153671DEF92DE00B1085F /* IBMCaptureUISDK.framework in Frameworks */,
-				36E1FF6A355A9750C5BBE8B1 /* Pods_IBMCaptureSDK_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220EB0431E048D6100A7C4AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2279A14F1E03293800E453E8 /* BoxService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2279A1571E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift */,
+				2279A1571E03294F00E453E8 /* BoxServiceTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
@@ -184,6 +190,7 @@
 		78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				220EB0431E048D6100A7C4AD /* Services */,
 				78766AD31C5A4A840026DD68 /* Extensions */,
 				78766AD21C5A4A740026DD68 /* Resources */,
 				78766AD11C5A4A5C0026DD68 /* Supporting Files */,
@@ -211,7 +218,6 @@
 				784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */,
 				784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */,
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
-				2279A14F1E03293800E453E8 /* BoxService.swift */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -538,7 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2279A1581E03294F00E453E8 /* IBMCaptureSDK_SampleTests.swift in Sources */,
+				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

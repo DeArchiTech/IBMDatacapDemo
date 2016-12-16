@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-IBMCaptureSDK-SampleTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>box-ios-sdk-BoxContentSDKResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>7C3F3DFB0A94CC4930ADE9466FB1C404</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2B10878F144531474F94454715F071A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

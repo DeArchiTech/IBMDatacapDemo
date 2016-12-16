@@ -7,9 +7,9 @@
 //
 
 import XCTest
-import IBMCaptureSDK_Sample
+@testable import IBMCaptureSDK_Sample
 
-class IBMCaptureSDK_SampleTests: XCTestCase {
+class BoxServiceTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
