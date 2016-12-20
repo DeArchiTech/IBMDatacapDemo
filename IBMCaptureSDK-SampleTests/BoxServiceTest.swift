@@ -24,8 +24,6 @@ class BoxServiceTest: XCTestCase {
     }
     
     func testAuthenticate() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         self.service = BoxService.init()
         let exp = expectationWithDescription("Some Expectation To Be Filled")
         self.service?.authenticate(){
@@ -40,4 +38,17 @@ class BoxServiceTest: XCTestCase {
     
     }
     
+    func testAuthenticateWithNewUser() {
+        self.service = BoxService.init()
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        self.service?.authenticateWithNewUser(){
+            (user,error) in
+            XCTAssertNotNil(user)
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
 }

@@ -16,14 +16,12 @@ class BoxService{
     var client : BOXContentClient?
     
     init() {
-        
-        BOXContentClient.setClientID(self.client_id, clientSecret: self.client_secret)
-        self.client = BOXContentClient.defaultClient()
-        
     }
     
     func authenticate(completion: ((BOXUser!, NSError!) -> Void)!){
-        
+     
+        BOXContentClient.setClientID(self.client_id, clientSecret: self.client_secret)
+        self.client = BOXContentClient.clientForNewSession()
         self.client?.authenticateWithCompletionBlock(){
             (user, error) in
             completion(user,error)
@@ -33,8 +31,11 @@ class BoxService{
     func authenticateWithNewUser(completion: ((BOXUser!, NSError!) -> Void)!){
         
         //:TODO Implement
-        completion(nil,nil)
-        
+        self.client?.authenticateInAppWithCompletionBlock(){
+            (user, error) in
+            completion(user,error)
+        }
+    
     }
     
 }
