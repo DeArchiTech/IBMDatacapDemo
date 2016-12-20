@@ -11,9 +11,26 @@ import BoxContentSDK
 
 class BoxLoginViewController : UIViewController{
     
+    var service : BoxService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("I am Here")
+        self.service = BoxService.init()
+        self.authenticate(){
+            (user,error) in
+            self.handleAuthenticateResponse(user, error: error)
+        }
+    }
+    
+    func authenticate(completion: ((BOXUser!, NSError!) -> Void)!){
+        self.service?.authenticate(){
+            (user, error) in
+            completion(user,error)
+        }
+    }
+    
+    func handleAuthenticateResponse(user : BOXUser?, error : NSError?){
+        print("User Logs In Successfully")
     }
     
 }

@@ -1,17 +1,16 @@
 //
-//  IBMCaptureSDK_SampleTests.swift
-//  IBMCaptureSDK-SampleTests
+//  LoginViewControllerTest.swift
+//  IBMCaptureSDK-Sample
 //
-//  Created by davix on 12/15/16.
+//  Created by David Kwok Ho Chan on 12/20/16.
 //  Copyright © 2016 Future Workshops. All rights reserved.
 //
-
 import XCTest
 @testable import IBMCaptureSDK_Sample
 
-class BoxServiceTest: XCTestCase {
+class BoxLoginViewControllerTest: XCTestCase{
     
-    var service : BoxService?
+    var vc : BoxLoginViewController?
     
     override func setUp() {
         super.setUp()
@@ -24,9 +23,10 @@ class BoxServiceTest: XCTestCase {
     }
     
     func testAuthenticate() {
-        self.service = BoxService.init()
         let exp = expectationWithDescription("Some Expectation To Be Filled")
-        self.service?.authenticate(){
+        self.vc = BoxLoginViewController()
+        self.vc?.service = BoxService.init()
+        self.vc?.authenticate(){
             (user,error) in
             XCTAssertNotNil(user)
             XCTAssertNil(error)
@@ -35,7 +35,14 @@ class BoxServiceTest: XCTestCase {
         waitForExpectationsWithTimeout(60, handler: { error in
             XCTAssertNil(error, "Error")
         })
-    
     }
+//    
+//    func testHandleAuthenticateResponse(){
+//    
+//        //If Error is not nil, presents error dialog
+//        //Else present success dialog
+//        
+//    }
     
 }
+
