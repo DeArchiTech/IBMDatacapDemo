@@ -21,15 +21,10 @@ class BoxServiceTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAuthenticate() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertTrue(false)
         let service = BoxService()
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
     }
     
 }
