@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IBMCaptureSDK-SampleTests/BoxServiceTest.swift"
+            timestampString = "503888162.192731"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "testAuthenticate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IBMCaptureSDK_SampleTests.BoxServiceTest.(testAuthenticate () -&gt; ()).(closure #1)"
+                  moduleName = "IBMCaptureSDK-SampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davix/Source/IBMDatacapDemo/IBMCaptureSDK-SampleTests/BoxServiceTest.swift"
+                  timestampString = "503891934.166368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IBMCaptureSDK_SampleTests.BoxServiceTest.(testAuthenticate () -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "IBMCaptureSDK-SampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davix/Source/IBMDatacapDemo/IBMCaptureSDK-SampleTests/BoxServiceTest.swift"
+                  timestampString = "503891934.169091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IBMCaptureSDK-Sample/BoxService.swift"
+            timestampString = "503891922.125772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "authenticate(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

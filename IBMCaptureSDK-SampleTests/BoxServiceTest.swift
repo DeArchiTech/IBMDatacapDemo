@@ -11,6 +11,8 @@ import XCTest
 
 class BoxServiceTest: XCTestCase {
     
+    var service : BoxService?
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,7 +26,18 @@ class BoxServiceTest: XCTestCase {
     func testAuthenticate() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let service = BoxService()
+        self.service = BoxService.init()
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        self.service?.authenticate(){
+            (user,error) in
+            XCTAssertNotNil(user)
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    
     }
     
 }
