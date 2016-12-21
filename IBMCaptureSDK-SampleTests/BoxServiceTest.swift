@@ -15,6 +15,7 @@ class BoxServiceTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        self.service = BoxService.init()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,7 +25,6 @@ class BoxServiceTest: XCTestCase {
     }
     
     func testAuthenticate() {
-        self.service = BoxService.init()
         let exp = expectationWithDescription("Some Expectation To Be Filled")
         self.service?.authenticate(){
             (user,error) in
@@ -33,8 +33,7 @@ class BoxServiceTest: XCTestCase {
             exp.fulfill()
         }
         waitForExpectationsWithTimeout(60, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
+            XCTAssertNil(error, "Error")})
     
     }
     

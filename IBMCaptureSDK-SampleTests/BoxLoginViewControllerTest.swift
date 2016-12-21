@@ -17,6 +17,7 @@ class BoxLoginViewControllerTest: XCTestCase{
     override func setUp() {
         super.setUp()
         self.vc = BoxLoginViewController()
+        self.vc?.service = BoxService.init()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -27,7 +28,6 @@ class BoxLoginViewControllerTest: XCTestCase{
     
     func testAuthenticate() {
         let exp = expectationWithDescription("Some Expectation To Be Filled")
-        self.vc?.service = BoxService.init()
         self.vc?.authenticate(){
             (user,error) in
             XCTAssertNotNil(user)
@@ -51,6 +51,19 @@ class BoxLoginViewControllerTest: XCTestCase{
         result = self.vc?.handleAuthenticateResponse(user, error: error)
         XCTAssertTrue(result!)
         
+    }
+    
+    func testUpload() {
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        let filePath = ""
+        self.vc?.upload(filePath){
+            (user,error) in
+            XCTAssertNotNil(user)
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
     }
     
     func testPresentsSuccess(){
