@@ -6,6 +6,8 @@
 //  Copyright © 2016 Future Workshops. All rights reserved.
 //
 import XCTest
+import BoxContentSDK
+
 @testable import IBMCaptureSDK_Sample
 
 class BoxLoginViewControllerTest: XCTestCase{
@@ -14,6 +16,7 @@ class BoxLoginViewControllerTest: XCTestCase{
     
     override func setUp() {
         super.setUp()
+        self.vc = BoxLoginViewController()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,7 +27,6 @@ class BoxLoginViewControllerTest: XCTestCase{
     
     func testAuthenticate() {
         let exp = expectationWithDescription("Some Expectation To Be Filled")
-        self.vc = BoxLoginViewController()
         self.vc?.service = BoxService.init()
         self.vc?.authenticate(){
             (user,error) in
@@ -36,13 +38,28 @@ class BoxLoginViewControllerTest: XCTestCase{
             XCTAssertNil(error, "Error")
         })
     }
-//    
-//    func testHandleAuthenticateResponse(){
-//    
-//        //If Error is not nil, presents error dialog
-//        //Else present success dialog
-//        
-//    }
+    
+    func testHandleAuthenticateResponse(){
+    
+        let user = BOXUser.init()
+        var error : NSError? = nil
+        //If Error is nil present success dialog
+        var result = self.vc?.handleAuthenticateResponse(user, error: error)
+        XCTAssertTrue(result!)
+        //Else Error is not nil, presents error di!alog
+        error = NSError.init(domain: "", code: 0, userInfo: [:])
+        result = self.vc?.handleAuthenticateResponse(user, error: error)
+        XCTAssertTrue(result!)
+        
+    }
+    
+    func testPresentsSuccess(){
+        self.vc?.presentsSuccess()
+    }
+    
+    func testPresentsFailure(){
+        self.vc?.presentsFailure()
+    }
     
 }
 

@@ -29,8 +29,28 @@ class BoxLoginViewController : UIViewController{
         }
     }
     
-    func handleAuthenticateResponse(user : BOXUser?, error : NSError?){
-        print("User Logs In Successfully")
+    func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
+        if error == nil{
+            self.presentsSuccess()
+        }else{
+            self.presentsFailure()
+        }
+        return true
     }
     
+    func presentsSuccess(){
+        let message = "User has been authenticated"
+        let alertController = UIAlertController(title: "Authentication Success", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func presentsFailure(){
+        let message = "User has not been authenticated"
+        let alertController = UIAlertController(title: "Authentication Failed", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 }
