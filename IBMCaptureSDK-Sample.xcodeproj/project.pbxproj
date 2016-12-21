@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
 		2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */; };
 		2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */; };
 		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
@@ -445,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */,
+				2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */,
 				223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

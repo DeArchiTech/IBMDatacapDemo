@@ -28,8 +28,7 @@ class BoxServiceTest: XCTestCase {
         let exp = expectationWithDescription("Some Expectation To Be Filled")
         self.service?.authenticate(){
             (user,error) in
-            XCTAssertNotNil(user)
-            XCTAssertNil(error)
+            self.validateResults(user, error: error)
             exp.fulfill()
         }
         waitForExpectationsWithTimeout(60, handler: { error in
@@ -37,4 +36,33 @@ class BoxServiceTest: XCTestCase {
     
     }
     
+    func testUploadWithNSData() {
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            let bundle = NSBundle(forClass: self.dynamicType)
+            let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
+            let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
+            //2)Second Upload After Being Authenticated
+            self.service?.upload(imgData){
+                (file,error) in
+                //3)Assert After Files being uploaded
+                self.validateResults(file, error: error)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+    }
+    
+    func validateResults(object : AnyObject?, error : NSError?){
+        if error != nil {
+            print(error)
+        }
+        XCTAssertNotNil(object)
+        XCTAssertNil(error)
+    }
 }
