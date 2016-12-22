@@ -12,6 +12,10 @@
 		2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
 		2215FF311E0B4C9500521973 /* BoxUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */; };
 		2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */; };
+		2215FF351E0B622400521973 /* RevaIDRecognitionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF341E0B622400521973 /* RevaIDRecognitionViewControllerTest.swift */; };
+		2215FF371E0B632400521973 /* RevaIDRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF361E0B632400521973 /* RevaIDRecognitionController.swift */; };
+		2215FF391E0B65C900521973 /* RevaEditPageImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF381E0B65C900521973 /* RevaEditPageImageViewControllerTest.swift */; };
+		2215FF3B1E0B672800521973 /* RevaEditPageImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF3A1E0B672800521973 /* RevaEditPageImageViewController.swift */; };
 		2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */; };
 		2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */; };
 		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
@@ -99,6 +103,10 @@
 /* Begin PBXFileReference section */
 		2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewController.swift; sourceTree = "<group>"; };
 		2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewControllerTest.swift; sourceTree = "<group>"; };
+		2215FF341E0B622400521973 /* RevaIDRecognitionViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevaIDRecognitionViewControllerTest.swift; sourceTree = "<group>"; };
+		2215FF361E0B632400521973 /* RevaIDRecognitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RevaIDRecognitionController.swift; path = "3rd party/MBProgressHUD/RevaIDRecognitionController.swift"; sourceTree = "<group>"; };
+		2215FF381E0B65C900521973 /* RevaEditPageImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevaEditPageImageViewControllerTest.swift; sourceTree = "<group>"; };
+		2215FF3A1E0B672800521973 /* RevaEditPageImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevaEditPageImageViewController.swift; sourceTree = "<group>"; };
 		2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewController.swift; sourceTree = "<group>"; };
 		2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewControllerTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
@@ -196,8 +204,10 @@
 		2215FF2F1E0B4B9E00521973 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2215FF361E0B632400521973 /* RevaIDRecognitionController.swift */,
 				2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */,
 				2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */,
+				2215FF3A1E0B672800521973 /* RevaEditPageImageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -208,6 +218,8 @@
 				2279A1571E03294F00E453E8 /* BoxServiceTest.swift */,
 				2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */,
 				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
+				2215FF341E0B622400521973 /* RevaIDRecognitionViewControllerTest.swift */,
+				2215FF381E0B65C900521973 /* RevaEditPageImageViewControllerTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
@@ -627,6 +639,8 @@
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
+				2215FF351E0B622400521973 /* RevaIDRecognitionViewControllerTest.swift in Sources */,
+				2215FF391E0B65C900521973 /* RevaEditPageImageViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +659,7 @@
 				2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */,
 				78766AC11C5A49BB0026DD68 /* UIImage+Extension.swift in Sources */,
 				78766ABB1C5A49BB0026DD68 /* IBMSelectionTableViewController.swift in Sources */,
+				2215FF3B1E0B672800521973 /* RevaEditPageImageViewController.swift in Sources */,
 				784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */,
 				78766AB51C5A49BB0026DD68 /* IBMEditPageImageViewController.swift in Sources */,
 				784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */,
@@ -658,6 +673,7 @@
 				78766AB31C5A49BB0026DD68 /* IBMDemo.swift in Sources */,
 				78766AB81C5A49BB0026DD68 /* IBMMainTableViewController.swift in Sources */,
 				78766ABE1C5A49BB0026DD68 /* IBMUIImageEffects.swift in Sources */,
+				2215FF371E0B632400521973 /* RevaIDRecognitionController.swift in Sources */,
 				78766A9A1C5A49BB0026DD68 /* MBProgressHUD.m in Sources */,
 				78766AAD1C5A49BB0026DD68 /* IBMAppDelegate.swift in Sources */,
 			);
