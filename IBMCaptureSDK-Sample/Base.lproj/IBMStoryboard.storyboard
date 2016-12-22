@@ -30,7 +30,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phy-To-CRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1603.5" y="-568.5"/>
+            <point key="canvasLocation" x="-1866" y="-638"/>
         </scene>
         <!--Capture SDK Sample-->
         <scene sceneID="zGV-cE-OlT">
@@ -283,6 +283,26 @@
                                             <segue destination="BLC-bQ-XLw" kind="show" id="BvV-ZB-O0S"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6vg-Yj-BhN" style="IBUITableViewCellStyleDefault" id="k04-Ar-d1N">
+                                        <rect key="frame" x="0.0" y="528" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k04-Ar-d1N" id="yfG-yW-CGk">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Upload To Box" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6vg-Yj-BhN">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3PB-eW-nve" kind="show" id="bHB-st-VRM"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -295,7 +315,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFX-ru-gYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1104.5" y="-568.5"/>
+            <point key="canvasLocation" x="-1092" y="-649"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="US8-vF-h0Y">
@@ -507,6 +527,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nc-Yw-JCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1650" y="1163"/>
+        </scene>
+        <!--Box Upload View Controller-->
+        <scene sceneID="UyT-Xa-2dH">
+            <objects>
+                <viewController id="3PB-eW-nve" customClass="BoxUploadViewController" customModule="IBMCaptureSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="slj-Oe-jSK"/>
+                        <viewControllerLayoutGuide type="bottom" id="1lF-b3-GZ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="coZ-2k-e7O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tel-BC-tVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="1298"/>
         </scene>
         <!--MRZ Decoding-->
         <scene sceneID="dZC-fF-KHy">

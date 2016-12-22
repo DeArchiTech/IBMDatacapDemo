@@ -7,7 +7,6 @@
 //
 import XCTest
 import BoxContentSDK
-
 @testable import IBMCaptureSDK_Sample
 
 class BoxLoginViewControllerTest: XCTestCase{
@@ -51,19 +50,6 @@ class BoxLoginViewControllerTest: XCTestCase{
         result = self.vc?.handleAuthenticateResponse(user, error: error)
         XCTAssertTrue(result!)
         
-    }
-    
-    func testUpload() {
-        let exp = expectationWithDescription("Some Expectation To Be Filled")
-        let filePath = ""
-        self.vc?.upload(filePath){
-            (user,error) in
-            XCTAssertNotNil(user)
-            XCTAssertNil(error)
-            exp.fulfill()
-        }
-        waitForExpectationsWithTimeout(60, handler: { error in
-            XCTAssertNil(error, "Error")})
     }
     
     func testPresentsSuccess(){

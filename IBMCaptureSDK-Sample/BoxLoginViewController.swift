@@ -28,12 +28,7 @@ class BoxLoginViewController : UIViewController{
             completion(user,error)
         }
     }
-    
-    func upload(filePath: String, completion: ((BOXUser!, NSError!) -> Void)!){
-        //Todo Implement
-        completion(nil,nil)
-    }
-    
+        
     func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
         if error == nil{
             self.presentsSuccess()

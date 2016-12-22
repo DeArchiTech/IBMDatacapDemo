@@ -39,6 +39,9 @@ class BoxServiceTest: XCTestCase {
     func testUploadWithNSData() {
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")
+        let folderID = "0"
+        let random = arc4random_uniform(100);
+        let fileName = "Le File Name" + String(random)
         //1)First Authenticate
         self.service?.authenticate(){
             (user,error) in
@@ -47,7 +50,7 @@ class BoxServiceTest: XCTestCase {
             let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
             let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
             //2)Second Upload After Being Authenticated
-            self.service?.upload(imgData){
+            self.service?.upload(imgData, folderID: folderID, fileName: fileName){
                 (file,error) in
                 //3)Assert After Files being uploaded
                 self.validateResults(file, error: error)

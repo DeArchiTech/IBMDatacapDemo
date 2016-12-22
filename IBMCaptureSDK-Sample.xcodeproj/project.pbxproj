@@ -10,6 +10,8 @@
 		2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
+		2215FF311E0B4C9500521973 /* BoxUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */; };
+		2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */; };
 		2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */; };
 		2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */; };
 		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
@@ -95,6 +97,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewController.swift; sourceTree = "<group>"; };
+		2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewControllerTest.swift; sourceTree = "<group>"; };
 		2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewController.swift; sourceTree = "<group>"; };
 		2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewControllerTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
@@ -189,11 +193,21 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		2215FF2F1E0B4B9E00521973 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */,
+				2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				2279A1571E03294F00E453E8 /* BoxServiceTest.swift */,
 				2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */,
+				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
@@ -202,6 +216,7 @@
 		78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				2215FF2F1E0B4B9E00521973 /* ViewControllers */,
 				220EB0431E048D6100A7C4AD /* Services */,
 				78766AD31C5A4A840026DD68 /* Extensions */,
 				78766AD21C5A4A740026DD68 /* Resources */,
@@ -230,7 +245,6 @@
 				784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */,
 				784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */,
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
-				2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -610,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
 			);
@@ -626,6 +641,7 @@
 				78766AB11C5A49BB0026DD68 /* IBMCameraViewController.swift in Sources */,
 				78766AAF1C5A49BB0026DD68 /* IBMBarcodeViewController.swift in Sources */,
 				78766ABC1C5A49BB0026DD68 /* IBMServiceConfigurationController.swift in Sources */,
+				2215FF311E0B4C9500521973 /* BoxUploadViewController.swift in Sources */,
 				2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */,
 				78766AC11C5A49BB0026DD68 /* UIImage+Extension.swift in Sources */,
 				78766ABB1C5A49BB0026DD68 /* IBMSelectionTableViewController.swift in Sources */,
