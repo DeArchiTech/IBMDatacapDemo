@@ -12,6 +12,7 @@ import XCTest
 class BoxServiceTest: XCTestCase {
     
     var service : BoxService?
+    var folderID = "0"
     
     override func setUp() {
         super.setUp()
@@ -39,18 +40,12 @@ class BoxServiceTest: XCTestCase {
     func testUploadWithNSData() {
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")
-        let folderID = "0"
-        let random = arc4random_uniform(100);
-        let fileName = "Le File Name" + String(random)
         //1)First Authenticate
         self.service?.authenticate(){
             (user,error) in
             self.validateResults(user, error: error)
-            let bundle = NSBundle(forClass: self.dynamicType)
-            let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
-            let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
             //2)Second Upload After Being Authenticated
-            self.service?.upload(imgData, folderID: folderID, fileName: fileName){
+            self.service?.upload(self.getImageData(), folderID: self.folderID, fileName: self.getFileName()){
                 (file,error) in
                 //3)Assert After Files being uploaded
                 self.validateResults(file, error: error)
@@ -67,5 +62,20 @@ class BoxServiceTest: XCTestCase {
         }
         XCTAssertNotNil(object)
         XCTAssertNil(error)
+    }
+    
+    func getFileName() -> String{
+        
+        return "Le File Name" + String(arc4random_uniform(100))
+        
+    }
+    
+    func getImageData() -> NSData{
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
+        let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
+        return imgData
+        
     }
 }

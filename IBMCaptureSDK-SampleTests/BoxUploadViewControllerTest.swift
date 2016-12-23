@@ -41,6 +41,8 @@ class BoxUploadViewControllerTest : XCTestCase{
             XCTAssertNil(error, "Error")})
     }
     
+    //Helper Methods 
+    
     func validateResults(object : AnyObject?, error : NSError?){
         if error != nil {
             print(error)
@@ -52,7 +54,7 @@ class BoxUploadViewControllerTest : XCTestCase{
     func getFileName() -> String{
         
         return "Le File Name" + String(arc4random_uniform(100))
-    
+        
     }
     
     func getImageData() -> NSData{
@@ -63,5 +65,5 @@ class BoxUploadViewControllerTest : XCTestCase{
         return imgData
         
     }
-    
+
 }

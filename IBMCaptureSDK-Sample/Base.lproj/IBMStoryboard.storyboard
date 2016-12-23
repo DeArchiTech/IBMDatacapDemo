@@ -747,7 +747,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znf-CA-Lo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-195.5" y="-1319.5"/>
+            <point key="canvasLocation" x="-470" y="-1531"/>
         </scene>
         <!--Service-->
         <scene sceneID="bJy-u6-wK3">
@@ -796,7 +796,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIR-tV-c0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.5" y="-1319.5"/>
+            <point key="canvasLocation" x="210" y="-1531"/>
         </scene>
         <!--Batch-->
         <scene sceneID="37n-SD-QWa">
@@ -860,7 +860,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpR-NA-ueo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.5" y="-2455.5"/>
+            <point key="canvasLocation" x="617" y="-2411"/>
         </scene>
         <!--Document-->
         <scene sceneID="ADL-wj-BT9">
@@ -912,7 +912,7 @@
         <!--Edit Image-->
         <scene sceneID="UEu-Uf-qh2">
             <objects>
-                <viewController title="Edit Image" id="yid-Me-OZ2" customClass="IBMEditPageImageViewController" customModule="IBMCaptureSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IBMEditPageImageViewController" title="Edit Image" id="yid-Me-OZ2" customClass="IBMEditPageImageViewController" customModule="IBMCaptureSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5JS-kI-RSt"/>
                         <viewControllerLayoutGuide type="bottom" id="xR1-uS-WeU"/>
@@ -1173,8 +1173,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lkg-yM-De6"/>
         <segue reference="ucL-Sc-tMB"/>
-        <segue reference="J99-Qu-ACu"/>
+        <segue reference="lkg-yM-De6"/>
+        <segue reference="iID-J2-YAI"/>
     </inferredMetricsTieBreakers>
 </document>

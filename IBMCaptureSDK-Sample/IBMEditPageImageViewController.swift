@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import BoxContentSDK
 import IBMCaptureUISDK
 import IBMCaptureSDK
 
-class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UploadVCProtocol{
 
     let IBMEditPageCellIdentifier = "IBMEditPageCellIdentifier"
     let imageEditor = ICPCoreImageImageEngine()
+    let serivce = BoxService.init()
+    let folderID = "0"
     
     enum IBMEditTool:Int {
         case Deskew = 0, Crop, BW, Grayscale, Rotate, Edge, Count
@@ -215,4 +218,36 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         alertController.addAction(alertAction)
         return alertController
     }
+    
+    func uploadImage(data : NSData, fileName : String){
+        self.serivce.upload(data, folderID : self.folderID, fileName: fileName){
+            (file, error) in
+            self.handleUploadResponse(file, error: error)
+        }
+    }
+    
+    func handleUploadResponse(file : BOXFile?, error: NSError?){
+        if file != nil{
+            self.presentsSuccess()
+        }else{
+            self.presentsFailure()
+        }
+    }
+    
+    func presentsSuccess(){
+        let message = "File has been uploaded"
+        let alertController = UIAlertController(title: "Upload Success", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func presentsFailure(){
+        let message = "File failed to be uploaded"
+        let alertController = UIAlertController(title: "Upload Failed", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 }
