@@ -11,7 +11,7 @@ import BoxContentSDK
 
 protocol UploadVCProtocol{
     
-    func uploadImage(data : NSData, fileName : String)
+    func uploadImage(data : NSData, fileName : String, completion: ((BOXFile!, NSError!) -> Void)!)
     
     func handleUploadResponse(file : BOXFile?, error: NSError?)
     

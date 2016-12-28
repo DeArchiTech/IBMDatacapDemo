@@ -12,6 +12,7 @@ import BoxContentSDK
 class IBMEditPageImageViewControllerTest : XCTestCase{
 
     var vc : IBMEditPageImageViewController?
+    var service : BoxService = BoxService.init()
     
     override func setUp() {
         super.setUp()
@@ -25,6 +26,24 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     }
     
     func testUploadImage(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        self.service.authenticate(){
+            (user, error) in
+            XCTAssertNotNil(user)
+            XCTAssertNil(error)
+            let data : NSData = self.getImageData()
+            let fileName : String = self.getFileName()
+            self.vc?.uploadImage(data, fileName: fileName){
+                (file, error) in
+                XCTAssertNotNil(file)
+                XCTAssertNil(error)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
     func testHandleUploadResponse(){
@@ -39,6 +58,17 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     
     func testPresentsFailure(){
         self.vc?.presentsFailure()
+    }
+    
+    func getFileName() -> String{
+        return "Le File Name" + String(arc4random_uniform(100))
+    }
+    
+    func getImageData() -> NSData{
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
+        let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
+        return imgData
     }
     
 }

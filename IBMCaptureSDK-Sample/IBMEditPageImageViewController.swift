@@ -219,10 +219,11 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         return alertController
     }
     
-    func uploadImage(data : NSData, fileName : String){
+    //Pass in self.handleUploadResponse when calling this
+    func uploadImage(data : NSData, fileName : String, completion: ((BOXFile!, NSError!) -> Void)!){
         self.serivce.upload(data, folderID : self.folderID, fileName: fileName){
             (file, error) in
-            self.handleUploadResponse(file, error: error)
+            completion(file, error)
         }
     }
     
