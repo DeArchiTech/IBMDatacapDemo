@@ -43,6 +43,8 @@ class BoxService{
     func upload(data: NSData, folderID: String, fileName: String, completion: ((BOXFile!, NSError!) -> Void)!){
         
         let client = BOXContentClient.defaultClient()
+        //Please remember to authenticate
+        //Todo: Add A Guard Statement
         let request = client.fileUploadRequestToFolderWithID(folderID, fromData: data, fileName: fileName)
         let progressBlock : BOXProgressBlock? = { (a,b) in }
         request.performRequestWithProgress(progressBlock, completion: completion)

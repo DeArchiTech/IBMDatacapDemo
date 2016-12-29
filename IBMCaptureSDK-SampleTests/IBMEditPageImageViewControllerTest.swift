@@ -53,20 +53,22 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     }
     
     func testPresentsSuccess(){
-        self.vc?.presentsSuccess()
+        self.vc?.presentsSuccess(nil)
     }
     
     func testPresentsFailure(){
-        self.vc?.presentsFailure()
-    }
-    
-    func testGetImageFile(){
-        let image = self.vc?.getImageFile()
-        XCTAssertNotNil(image)
+        self.vc?.presentsFailure(nil)
     }
     
     func testUpload(){
         self.vc?.upload(self.getImageData())
+    }
+    
+    func testApplyFilter(){
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
+        let result = self.vc?.applyFilterCode(img!)
+        XCTAssertTrue(result!)
     }
     
     func getFileName() -> String{

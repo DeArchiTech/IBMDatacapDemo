@@ -15,9 +15,9 @@ protocol UploadVCProtocol{
     
     func handleUploadResponse(file : BOXFile?, error: NSError?)
     
-    func presentsSuccess()
+    func presentsSuccess(msg : String?)
     
-    func presentsFailure()
+    func presentsFailure(msg : String?)
     
     func getImageFile() -> UIImage?
     

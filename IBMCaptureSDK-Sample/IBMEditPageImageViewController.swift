@@ -104,7 +104,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         case .Edge:
             detectEdges(image)
         case .Upload:
-            self.upload(self.getImageFile()!)
+            self.upload(self.getImageData())
         case .Count:
             return
         }
@@ -231,40 +231,74 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     
     func handleUploadResponse(file : BOXFile?, error: NSError?){
         if file != nil{
-            self.presentsSuccess()
+            self.presentsSuccess("")
         }else{
-            self.presentsFailure()
+            self.presentsFailure(getErrorMessage(error!))
         }
     }
     
-    func presentsSuccess(){
-        let message = "File has been uploaded"
+    func getErrorMessage(error : NSError) -> String{
+        let key = "com.box.contentsdk.jsonerrorresponse"
+        var errorResponse = error.userInfo[key] as! NSDictionary
+        let errorMessageKey = "message"
+        return errorResponse[errorMessageKey] as! String
+    }
+    
+    func presentsSuccess(msg : String?){
+        var message = "File has been uploaded"
+        if msg != nil{
+            message = msg!
+        }
         let alertController = UIAlertController(title: "Upload Success", message:
             message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func presentsFailure(){
-        let message = "File failed to be uploaded"
+    func presentsFailure(msg : String?){
+        var message = "File failed to be uploaded"
+        if msg != nil{
+            message = msg!
+        }
         let alertController = UIAlertController(title: "Upload Failed", message:
             message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func getImageData() -> NSData{
+        let util = ImageUtil.init()
+        return util.createBase64(self.getImageFile()!)
+    }
+    
     func getImageFile() -> UIImage?{
         return self.modifiedImage
     }
     
-    func upload(image : UIImage) {
-        //1)Upload It
-        let util = ImageUtil.init()
-        let imageFileName = "Upload File"
-        let data : NSData = util.createBase64(image)
-        self.uploadImage(data, fileName: imageFileName){
-            (file, error) in
-            self.handleUploadResponse(file, error: error)
+    func upload(data : NSData) {
+        
+        //1)Apply Filter Code
+        let image = (pageImage.image ?? originalImage)
+        if self.applyFilterCode(image!){
+            //2)Upload It
+            self.uploadImage(data, fileName: self.getFileName()){
+                (file, error) in
+                self.handleUploadResponse(file, error: error)
+            }
+        }else{
+            self.presentsFailure("Failed To Apply Filter")
         }
+
     }
+    
+    func applyFilterCode(image : UIImage) -> Bool{
+        
+        self.blackAndWhite(image)
+        return true
+    }
+    
+    func getFileName() -> String{
+        return "Le File Name" + String(arc4random_uniform(100))
+    }
+    
 }
