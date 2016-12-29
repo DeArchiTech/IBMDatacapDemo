@@ -60,6 +60,15 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
         self.vc?.presentsFailure()
     }
     
+    func testGetImageFile(){
+        let image = self.vc?.getImageFile()
+        XCTAssertNotNil(image)
+    }
+    
+    func testUpload(){
+        self.vc?.upload(self.getImageData())
+    }
+    
     func getFileName() -> String{
         return "Le File Name" + String(arc4random_uniform(100))
     }

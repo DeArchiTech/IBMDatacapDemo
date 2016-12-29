@@ -18,7 +18,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     let folderID = "0"
     
     enum IBMEditTool:Int {
-        case Deskew = 0, Crop, BW, Grayscale, Rotate, Edge, Count
+        case Deskew = 0, Crop, BW, Grayscale, Rotate, Edge, Upload, Count
     }
     
     @IBOutlet weak var pageImage:UIImageView!
@@ -73,6 +73,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         case .Rotate: return "Rotate 90"
         case .Edge: return "Detect Edges"
         case .Count: return ""
+        case .Upload: return "Upload"
         }
     }
     
@@ -102,6 +103,8 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
             rotateImage(image)
         case .Edge:
             detectEdges(image)
+        case .Upload:
+            self.upload(self.getImageFile()!)
         case .Count:
             return
         }
@@ -111,7 +114,6 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     @IBAction func resetImage(sender: AnyObject) {
         modifiedImage = originalImage
     }
-    
     
     //MARK: Tools
     func deskew(image:UIImage) {
@@ -251,4 +253,18 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func getImageFile() -> UIImage?{
+        return self.modifiedImage
+    }
+    
+    func upload(image : UIImage) {
+        //1)Upload It
+        let util = ImageUtil.init()
+        let imageFileName = "Upload File"
+        let data : NSData = util.createBase64(image)
+        self.uploadImage(data, fileName: imageFileName){
+            (file, error) in
+            self.handleUploadResponse(file, error: error)
+        }
+    }
 }

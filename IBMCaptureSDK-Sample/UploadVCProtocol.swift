@@ -19,4 +19,6 @@ protocol UploadVCProtocol{
     
     func presentsFailure()
     
+    func getImageFile() -> UIImage?
+    
 }
