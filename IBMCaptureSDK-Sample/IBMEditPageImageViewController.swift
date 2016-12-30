@@ -104,7 +104,8 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         case .Edge:
             detectEdges(image)
         case .Upload:
-            self.upload(self.getImageData())
+            self.addPopUp()
+//            self.upload(self.getImageData())
         case .Count:
             return
         }
@@ -237,11 +238,16 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
-    func getErrorMessage(error : NSError) -> String{
-        let key = "com.box.contentsdk.jsonerrorresponse"
-        var errorResponse = error.userInfo[key] as! NSDictionary
-        let errorMessageKey = "message"
-        return errorResponse[errorMessageKey] as! String
+    func getErrorMessage(error : NSError?) -> String?{
+        if error == nil {
+            return nil
+        }else {
+            let key = "com.box.contentsdk.jsonerrorresponse"
+            var errorResponse = error!.userInfo[key] as! NSDictionary
+            let errorMessageKey = "message"
+            return errorResponse[errorMessageKey] as! String
+        }
+
     }
     
     func presentsSuccess(msg : String?){
@@ -272,16 +278,15 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func getImageFile() -> UIImage?{
-        return self.modifiedImage
+        return (pageImage.image ?? originalImage)
     }
     
-    func upload(data : NSData) {
+    func uploadAction(fileName : String) {
         
         //1)Apply Filter Code
-        let image = (pageImage.image ?? originalImage)
-        if self.applyFilterCode(image!){
+        if self.applyFilterCode(self.getImageFile()!){
             //2)Upload It
-            self.uploadImage(data, fileName: self.getFileName()){
+            self.uploadImage(self.getImageData(), fileName: fileName){
                 (file, error) in
                 self.handleUploadResponse(file, error: error)
             }
@@ -299,6 +304,27 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     
     func getFileName() -> String{
         return "Le File Name" + String(arc4random_uniform(100))
+    }
+    
+    func addPopUp() -> Bool{
+        
+        //1. Create the alert controller.
+        var alert = UIAlertController(title: "Alert", message: "Please enter a name", preferredStyle: .Alert)
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.text = "iOS Image"
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [weak alert] (action) -> Void in
+            let textField = alert!.textFields![0] as UITextField
+            self.uploadAction(textField.text!)
+            }))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+        return true
+        
     }
     
 }

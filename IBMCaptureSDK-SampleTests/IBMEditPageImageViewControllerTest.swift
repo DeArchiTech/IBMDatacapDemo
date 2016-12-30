@@ -61,13 +61,18 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     }
     
     func testUpload(){
-        self.vc?.upload(self.getImageData())
+        self.vc?.upload(self.getImageData(), fileName: self.getFileName())
     }
     
     func testApplyFilter(){
         let bundle = NSBundle(forClass: self.dynamicType)
         let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
         let result = self.vc?.applyFilterCode(img!)
+        XCTAssertTrue(result!)
+    }
+    
+    func testPresentsPopup(){
+        let result = self.vc?.addPopUp()
         XCTAssertTrue(result!)
     }
     
