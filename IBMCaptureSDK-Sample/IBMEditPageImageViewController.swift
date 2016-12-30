@@ -104,8 +104,12 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         case .Edge:
             detectEdges(image)
         case .Upload:
-            self.addPopUp()
-//            self.upload(self.getImageData())
+            //1)Apply Filter Code
+            if self.applyFilterCode(self.getImageFile()!){
+                self.addPopUp()
+            }else{
+                self.presentsFailure("Failed To Apply Filter")
+            }
         case .Count:
             return
         }
@@ -278,20 +282,17 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func getImageFile() -> UIImage?{
-        return (pageImage.image ?? originalImage)
+        let image = pageImage.image ?? originalImage
+        return image
     }
     
-    func uploadAction(fileName : String) {
+    func uploadAction(fileNamePrefix : String) {
         
-        //1)Apply Filter Code
-        if self.applyFilterCode(self.getImageFile()!){
-            //2)Upload It
-            self.uploadImage(self.getImageData(), fileName: fileName){
-                (file, error) in
-                self.handleUploadResponse(file, error: error)
-            }
-        }else{
-            self.presentsFailure("Failed To Apply Filter")
+        //Upload It
+        let fileName = fileNamePrefix + " "  + self.getDateString()
+        self.uploadImage(self.getImageData(), fileName: fileName){
+            (file, error) in
+            self.handleUploadResponse(file, error: error)
         }
 
     }
@@ -307,7 +308,6 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func addPopUp() -> Bool{
-        
         //1. Create the alert controller.
         var alert = UIAlertController(title: "Alert", message: "Please enter a name", preferredStyle: .Alert)
         //2. Add the text field. You can configure it however you need.
@@ -324,6 +324,15 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
         return true
+    }
+    
+    func getDateString() -> String{
+        
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd/HH/mm"
+        //"dd.MM.yy"
+        return formatter.stringFromDate(date)
         
     }
     

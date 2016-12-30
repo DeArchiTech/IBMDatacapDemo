@@ -61,7 +61,7 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     }
     
     func testUpload(){
-        self.vc?.upload(self.getImageData(), fileName: self.getFileName())
+        self.vc?.uploadAction(self.getFileName())
     }
     
     func testApplyFilter(){
@@ -74,6 +74,15 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     func testPresentsPopup(){
         let result = self.vc?.addPopUp()
         XCTAssertTrue(result!)
+    }
+    
+    func testGetDateString(){
+        
+        let result : String = (self.vc?.getDateString())!
+        print(result)
+        let count = result.characters.count
+        XCTAssert(count > 0)
+        
     }
     
     func getFileName() -> String{
