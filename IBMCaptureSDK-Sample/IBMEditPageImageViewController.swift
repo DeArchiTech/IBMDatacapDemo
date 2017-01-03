@@ -295,7 +295,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
             self.handleUploadResponse(file, error: error)
         }
 
-    }
+    } 
     
     func applyFilterCode(image : UIImage) -> Bool{
         
@@ -330,7 +330,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         
         let date = NSDate()
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd/HH/mm"
+        formatter.dateFormat = "yyyy-MM-dd-HH-mm"
         //"dd.MM.yy"
         return formatter.stringFromDate(date)
         
