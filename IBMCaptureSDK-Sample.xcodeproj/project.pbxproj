@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
-		2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		220A02FD1E1DCE1D00DA9ED5 /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 22C0EDCC1E04C8C0007A3EEF /* Frameworks */; };
 		2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
 		2215FF311E0B4C9500521973 /* BoxUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */; };
 		2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */; };
@@ -25,11 +24,43 @@
 		22A7E5CA1E04C8F90075EF37 /* IBMCaptureSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22A7E5CB1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		22A7E5CC1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		22A7E5CF1E04C90D0075EF37 /* box-ios-sdk in Resources */ = {isa = PBXBuildFile; fileRef = 22A7E5CE1E04C90D0075EF37 /* box-ios-sdk */; };
-		22C0EDCD1E04C8C0007A3EEF /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 22C0EDCC1E04C8C0007A3EEF /* Frameworks */; };
 		22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */; };
 		22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */; };
 		22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B721E1491200081A0A9 /* ImageUtil.swift */; };
+		22F510F61E1EEC640024E7B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F51E1EEC640024E7B2 /* Images.xcassets */; };
+		22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */; };
+		22F511111E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */; };
+		22F511121E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FA1E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png */; };
+		22F511131E1EEEFF0024E7B2 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FB1E1EEEFF0024E7B2 /* AppIcon29x29.png */; };
+		22F511141E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FC1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png */; };
+		22F511151E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FD1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png */; };
+		22F511161E1EEEFF0024E7B2 /* AppIcon29x29~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FE1E1EEEFF0024E7B2 /* AppIcon29x29~ipad.png */; };
+		22F511171E1EEEFF0024E7B2 /* AppIcon40x40~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510FF1E1EEEFF0024E7B2 /* AppIcon40x40~ipad.png */; };
+		22F511181E1EEEFF0024E7B2 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511001E1EEEFF0024E7B2 /* AppIcon50x50.png */; };
+		22F511191E1EEEFF0024E7B2 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511011E1EEEFF0024E7B2 /* AppIcon50x50@2x.png */; };
+		22F5111A1E1EEEFF0024E7B2 /* AppIcon57x57~2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511021E1EEEFF0024E7B2 /* AppIcon57x57~2x.png */; };
+		22F5111B1E1EEEFF0024E7B2 /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511031E1EEEFF0024E7B2 /* AppIcon58x58.png */; };
+		22F5111C1E1EEEFF0024E7B2 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511041E1EEEFF0024E7B2 /* AppIcon60x60.png */; };
+		22F5111D1E1EEEFF0024E7B2 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511051E1EEEFF0024E7B2 /* AppIcon72x72.png */; };
+		22F5111E1E1EEEFF0024E7B2 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511061E1EEEFF0024E7B2 /* AppIcon72x72@2x.png */; };
+		22F5111F1E1EEEFF0024E7B2 /* AppIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511071E1EEEFF0024E7B2 /* AppIcon76x76@2x~ipad.png */; };
+		22F511201E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511081E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png */; };
+		22F511211E1EEEFF0024E7B2 /* AppIcon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511091E1EEEFF0024E7B2 /* AppIcon80x80.png */; };
+		22F511221E1EEEFF0024E7B2 /* AppIcon80x80~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110A1E1EEEFF0024E7B2 /* AppIcon80x80~ipad.png */; };
+		22F511231E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110B1E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png */; };
+		22F511241E1EEEFF0024E7B2 /* AppIcon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110C1E1EEEFF0024E7B2 /* AppIcon87x87.png */; };
+		22F511251E1EEEFF0024E7B2 /* AppIcon120x120-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110D1E1EEEFF0024E7B2 /* AppIcon120x120-1.png */; };
+		22F511261E1EEEFF0024E7B2 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110E1E1EEEFF0024E7B2 /* AppIcon120x120.png */; };
+		22F511271E1EEEFF0024E7B2 /* AppIcon180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5110F1E1EEEFF0024E7B2 /* AppIcon180x180.png */; };
+		22F511311E1EEF130024E7B2 /* reva568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511281E1EEF130024E7B2 /* reva568h.png */; };
+		22F511321E1EEF130024E7B2 /* reva320480.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511291E1EEF130024E7B2 /* reva320480.png */; };
+		22F511331E1EEF130024E7B2 /* reva640960-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112A1E1EEF130024E7B2 /* reva640960-1.png */; };
+		22F511341E1EEF130024E7B2 /* reva640960.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112B1E1EEF130024E7B2 /* reva640960.png */; };
+		22F511351E1EEF130024E7B2 /* reva6401136-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112C1E1EEF130024E7B2 /* reva6401136-1.png */; };
+		22F511361E1EEF130024E7B2 /* reva6401136-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112D1E1EEF130024E7B2 /* reva6401136-3.png */; };
+		22F511371E1EEF130024E7B2 /* reva7501334.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112E1E1EEF130024E7B2 /* reva7501334.png */; };
+		22F511381E1EEF130024E7B2 /* reva12422208.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112F1E1EEF130024E7B2 /* reva12422208.png */; };
+		22F511391E1EEF130024E7B2 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511301E1EEF130024E7B2 /* revaDefault.png */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
@@ -114,6 +145,40 @@
 		22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadVCProtocol.swift; sourceTree = "<group>"; };
 		22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMEditPageImageViewControllerTest.swift; sourceTree = "<group>"; };
 		22F08B721E1491200081A0A9 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		22F510F51E1EEC640024E7B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x.png"; sourceTree = "<group>"; };
+		22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x~ipad.png"; sourceTree = "<group>"; };
+		22F510FA1E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20~ipad.png"; sourceTree = "<group>"; };
+		22F510FB1E1EEEFF0024E7B2 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon29x29.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon29x29.png; sourceTree = "<group>"; };
+		22F510FC1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon29x29@2x~ipad-1.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon29x29@2x~ipad-1.png"; sourceTree = "<group>"; };
+		22F510FD1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon29x29@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon29x29@2x~ipad.png"; sourceTree = "<group>"; };
+		22F510FE1E1EEEFF0024E7B2 /* AppIcon29x29~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon29x29~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon29x29~ipad.png"; sourceTree = "<group>"; };
+		22F510FF1E1EEEFF0024E7B2 /* AppIcon40x40~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon40x40~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon40x40~ipad.png"; sourceTree = "<group>"; };
+		22F511001E1EEEFF0024E7B2 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon50x50.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon50x50.png; sourceTree = "<group>"; };
+		22F511011E1EEEFF0024E7B2 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon50x50@2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		22F511021E1EEEFF0024E7B2 /* AppIcon57x57~2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon57x57~2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon57x57~2x.png"; sourceTree = "<group>"; };
+		22F511031E1EEEFF0024E7B2 /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon58x58.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon58x58.png; sourceTree = "<group>"; };
+		22F511041E1EEEFF0024E7B2 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon60x60.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon60x60.png; sourceTree = "<group>"; };
+		22F511051E1EEEFF0024E7B2 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon72x72.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon72x72.png; sourceTree = "<group>"; };
+		22F511061E1EEEFF0024E7B2 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon72x72@2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		22F511071E1EEEFF0024E7B2 /* AppIcon76x76@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon76x76@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon76x76@2x~ipad.png"; sourceTree = "<group>"; };
+		22F511081E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon76x76~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon76x76~ipad.png"; sourceTree = "<group>"; };
+		22F511091E1EEEFF0024E7B2 /* AppIcon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon80x80.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon80x80.png; sourceTree = "<group>"; };
+		22F5110A1E1EEEFF0024E7B2 /* AppIcon80x80~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon80x80~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon80x80~ipad.png"; sourceTree = "<group>"; };
+		22F5110B1E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon83.5x83.5@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon83.5x83.5@2x~ipad.png"; sourceTree = "<group>"; };
+		22F5110C1E1EEEFF0024E7B2 /* AppIcon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon87x87.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon87x87.png; sourceTree = "<group>"; };
+		22F5110D1E1EEEFF0024E7B2 /* AppIcon120x120-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon120x120-1.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon120x120-1.png"; sourceTree = "<group>"; };
+		22F5110E1E1EEEFF0024E7B2 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon120x120.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon120x120.png; sourceTree = "<group>"; };
+		22F5110F1E1EEEFF0024E7B2 /* AppIcon180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon180x180.png; path = ../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon180x180.png; sourceTree = "<group>"; };
+		22F511281E1EEF130024E7B2 /* reva568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva568h.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva568h.png; sourceTree = "<group>"; };
+		22F511291E1EEF130024E7B2 /* reva320480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva320480.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva320480.png; sourceTree = "<group>"; };
+		22F5112A1E1EEF130024E7B2 /* reva640960-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reva640960-1.png"; path = "../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva640960-1.png"; sourceTree = "<group>"; };
+		22F5112B1E1EEF130024E7B2 /* reva640960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva640960.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva640960.png; sourceTree = "<group>"; };
+		22F5112C1E1EEF130024E7B2 /* reva6401136-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reva6401136-1.png"; path = "../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva6401136-1.png"; sourceTree = "<group>"; };
+		22F5112D1E1EEF130024E7B2 /* reva6401136-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reva6401136-3.png"; path = "../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva6401136-3.png"; sourceTree = "<group>"; };
+		22F5112E1E1EEF130024E7B2 /* reva7501334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva7501334.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva7501334.png; sourceTree = "<group>"; };
+		22F5112F1E1EEF130024E7B2 /* reva12422208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva12422208.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva12422208.png; sourceTree = "<group>"; };
+		22F511301E1EEF130024E7B2 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = revaDefault.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/revaDefault.png; sourceTree = "<group>"; };
 		4CDC7BDE804CFA84B4EEEC72 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-SampleTests/Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58AEB377E78E5D0DF8099895 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMIDRecognitionViewController.swift; sourceTree = "<group>"; };
@@ -237,9 +302,50 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		22F510F71E1EEE810024E7B2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */,
+				22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */,
+				22F510FA1E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png */,
+				22F510FB1E1EEEFF0024E7B2 /* AppIcon29x29.png */,
+				22F510FC1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png */,
+				22F510FD1E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png */,
+				22F510FE1E1EEEFF0024E7B2 /* AppIcon29x29~ipad.png */,
+				22F510FF1E1EEEFF0024E7B2 /* AppIcon40x40~ipad.png */,
+				22F511001E1EEEFF0024E7B2 /* AppIcon50x50.png */,
+				22F511011E1EEEFF0024E7B2 /* AppIcon50x50@2x.png */,
+				22F511021E1EEEFF0024E7B2 /* AppIcon57x57~2x.png */,
+				22F511031E1EEEFF0024E7B2 /* AppIcon58x58.png */,
+				22F511041E1EEEFF0024E7B2 /* AppIcon60x60.png */,
+				22F511051E1EEEFF0024E7B2 /* AppIcon72x72.png */,
+				22F511061E1EEEFF0024E7B2 /* AppIcon72x72@2x.png */,
+				22F511071E1EEEFF0024E7B2 /* AppIcon76x76@2x~ipad.png */,
+				22F511081E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png */,
+				22F511091E1EEEFF0024E7B2 /* AppIcon80x80.png */,
+				22F5110A1E1EEEFF0024E7B2 /* AppIcon80x80~ipad.png */,
+				22F5110B1E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png */,
+				22F5110C1E1EEEFF0024E7B2 /* AppIcon87x87.png */,
+				22F5110D1E1EEEFF0024E7B2 /* AppIcon120x120-1.png */,
+				22F5110E1E1EEEFF0024E7B2 /* AppIcon120x120.png */,
+				22F5110F1E1EEEFF0024E7B2 /* AppIcon180x180.png */,
+				22F511281E1EEF130024E7B2 /* reva568h.png */,
+				22F511291E1EEF130024E7B2 /* reva320480.png */,
+				22F5112A1E1EEF130024E7B2 /* reva640960-1.png */,
+				22F5112B1E1EEF130024E7B2 /* reva640960.png */,
+				22F5112C1E1EEF130024E7B2 /* reva6401136-1.png */,
+				22F5112D1E1EEF130024E7B2 /* reva6401136-3.png */,
+				22F5112E1E1EEF130024E7B2 /* reva7501334.png */,
+				22F5112F1E1EEF130024E7B2 /* reva12422208.png */,
+				22F511301E1EEF130024E7B2 /* revaDefault.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				22F510F71E1EEE810024E7B2 /* Images */,
 				22F08B6F1E1490980081A0A9 /* Util */,
 				22F08B6C1E0C877B0081A0A9 /* Protocol */,
 				2215FF2F1E0B4B9E00521973 /* ViewControllers */,
@@ -271,6 +377,7 @@
 				784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */,
 				784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */,
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
+				22F510F51E1EEC640024E7B2 /* Images.xcassets */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -495,27 +602,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2201536A1DEF938C00B1085F /* IBMCaptureSDK.framework in Resources */,
-				2201536B1DEF938C00B1085F /* IBMCaptureUISDK.framework in Resources */,
+				220A02FD1E1DCE1D00DA9ED5 /* Frameworks in Resources */,
 				78766AA11C5A49BB0026DD68 /* barcode_ean_128.jpg in Resources */,
+				22F511131E1EEEFF0024E7B2 /* AppIcon29x29.png in Resources */,
+				22F511371E1EEF130024E7B2 /* reva7501334.png in Resources */,
 				78766A9F1C5A49BB0026DD68 /* barcode_code_93.jpg in Resources */,
+				22F511161E1EEEFF0024E7B2 /* AppIcon29x29~ipad.png in Resources */,
+				22F511341E1EEF130024E7B2 /* reva640960.png in Resources */,
+				22F5111C1E1EEEFF0024E7B2 /* AppIcon60x60.png in Resources */,
+				22F511221E1EEEFF0024E7B2 /* AppIcon80x80~ipad.png in Resources */,
+				22F511181E1EEEFF0024E7B2 /* AppIcon50x50.png in Resources */,
+				22F511331E1EEF130024E7B2 /* reva640960-1.png in Resources */,
+				22F511361E1EEF130024E7B2 /* reva6401136-3.png in Resources */,
 				78766AD01C5A4A4C0026DD68 /* tessdata in Resources */,
+				22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */,
+				22F5111A1E1EEEFF0024E7B2 /* AppIcon57x57~2x.png in Resources */,
 				78766AA71C5A49BB0026DD68 /* barcode_upc_a.jpg in Resources */,
 				78766AA21C5A49BB0026DD68 /* barcode_ean_13_sup.jpg in Resources */,
 				78766AA51C5A49BB0026DD68 /* barcode_itf.jpg in Resources */,
+				22F511311E1EEF130024E7B2 /* reva568h.png in Resources */,
 				78766AA91C5A49BB0026DD68 /* carloan.png in Resources */,
 				78766AAA1C5A49BB0026DD68 /* some_barcodes.jpg in Resources */,
+				22F5111F1E1EEEFF0024E7B2 /* AppIcon76x76@2x~ipad.png in Resources */,
+				22F511171E1EEEFF0024E7B2 /* AppIcon40x40~ipad.png in Resources */,
+				22F511121E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png in Resources */,
+				22F511191E1EEEFF0024E7B2 /* AppIcon50x50@2x.png in Resources */,
+				22F510F61E1EEC640024E7B2 /* Images.xcassets in Resources */,
+				22F5111B1E1EEEFF0024E7B2 /* AppIcon58x58.png in Resources */,
+				22F5111D1E1EEEFF0024E7B2 /* AppIcon72x72.png in Resources */,
+				22F511201E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png in Resources */,
+				22F511151E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png in Resources */,
+				22F511111E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png in Resources */,
 				78766AA01C5A49BB0026DD68 /* barcode_data_matrix.jpg in Resources */,
-				22C0EDCD1E04C8C0007A3EEF /* Frameworks in Resources */,
-				22A7E5CF1E04C90D0075EF37 /* box-ios-sdk in Resources */,
 				78766A9D1C5A49BB0026DD68 /* barcode_code_128.jpg in Resources */,
 				78766AAC1C5A49BB0026DD68 /* LaunchScreen.storyboard in Resources */,
+				22F511251E1EEEFF0024E7B2 /* AppIcon120x120-1.png in Resources */,
 				78766AAB1C5A49BB0026DD68 /* IBMStoryboard.storyboard in Resources */,
 				78766A9C1C5A49BB0026DD68 /* barcode_aztec.jpg in Resources */,
 				78766AA31C5A49BB0026DD68 /* barcode_ean_8.jpg in Resources */,
 				78766A9B1C5A49BB0026DD68 /* Assets.xcassets in Resources */,
+				22F511241E1EEEFF0024E7B2 /* AppIcon87x87.png in Resources */,
+				22F511321E1EEF130024E7B2 /* reva320480.png in Resources */,
 				78766A9E1C5A49BB0026DD68 /* barcode_code_39.jpg in Resources */,
 				78766AA61C5A49BB0026DD68 /* barcode_qr_code.png in Resources */,
+				22F511391E1EEF130024E7B2 /* revaDefault.png in Resources */,
+				22F511261E1EEEFF0024E7B2 /* AppIcon120x120.png in Resources */,
+				22F511381E1EEF130024E7B2 /* reva12422208.png in Resources */,
+				22F511231E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
+				22F511351E1EEF130024E7B2 /* reva6401136-1.png in Resources */,
+				22F5111E1E1EEEFF0024E7B2 /* AppIcon72x72@2x.png in Resources */,
+				22F511211E1EEEFF0024E7B2 /* AppIcon80x80.png in Resources */,
+				22F511271E1EEEFF0024E7B2 /* AppIcon180x180.png in Resources */,
+				22F511141E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png in Resources */,
 				78766AA41C5A49BB0026DD68 /* barcode_ean_pdf_417.jpg in Resources */,
 				78766AA81C5A49BB0026DD68 /* barcode_upc_e.jpg in Resources */,
 			);
@@ -814,7 +952,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,7 +1009,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -888,8 +1026,10 @@
 					"-framework",
 					IBMCaptureSDK,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions.datacap;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
@@ -902,7 +1042,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -919,8 +1059,10 @@
 					"-framework",
 					IBMCaptureSDK,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions.datacap;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
