@@ -450,13 +450,14 @@
 				TargetAttributes = {
 					2279A1541E03294E00E453E8 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = J9T57DG7T3;
+						DevelopmentTeam = 9GB27LE5A2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F908CD391C3E7553009CBCCB;
 					};
 					F908CD391C3E7553009CBCCB = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = J9T57DG7T3;
+						DevelopmentTeam = 9GB27LE5A2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -729,7 +730,8 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -753,7 +755,8 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -787,9 +790,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -835,9 +840,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -864,7 +871,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -879,7 +888,7 @@
 					"-framework",
 					IBMCaptureSDK,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.IBMDatacapDemoReva;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -893,7 +902,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -908,7 +919,7 @@
 					"-framework",
 					IBMCaptureSDK,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.IBMDatacapDemoReva;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
