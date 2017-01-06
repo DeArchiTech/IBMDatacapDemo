@@ -562,13 +562,13 @@
 					2279A1541E03294E00E453E8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 9GB27LE5A2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = F908CD391C3E7553009CBCCB;
 					};
 					F908CD391C3E7553009CBCCB = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9GB27LE5A2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -882,11 +882,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CDC7BDE804CFA84B4EEEC72 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -907,11 +906,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E83B8B7CC1DA1CBFDB901435 /* Pods-IBMCaptureSDK-SampleTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1028,7 +1026,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1046,8 +1044,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions.datacap;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "c616f851-e3f2-4c51-8859-608337566d20";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
@@ -1061,7 +1059,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1079,8 +1077,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revasolutions.datacap;
 				PRODUCT_NAME = "IBMCaptureSDK-Sample";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "c616f851-e3f2-4c51-8859-608337566d20";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBMCaptureSDK-Sample/IBMCaptureSDK-Sample-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
