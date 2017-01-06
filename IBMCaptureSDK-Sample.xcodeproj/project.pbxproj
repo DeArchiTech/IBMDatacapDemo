@@ -61,6 +61,7 @@
 		22F511371E1EEF130024E7B2 /* reva7501334.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112E1E1EEF130024E7B2 /* reva7501334.png */; };
 		22F511381E1EEF130024E7B2 /* reva12422208.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5112F1E1EEF130024E7B2 /* reva12422208.png */; };
 		22F511391E1EEF130024E7B2 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F511301E1EEF130024E7B2 /* revaDefault.png */; };
+		22F5113C1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5113B1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
@@ -179,6 +180,7 @@
 		22F5112E1E1EEF130024E7B2 /* reva7501334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva7501334.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva7501334.png; sourceTree = "<group>"; };
 		22F5112F1E1EEF130024E7B2 /* reva12422208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reva12422208.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/reva12422208.png; sourceTree = "<group>"; };
 		22F511301E1EEF130024E7B2 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = revaDefault.png; path = ../../../Downloads/Images.xcassets/LaunchImage.launchimage/revaDefault.png; sourceTree = "<group>"; };
+		22F5113B1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon83.5x83.5@2x~ipad_.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon83.5x83.5@2x~ipad_.png"; sourceTree = "<group>"; };
 		4CDC7BDE804CFA84B4EEEC72 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-SampleTests/Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58AEB377E78E5D0DF8099895 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMIDRecognitionViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 		22F510F71E1EEE810024E7B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22F5113B1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png */,
 				22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */,
 				22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */,
 				22F510FA1E1EEEFF0024E7B2 /* AppIcon20x20~ipad.png */,
@@ -618,6 +621,7 @@
 				78766AD01C5A4A4C0026DD68 /* tessdata in Resources */,
 				22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */,
 				22F5111A1E1EEEFF0024E7B2 /* AppIcon57x57~2x.png in Resources */,
+				22F5113C1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png in Resources */,
 				78766AA71C5A49BB0026DD68 /* barcode_upc_a.jpg in Resources */,
 				78766AA21C5A49BB0026DD68 /* barcode_ean_13_sup.jpg in Resources */,
 				78766AA51C5A49BB0026DD68 /* barcode_itf.jpg in Resources */,

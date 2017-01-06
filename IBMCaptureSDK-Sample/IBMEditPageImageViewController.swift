@@ -246,12 +246,13 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
         if error == nil {
             return nil
         }else {
-            let key = "com.box.contentsdk.jsonerrorresponse"
-            var errorResponse = error!.userInfo[key] as! NSDictionary
-            let errorMessageKey = "message"
-            return errorResponse[errorMessageKey] as! String
+            return "An Error Has Occured"
+            //TODO REFACTOR!!!
+//            let key = "com.box.contentsdk.jsonerrorresponse"
+//            var errorResponse = error!.userInfo.first as! NSDictionary
+//            let errorMessageKey = "message"
+//            return errorResponse[errorMessageKey] as! String
         }
-
     }
     
     func presentsSuccess(msg : String?){
