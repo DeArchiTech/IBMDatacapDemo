@@ -534,11 +534,10 @@
 				F908CD361C3E7553009CBCCB /* Sources */,
 				F908CD371C3E7553009CBCCB /* Frameworks */,
 				F908CD381C3E7553009CBCCB /* Resources */,
-				B76076241C68B04500927117 /* Strip Frameworks */,
 				EBDBA301327083EB4C1399FE /* [CP] Embed Pods Frameworks */,
 				F071FD056C81A1057C1FEBE9 /* [CP] Copy Pods Resources */,
 				22A7E5CD1E04C8F90075EF37 /* Embed Frameworks */,
-				22F5113A1E1F15810024E7B2 /* ShellScript */,
+				22F5113A1E1F15810024E7B2 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -667,13 +666,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22F5113A1E1F15810024E7B2 /* ShellScript */ = {
+		22F5113A1E1F15810024E7B2 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,20 +724,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
-		};
-		B76076241C68B04500927117 /* Strip Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Frameworks/IBMCaptureSDK.framework/strip_framework.sh\"\n\"${SRCROOT}/Frameworks/IBMCaptureUISDK.framework/strip_framework.sh\" ";
 		};
 		B76076471C68FFDA00927117 /* Check presence of frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
