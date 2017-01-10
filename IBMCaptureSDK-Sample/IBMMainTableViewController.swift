@@ -96,8 +96,8 @@ class IBMMainTableViewController: UITableViewController {
         return imageEditingController
     }
     
-    func login() {
-        
-        
+    func showPopUp() -> Bool{
+        return false
     }
+    
 }

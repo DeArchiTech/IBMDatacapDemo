@@ -19,6 +19,7 @@
 		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
 		2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceTest.swift */; };
+		2299C05A1E244D4A00836DFA /* IBMMainTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2299C0591E244D4A00836DFA /* IBMMainTableViewControllerTest.swift */; };
 		22A7E5C61E04C8E50075EF37 /* BoxContentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223CF3571E04C832004F2B48 /* BoxContentSDK.framework */; };
 		22A7E5C91E04C8F90075EF37 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		22A7E5CA1E04C8F90075EF37 /* IBMCaptureSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -141,6 +142,7 @@
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
 		2279A1591E03294F00E453E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2299C0591E244D4A00836DFA /* IBMMainTableViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMMainTableViewControllerTest.swift; sourceTree = "<group>"; };
 		22A7E5CE1E04C90D0075EF37 /* box-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "box-ios-sdk"; path = "Pods/box-ios-sdk"; sourceTree = "<group>"; };
 		22C0EDCC1E04C8C0007A3EEF /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadVCProtocol.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */,
 				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
 				22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */,
+				2299C0591E244D4A00836DFA /* IBMMainTableViewControllerTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
@@ -534,6 +537,7 @@
 				F908CD361C3E7553009CBCCB /* Sources */,
 				F908CD371C3E7553009CBCCB /* Frameworks */,
 				F908CD381C3E7553009CBCCB /* Resources */,
+				2299C05B1E2461C100836DFA /* Strip Framework */,
 				EBDBA301327083EB4C1399FE /* [CP] Embed Pods Frameworks */,
 				F071FD056C81A1057C1FEBE9 /* [CP] Copy Pods Resources */,
 				22A7E5CD1E04C8F90075EF37 /* Embed Frameworks */,
@@ -666,6 +670,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2299C05B1E2461C100836DFA /* Strip Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		22F5113A1E1F15810024E7B2 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -794,6 +812,7 @@
 			files = (
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
+				2299C05A1E244D4A00836DFA /* IBMMainTableViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
 			);
@@ -988,6 +1007,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
