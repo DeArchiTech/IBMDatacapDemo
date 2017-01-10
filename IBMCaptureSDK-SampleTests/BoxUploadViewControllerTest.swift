@@ -17,7 +17,7 @@ class BoxUploadViewControllerTest : XCTestCase{
     override func setUp() {
         super.setUp()
         self.vc = BoxUploadViewController()
-        self.service = BoxService()
+        self.service = BoxService.init()
         self.vc?.service = self.service
     }
     

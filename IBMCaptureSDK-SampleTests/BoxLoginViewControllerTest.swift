@@ -16,7 +16,7 @@ class BoxLoginViewControllerTest: XCTestCase{
     override func setUp() {
         super.setUp()
         self.vc = BoxLoginViewController()
-        self.vc?.service = BoxService.init()
+        self.vc?.service = BoxService()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
