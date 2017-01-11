@@ -10,7 +10,17 @@ import IBMCaptureSDK
 import IBMCaptureUISDK
 
 class IBMMainTableViewController: UITableViewController {
-
+    
+    static var firstTimeUsing : Bool = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if IBMMainTableViewController.firstTimeUsing{
+            self.showPopUp()
+            IBMMainTableViewController.firstTimeUsing = false
+        }
+    }
+    
     enum IBMMainTableSegue:String {
         case IBMMainToBatchSegue = "IBMMainToBatchSegue",
         IBMMainToImageEngineSegue = "IBMMainToImageEngineSegue",
@@ -97,7 +107,18 @@ class IBMMainTableViewController: UITableViewController {
     }
     
     func login() {
-        
-        
     }
+    
+    func showPopUp(){
+        let message = "Please Authenticate with your BOX Account"
+        let alertController = UIAlertController(title: "Authentication is needed", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func firstLoad() -> Bool{
+        return !IBMMainTableViewController.firstTimeUsing
+    }
+    
 }
