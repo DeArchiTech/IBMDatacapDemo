@@ -10,23 +10,23 @@ import XCTest
 
 class IBMMainTableViewControllerTest : XCTestCase{
     
-    var vc : IBMMainTableViewController?
-    var service : BoxService = BoxService.init()
-    
-    override func setUp() {
-        super.setUp()
-        var storyboard: UIStoryboard = UIStoryboard(name: "IBMStoryboard", bundle: nil)
-        self.vc = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! IBMMainTableViewController
-        self.vc!.loadView()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
-    func testShowPopup(){
-        let result : Bool? = self.vc?.showPopUp()
-        XCTAssertTrue(result!)
-    }
+//    var vc : IBMMainTableViewController?
+//    var service : BoxService = BoxService.init()
+//    
+//    override func setUp() {
+//        super.setUp()
+//        var storyboard: UIStoryboard = UIStoryboard(name: "IBMStoryboard", bundle: nil)
+//        self.vc = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! IBMMainTableViewController
+//        self.vc!.loadView()
+//    }
+//    
+//    override func tearDown() {
+//        super.tearDown()
+//    }
+//    
+//    func testShowPopup(){
+//        let result : Bool? = self.vc?.showPopUp()
+//        XCTAssertTrue(result!)
+//    }
 
 }

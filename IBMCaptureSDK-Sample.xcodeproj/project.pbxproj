@@ -25,6 +25,13 @@
 		22A7E5CA1E04C8F90075EF37 /* IBMCaptureSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22A7E5CB1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		22A7E5CC1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22CF20981E256F63009EB0C7 /* BoxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */; };
+		22CF20991E256F66009EB0C7 /* BoxUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */; };
+		22CF209A1E256FC1009EB0C7 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
+		22CF209B1E2572CA009EB0C7 /* UploadVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */; };
+		22CF209F1E257BA6009EB0C7 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B721E1491200081A0A9 /* ImageUtil.swift */; };
+		22CF20A11E258162009EB0C7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78766A6D1C5A49BB0026DD68 /* MBProgressHUD.m */; };
+		22CF20A41E259A7E009EB0C7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78766A6D1C5A49BB0026DD68 /* MBProgressHUD.m */; };
 		22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */; };
 		22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */; };
 		22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B721E1491200081A0A9 /* ImageUtil.swift */; };
@@ -66,7 +73,6 @@
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
-		78766A9A1C5A49BB0026DD68 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78766A6D1C5A49BB0026DD68 /* MBProgressHUD.m */; };
 		78766A9B1C5A49BB0026DD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
 		78766A9C1C5A49BB0026DD68 /* barcode_aztec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78766A701C5A49BB0026DD68 /* barcode_aztec.jpg */; };
 		78766A9D1C5A49BB0026DD68 /* barcode_code_128.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78766A711C5A49BB0026DD68 /* barcode_code_128.jpg */; };
@@ -271,7 +277,6 @@
 		2215FF2F1E0B4B9E00521973 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				78766A8C1C5A49BB0026DD68 /* IBMEditPageImageViewController.swift */,
 				2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */,
 				2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */,
 			);
@@ -289,6 +294,13 @@
 				2279A1591E03294F00E453E8 /* Info.plist */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
+			sourceTree = "<group>";
+		};
+		22CF20A81E25A83D009EB0C7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		22F08B6C1E0C877B0081A0A9 /* Protocol */ = {
@@ -351,6 +363,7 @@
 		78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				22CF20A81E25A83D009EB0C7 /* Helper */,
 				22F510F71E1EEE810024E7B2 /* Images */,
 				22F08B6F1E1490980081A0A9 /* Util */,
 				22F08B6C1E0C877B0081A0A9 /* Protocol */,
@@ -363,6 +376,7 @@
 				78766AC21C5A4A190026DD68 /* Frameworks */,
 				78766A6A1C5A49BB0026DD68 /* 3rd party */,
 				78766A831C5A49BB0026DD68 /* IBMAppDelegate.swift */,
+				78766A8C1C5A49BB0026DD68 /* IBMEditPageImageViewController.swift */,
 				78766A991C5A49BB0026DD68 /* UIImage+Extension.swift */,
 				78766A841C5A49BB0026DD68 /* IBMBarcodeTableViewController.swift */,
 				78766A851C5A49BB0026DD68 /* IBMBarcodeViewController.swift */,
@@ -399,8 +413,8 @@
 		78766A6B1C5A49BB0026DD68 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				78766A6C1C5A49BB0026DD68 /* MBProgressHUD.h */,
 				78766A6D1C5A49BB0026DD68 /* MBProgressHUD.m */,
+				78766A6C1C5A49BB0026DD68 /* MBProgressHUD.h */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -810,11 +824,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CF20A11E258162009EB0C7 /* MBProgressHUD.m in Sources */,
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
+				22CF209A1E256FC1009EB0C7 /* BoxService.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
+				22CF209F1E257BA6009EB0C7 /* ImageUtil.swift in Sources */,
 				2299C05A1E244D4A00836DFA /* IBMMainTableViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
+				22CF209B1E2572CA009EB0C7 /* UploadVCProtocol.swift in Sources */,
+				22CF20991E256F66009EB0C7 /* BoxUploadViewController.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
+				22CF20981E256F63009EB0C7 /* BoxLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,8 +868,8 @@
 				78766AB31C5A49BB0026DD68 /* IBMDemo.swift in Sources */,
 				78766AB81C5A49BB0026DD68 /* IBMMainTableViewController.swift in Sources */,
 				78766ABE1C5A49BB0026DD68 /* IBMUIImageEffects.swift in Sources */,
-				78766A9A1C5A49BB0026DD68 /* MBProgressHUD.m in Sources */,
 				78766AAD1C5A49BB0026DD68 /* IBMAppDelegate.swift in Sources */,
+				22CF20A41E259A7E009EB0C7 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,9 +916,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = "IBMCaptureSDK-SampleTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.gml.io.IBMCaptureSDK-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -920,9 +942,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = "IBMCaptureSDK-SampleTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.gml.io.IBMCaptureSDK-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
@@ -953,6 +977,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -973,7 +998,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1003,6 +1028,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1018,6 +1044,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1040,8 +1067,10 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/box-ios-sdk",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "IBMCaptureSDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					IBMCaptureUISDK,
@@ -1073,8 +1102,10 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/box-ios-sdk",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "IBMCaptureSDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					IBMCaptureUISDK,
