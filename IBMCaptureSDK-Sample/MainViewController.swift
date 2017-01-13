@@ -68,8 +68,8 @@ import Foundation
     
     func pushImageEditViewController(pickedImage: UIImage) -> Bool{
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("IBMEditPageImageViewController") as! IBMEditPageImageViewController
-        vc.originalImage = pickedImage
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("recognitionViewController") as! IBMIDRecognitionViewController
+        vc.imageView.image = pickedImage
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         return true

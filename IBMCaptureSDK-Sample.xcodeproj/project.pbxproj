@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2211F0381E2867300055CB19 /* pod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2211F0371E2867300055CB19 /* pod.jpg */; };
 		2211F0391E286A5F0055CB19 /* pod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2211F0371E2867300055CB19 /* pod.jpg */; };
+		2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2211F03A1E287C1C0055CB19 /* IBMRegControllerTest.swift */; };
 		2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78766A6E1C5A49BB0026DD68 /* Assets.xcassets */; };
 		2215FF311E0B4C9500521973 /* BoxUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */; };
 		2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */; };
@@ -140,6 +141,7 @@
 
 /* Begin PBXFileReference section */
 		2211F0371E2867300055CB19 /* pod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pod.jpg; sourceTree = "<group>"; };
+		2211F03A1E287C1C0055CB19 /* IBMRegControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMRegControllerTest.swift; sourceTree = "<group>"; };
 		2215FF301E0B4C9500521973 /* BoxUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewController.swift; sourceTree = "<group>"; };
 		2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewControllerTest.swift; sourceTree = "<group>"; };
 		2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */,
 				22C65A631E2708CE000E116B /* MainViewControllerTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
+				2211F03A1E287C1C0055CB19 /* IBMRegControllerTest.swift */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
+				2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */,
 				22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
 			);
