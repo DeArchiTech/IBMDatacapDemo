@@ -4,7 +4,6 @@
 //
 //  Copyright (c) 2016 IBM Corporation. All rights reserved.
 //
-
 import UIKit
 import IBMCaptureSDK
 import IBMCaptureUISDK
@@ -27,9 +26,6 @@ class IBMCameraViewController: UIViewController, ICPCameraViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         self.cameraView.delegate = self
         
         //Optional setup
@@ -45,8 +41,6 @@ class IBMCameraViewController: UIViewController, ICPCameraViewDelegate {
         
         self.cameraView.restartPreview()
     }
-    
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
