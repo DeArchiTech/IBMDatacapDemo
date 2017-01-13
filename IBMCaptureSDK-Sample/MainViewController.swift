@@ -48,6 +48,8 @@ import Foundation
             imagePicker.allowsEditing = false
             imagePicker.delegate = self
             self.presentViewController(imagePicker, animated: true, completion: nil)
+        }else{
+            self.pushImageEditViewController(UIImage(named: "pod")!)
         }
         
     }
@@ -69,7 +71,8 @@ import Foundation
     func pushImageEditViewController(pickedImage: UIImage) -> Bool{
         
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("recognitionViewController") as! IBMIDRecognitionViewController
-        vc.imageView.image = pickedImage
+        // TODO: refactor
+        //vc.imageView.image = pickedImage
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         return true

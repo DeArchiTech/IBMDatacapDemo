@@ -23,7 +23,9 @@ class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: "us_passport")
+        // TODO: refactor
+//        imageView.image = UIImage(named: "us_passport")
+        imageView.image = UIImage(named: "pod")
         let action = UIBarButtonItem(title: "Recognize", style: .Plain, target: self, action: #selector(IBMIDRecognitionViewController.recognizeId(_:)))
         self.navigationItem.rightBarButtonItem = action
     }
