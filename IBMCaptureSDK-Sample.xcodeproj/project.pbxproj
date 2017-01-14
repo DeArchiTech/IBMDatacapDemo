@@ -20,6 +20,7 @@
 		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		224D759D1E28453A004AB51C /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 224D759C1E28453A004AB51C /* Frameworks */; };
+		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
 		2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceTest.swift */; };
 		22A7E5C61E04C8E50075EF37 /* BoxContentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223CF3571E04C832004F2B48 /* BoxContentSDK.framework */; };
@@ -148,6 +149,7 @@
 		2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewControllerTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
 		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				78766A831C5A49BB0026DD68 /* IBMAppDelegate.swift */,
 				22C65A611E270861000E116B /* MainViewController.swift */,
 				78766A991C5A49BB0026DD68 /* UIImage+Extension.swift */,
+				22500B6A1E295E4C00443D93 /* PodData.swift */,
 				78766A841C5A49BB0026DD68 /* IBMBarcodeTableViewController.swift */,
 				78766A851C5A49BB0026DD68 /* IBMBarcodeViewController.swift */,
 				78766A861C5A49BB0026DD68 /* IBMBatchTableViewController.swift */,
@@ -873,6 +876,7 @@
 				78766AB31C5A49BB0026DD68 /* IBMDemo.swift in Sources */,
 				78766AB81C5A49BB0026DD68 /* IBMMainTableViewController.swift in Sources */,
 				78766ABE1C5A49BB0026DD68 /* IBMUIImageEffects.swift in Sources */,
+				22500B6B1E295E4C00443D93 /* PodData.swift in Sources */,
 				78766A9A1C5A49BB0026DD68 /* MBProgressHUD.m in Sources */,
 				78766AAD1C5A49BB0026DD68 /* IBMAppDelegate.swift in Sources */,
 			);

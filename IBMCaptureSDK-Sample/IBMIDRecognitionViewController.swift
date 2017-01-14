@@ -11,9 +11,11 @@ import IBMCaptureSDK
 class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
 
     var data:ICPMRZData?
+    var podData:PodData?
     
     //1 - For the id processing, we gonna use and tesseract OCR engine with a trained data specific for the passport font type
-    lazy var ocrEngine = ICPTesseractOcrEngine(tessDataPrefixes: ["mrz"], andTessdataAbsolutePath: NSBundle.mainBundle().bundlePath)
+//    lazy var ocrEngine = ICPTesseractOcrEngine(tessDataPrefixes: ["mrz"], andTessdataAbsolutePath: NSBundle.mainBundle().bundlePath)
+    lazy var ocrEngine = ICPTesseractOcrEngine(tessDataPrefixes: ["eng"], andTessdataAbsolutePath: NSBundle.mainBundle().bundlePath)
     lazy var idProcessor:ICPIDProcessor = { [unowned self] in
        return ICPIDProcessor(OCREngine: self.ocrEngine)
     }()
@@ -39,12 +41,28 @@ class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
         
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         
+        let aimage : UIImage? = self.imageView.image
+        let width = aimage?.size.width
+        let height = aimage?.size.height
+        let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
+        let whiteList : String? = ""
+        let highLightChars : Bool? = false
         
-        idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
-            hud.hide(true)
-            self?.data = mrzData
-            self?.tableView?.reloadData()
+        ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
+            a,b,c in
+            print(a)
+            print(b)
+            print(c)
         }
+        
+//        idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
+//            hud.hide(true)
+//            var txt = "ABCD"
+//            print(mrzData)
+//            print(mrzString)
+//            self?.data = mrzData
+//            self?.tableView?.reloadData()
+//        }
     }
 }
 
