@@ -8,7 +8,7 @@
 import UIKit
 import IBMCaptureSDK
 
-class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
+class IBMIDRecognitionViewController: UIViewController, PODPresenter{
 
     var data:ICPMRZData?
     var podData:PodData?
@@ -38,8 +38,21 @@ class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
             tableView?.reloadData()
             return
         }
-        
-        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+
+        let regconizePOD = true
+        if regconizePOD {
+            self.recognizePOD()
+        }else {
+            let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
+                hud.hide(true)
+                self?.data = mrzData
+                self?.tableView?.reloadData()
+            }
+        }
+    }
+    
+    func recognizePOD(){
         
         let aimage : UIImage? = self.imageView.image
         let width = aimage?.size.width
@@ -47,22 +60,27 @@ class IBMIDRecognitionViewController: UIViewController, IBMPassportPresenter {
         let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
         let whiteList : String? = ""
         let highLightChars : Bool? = false
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
             a,b,c in
-            print(a)
-            print(b)
-            print(c)
+            hud.hide(true)
+            self.podData = self.createPODData(a,input: b,dict: c)
+            self.tableView?.reloadData()
         }
         
-//        idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
-//            hud.hide(true)
-//            var txt = "ABCD"
-//            print(mrzData)
-//            print(mrzString)
-//            self?.data = mrzData
-//            self?.tableView?.reloadData()
-//        }
+    }
+    
+    func createPODData(image : UIImage, input : String, dict : [String : [AnyObject]]) -> PodData {
+        return PodData.init(
+            customerSalesOrder: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            customerId: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            owner: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            customerName: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            deliveryAddress: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            ppmShipment: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true))
     }
 }
 
@@ -87,6 +105,6 @@ extension IBMIDRecognitionViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return self.tableView(tableView, cellForRowAtIndexPath: indexPath, withData: self.data)
+        return self.tableView(tableView, cellForRowAtIndexPath: indexPath, withData: self.podData)
     }
 }

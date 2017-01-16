@@ -28,6 +28,7 @@
 		22A7E5CA1E04C8F90075EF37 /* IBMCaptureSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22A7E5CB1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		22A7E5CC1E04C8F90075EF37 /* IBMCaptureUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22C63A1D1E2D5B2000569F75 /* PODPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C63A1C1E2D5B2000569F75 /* PODPresenter.swift */; };
 		22C65A601E27035F000E116B /* PODDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C65A5E1E27035F000E116B /* PODDemo.storyboard */; };
 		22C65A621E270861000E116B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C65A611E270861000E116B /* MainViewController.swift */; };
 		22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C65A631E2708CE000E116B /* MainViewControllerTest.swift */; };
@@ -155,6 +156,7 @@
 		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
 		2279A1591E03294F00E453E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A7E5CE1E04C90D0075EF37 /* box-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "box-ios-sdk"; path = "Pods/box-ios-sdk"; sourceTree = "<group>"; };
+		22C63A1C1E2D5B2000569F75 /* PODPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PODPresenter.swift; sourceTree = "<group>"; };
 		22C65A5F1E27035F000E116B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PODDemo.storyboard; sourceTree = "<group>"; };
 		22C65A611E270861000E116B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "IBMCaptureSDK-Sample/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		22C65A631E2708CE000E116B /* MainViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewControllerTest.swift; path = ../../../Downloads/MainViewControllerTest.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				78766A851C5A49BB0026DD68 /* IBMBarcodeViewController.swift */,
 				78766A861C5A49BB0026DD68 /* IBMBatchTableViewController.swift */,
 				78766A871C5A49BB0026DD68 /* IBMCameraViewController.swift */,
+				22C63A1C1E2D5B2000569F75 /* PODPresenter.swift */,
 				78766A891C5A49BB0026DD68 /* IBMCheckCountrySelectionController.swift */,
 				78766A8A1C5A49BB0026DD68 /* IBMDemo.swift */,
 				78766A8B1C5A49BB0026DD68 /* IBMDocumentTableViewController.swift */,
@@ -867,6 +870,7 @@
 				784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */,
 				22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */,
 				78766AB91C5A49BB0026DD68 /* IBMOCRViewController.swift in Sources */,
+				22C63A1D1E2D5B2000569F75 /* PODPresenter.swift in Sources */,
 				2279A1501E03293800E453E8 /* BoxService.swift in Sources */,
 				78766AAE1C5A49BB0026DD68 /* IBMBarcodeTableViewController.swift in Sources */,
 				784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */,
