@@ -12,15 +12,56 @@ import UIKit
 
 class PodDataHelper : NSObject{
     
-    override init(){
+    var podString: String = ""
+    
+    init(podString: String){
         super.init()
+        self.podString = podString
     }
     
     func getCustomerSalesOrder() -> String {
-        return "1229082"
+        
+        var result = ""
+        for char in podString.unicodeScalars{
+            let value = char.value
+            if (value >= 48 && value <= 57){
+                result.append(Character.init(char))
+            }else{
+                if result.characters.count > 0 {
+                    break
+                }
+            }
+        }
+        return result
     }
     
     func getCustomerId() -> String {
-        return "2515167"
+        
+        var result = ""
+        var firstSetOfLettersFound = false
+        var firstSetOfDigitsFound = false
+        var secondSetOfLetttersFound = false
+        for char in podString.unicodeScalars{
+            let value = char.value
+            if (value >= 48 && value <= 57){
+                if !firstSetOfDigitsFound {
+                    firstSetOfDigitsFound = true
+                }
+                if secondSetOfLetttersFound {
+                    result.append(Character.init(char))
+                }
+            }else{
+                if result.characters.count == 0 {
+                    firstSetOfLettersFound = true
+                }
+                if firstSetOfLettersFound && firstSetOfDigitsFound{
+                    secondSetOfLetttersFound = true
+                }
+            }
+        }
+        return result
+        
     }
+    
+    
 }

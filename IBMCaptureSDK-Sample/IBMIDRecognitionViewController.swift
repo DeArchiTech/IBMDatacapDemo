@@ -72,10 +72,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     }
     
     func createPODData(image : UIImage, input : String, dict : [String : [AnyObject]]) -> PodData {
-        print(input)
+        let helper = PodDataHelper.init(podString: input)
         return PodData.init(
-            customerSalesOrder: ICPMRZField.init(value: "", confidence: 1, checked: true),
-            customerId: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            customerSalesOrder: ICPMRZField.init(value: helper.getCustomerSalesOrder(), confidence: 1, checked: true),
+            customerId: ICPMRZField.init(value: helper.getCustomerId(), confidence: 1, checked: true),
             owner: ICPMRZField.init(value: "", confidence: 1, checked: true),
             customerName: ICPMRZField.init(value: "", confidence: 1, checked: true),
             deliveryAddress: ICPMRZField.init(value: "", confidence: 1, checked: true),

@@ -105,21 +105,21 @@ extension PODPresenter {
         }
         switch rowData {
         case .CustomerSalesOrder:
-            return ("CustomerSalesOrder", data.customerSalesOrder.checked)
+            return (data.customerSalesOrder.value, data.customerSalesOrder.checked)
         case .CustomerId:
-            return ("CustomerId", data.customerSalesOrder.checked)
+            return (data.customerId.value, data.customerSalesOrder.checked)
         case .Owner:
-            return ("Owner", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         case .CustomerName:
-            return ("Customer Name", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         case .DeliveryAddress:
-            return ("Delivery Address", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         case .PPMShipment:
-            return ("PPM SHIPMENT", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         case .Carrier:
-            return ("Carrier", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         case .ShipmentDate:
-            return ("Shipment Date", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.customerSalesOrder.checked)
         }
         
 

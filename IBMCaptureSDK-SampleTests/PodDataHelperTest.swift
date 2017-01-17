@@ -23,7 +23,8 @@ class PodDataHelperTest: XCTestCase{
     
     func testGetCustomerSalesOrder(){
         
-        let helper = PodDataHelper.init()
+        let parsedString = "ABCDEASE1229082"
+        let helper = PodDataHelper.init(podString: parsedString)
         let result = helper.getCustomerSalesOrder()
         let expected = "1229082"
         XCTAssertEqual(result, expected)
@@ -31,9 +32,11 @@ class PodDataHelperTest: XCTestCase{
 
     func testGetCustomerId(){
         
-        let helper = PodDataHelper.init()
+        let parsedString = "ABCDEASE1229082ABCDEASE2515167"
+        let helper = PodDataHelper.init(podString: parsedString)
         let result = helper.getCustomerId()
         let expected = "2515167"
+        print(result)
         XCTAssertEqual(result, expected)
     }
     
