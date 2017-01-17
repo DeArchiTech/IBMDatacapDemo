@@ -120,7 +120,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
         if error == nil{
-            self.presentsSuccess()
+//            self.presentsSuccess()
+            self.addPopUp()
         }else{
             self.presentsFailure()
         }
