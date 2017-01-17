@@ -59,7 +59,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         let height = aimage?.size.height
         let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
         let whiteList : String? = ""
-        let highLightChars : Bool? = false
+        let highLightChars : Bool? = true
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
@@ -72,6 +72,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     }
     
     func createPODData(image : UIImage, input : String, dict : [String : [AnyObject]]) -> PodData {
+        print(input)
         return PodData.init(
             customerSalesOrder: ICPMRZField.init(value: "", confidence: 1, checked: true),
             customerId: ICPMRZField.init(value: "", confidence: 1, checked: true),
