@@ -10,6 +10,8 @@ import BoxContentSDK
 @testable import IBMCaptureSDK_Sample
 
 class IBMIDRecognitionViewController: XCTestCase{
+    @IBAction func uploadButtonClicked(sender: AnyObject) {
+    }
 
     var vc : IBMIDRecognitionViewController?
     

@@ -67,6 +67,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             hud.hide(true)
             self.podData = self.createPODData(a,input: b,dict: c)
             self.tableView?.reloadData()
+            self.pushAlertController()
         }
         
     }
@@ -83,6 +84,23 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
             shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true))
     }
+    
+    func pushAlertController() {
+        
+        var refreshAlert = UIAlertController(title: "Box Upload", message: "Would you like to upload to BOX?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+        
+    }
+    
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {
