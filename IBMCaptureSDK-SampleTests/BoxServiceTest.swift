@@ -107,6 +107,7 @@ class BoxServiceTest: XCTestCase {
                 //3)Assert After Files being uploaded
                 self.service?.createMetadataOnFile(self.getFileID(file)){
                     (metaData,error) in
+                    print(self.getMetaDataID(metaData))
                     self.validateResults(metaData, error: error)
                     exp.fulfill()
                 }
@@ -153,4 +154,12 @@ class BoxServiceTest: XCTestCase {
         return file.modelID!
     }
 
+    func printMetaDataInfo(metaData : BOXMetadata){
+        print(metaData.JSONData)
+        print(metaData.info)
+    }
+    
+    func getMetaDataID(metaData: BOXMetadata) -> String{
+        return metaData.JSONData["id"]
+    }
 }

@@ -104,8 +104,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     }
     
     func uploadToBox() {
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         self.authenticate(){
             (user,error) in
+            hud.hide(true)
             self.handleAuthenticateResponse(user, error: error)
         }
     }
@@ -166,9 +168,11 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func uploadAction(fileNamePrefix : String) {
         
         //Upload It
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         let fileName = fileNamePrefix + " "  + self.getDateString()
         self.uploadImage(self.getImageData(), fileName: fileName){
             (file, error) in
+            hud.hide(true)
             self.handleUploadResponse(file, error: error)
         }
         
@@ -185,7 +189,12 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func handleUploadResponse(file : BOXFile?, error: NSError?){
         if file != nil{
-            self.presentsUploadSuccess("")
+            let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            self.addMetaDataTemplate(file!){
+                (data,error) in
+                hud.hide(true)
+                self.presentsUploadSuccess("")
+            }
         }else{
             self.presentsUploadFailure(getErrorMessage(error!))
         }
@@ -244,6 +253,13 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
+    func addMetaDataTemplate(file : BOXFile, completionBlock : BOXMetadataBlock){
+        self.service?.createMetadataOnFile(self.getFileID(file), completionBlock: completionBlock)
+    }
+    
+    func getFileID(file :BOXFile) -> String{
+        return file.modelID!
+    }
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {
