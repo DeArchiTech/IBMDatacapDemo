@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BoxServiceTest.(testGetSpecificTemplate() -&gt; ()).(closure #1).(closure #1):BoxServiceTest.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PodDataHelperTest.testGetCustomerId() -&gt; () [inlined]:PodDataHelperTest.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BoxServiceTest.(testGetTemplates() -&gt; ()).(closure #1).(closure #1):BoxServiceTest.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BoxServiceTest.(testUploadWithNSData() -&gt; ()).(closure #1).(closure #1):BoxServiceTest.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BoxServiceTest.(testCreateMetadataOnFile() -&gt; ()).(closure #1).(closure #1):BoxServiceTest.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

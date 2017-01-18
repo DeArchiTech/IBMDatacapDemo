@@ -50,5 +50,48 @@ class BoxService{
         request.performRequestWithProgress(progressBlock, completion: completion)
         
     }
+    
+    func getBoxTemplates(completionBlock : BOXMetadataTemplatesBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let metadataTemplateRequest : BOXMetadataTemplateRequest = client.metadataTemplatesInfoRequest()
+        metadataTemplateRequest.performRequestWithCompletion(completionBlock)
+        
+    }
+    
+    func getSpecificTemplate(completionBlock : BOXMetadataTemplatesBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let scope = "global"
+        let templateString = "poddemo"
+        let request = client.metadataTemplateInfoRequestWithScope(scope, template: templateString)
+        request.performRequestWithCompletion(completionBlock)
+        
+    }
+    
+    func getTemplate(array : [AnyObject]) -> BOXMetadataTemplate{
+        
+        return array.first as! BOXMetadataTemplate
+        
+    }
+    
+    func createMetadataOnFile(fileID : String, completionBlock : BOXMetadataBlock){
+
+        let client = BOXContentClient.defaultClient()
+        let request : BOXFileUpdateRequest = client.fileUpdateRequestWithID(fileID)
+        let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: [])
+        metaDataRequest.performRequestWithCompletion(completionBlock)
+        
+    }
+    
+    func updateMetaDataForFile(metaData : BOXMetadata) -> Bool{
+        
+        let dict : [NSObject : AnyObject] = [:]
+        let data : BOXMetadata = BOXMetadata.init(JSON: dict)
+        let op : BOXMetadataUpdateOperation = BOXMetadataUpdateOperation.init(0)
+        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: op, path: "", value: "")
+        return true
+        
+    }
 
 }

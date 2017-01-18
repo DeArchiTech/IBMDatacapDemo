@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import BoxContentSDK
 @testable import IBMCaptureSDK_Sample
 
 class BoxServiceTest: XCTestCase {
@@ -56,6 +57,70 @@ class BoxServiceTest: XCTestCase {
             XCTAssertNil(error, "Error")})
     }
     
+    func testGetTemplates() {
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            //2)Second Upload After Being Authenticated
+            self.service?.getBoxTemplates(){
+                (templates,error) in
+                self.validateResults(templates, error: error)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
+    func testGetSpecificTemplate() {
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            //2)Second Upload After Being Authenticated
+            self.service?.getSpecificTemplate(){
+                (template,error) in
+                self.validateResults(template, error: error)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
+    func testCreateMetadataOnFile() {
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            self.service?.upload(self.getImageData(), folderID: self.folderID, fileName: self.getFileName()){
+                (file,error) in
+                //3)Assert After Files being uploaded
+                self.service?.createMetadataOnFile(self.getFileID(file)){
+                    (metaData,error) in
+                    self.validateResults(metaData, error: error)
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
+    func testUpdateMetaDataForFile(){
+        
+    }
+    
     func validateResults(object : AnyObject?, error : NSError?){
         if error != nil {
             print(error)
@@ -66,7 +131,7 @@ class BoxServiceTest: XCTestCase {
     
     func getFileName() -> String{
         
-        return "Le File Name" + String(arc4random_uniform(100))
+        return "The File Name" + String(arc4random_uniform(1000))
         
     }
     
@@ -78,4 +143,14 @@ class BoxServiceTest: XCTestCase {
         return imgData
         
     }
+    
+    func printFileID(file : BOXFile) {
+        print(file.modelID)
+        print(file.sequenceID)
+    }
+    
+    func getFileID(file :BOXFile) -> String{
+        return file.modelID!
+    }
+
 }

@@ -19,6 +19,8 @@
 		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		224D759D1E28453A004AB51C /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 224D759C1E28453A004AB51C /* Frameworks */; };
 		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
+		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
+		225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD171E2FF1E600B1B82F /* podSample2.png */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
 		2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceTest.swift */; };
 		22A7E5C61E04C8E50075EF37 /* BoxContentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223CF3571E04C832004F2B48 /* BoxContentSDK.framework */; };
@@ -156,6 +158,8 @@
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
 		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
+		225EBD161E2FF1E600B1B82F /* podSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample.png; sourceTree = "<group>"; };
+		225EBD171E2FF1E600B1B82F /* podSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample2.png; sourceTree = "<group>"; };
 		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
@@ -491,6 +495,8 @@
 			isa = PBXGroup;
 			children = (
 				78766A6E1C5A49BB0026DD68 /* Assets.xcassets */,
+				225EBD161E2FF1E600B1B82F /* podSample.png */,
+				225EBD171E2FF1E600B1B82F /* podSample2.png */,
 				22C63A281E2D94C600569F75 /* pod.png */,
 				22C63A201E2D920D00569F75 /* pod2.jpg */,
 				22C63A211E2D920D00569F75 /* pod3.jpg */,
@@ -698,6 +704,7 @@
 				22F511251E1EEEFF0024E7B2 /* AppIcon120x120-1.png in Resources */,
 				78766AAB1C5A49BB0026DD68 /* IBMStoryboard.storyboard in Resources */,
 				22C63A251E2D920D00569F75 /* pod3.jpg in Resources */,
+				225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */,
 				78766A9C1C5A49BB0026DD68 /* barcode_aztec.jpg in Resources */,
 				78766AA31C5A49BB0026DD68 /* barcode_ean_8.jpg in Resources */,
 				78766A9B1C5A49BB0026DD68 /* Assets.xcassets in Resources */,
@@ -713,6 +720,7 @@
 				22F511351E1EEF130024E7B2 /* reva6401136-1.png in Resources */,
 				22F5111E1E1EEEFF0024E7B2 /* AppIcon72x72@2x.png in Resources */,
 				22F511211E1EEEFF0024E7B2 /* AppIcon80x80.png in Resources */,
+				225EBD181E2FF1E600B1B82F /* podSample.png in Resources */,
 				22F511271E1EEEFF0024E7B2 /* AppIcon180x180.png in Resources */,
 				22F511141E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad-1.png in Resources */,
 				78766AA41C5A49BB0026DD68 /* barcode_ean_pdf_417.jpg in Resources */,
