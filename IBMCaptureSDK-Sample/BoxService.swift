@@ -79,18 +79,27 @@ class BoxService{
 
         let client = BOXContentClient.defaultClient()
         let request : BOXFileUpdateRequest = client.fileUpdateRequestWithID(fileID)
-        let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: [])
+        let task : [AnyObject] = [self.updateMetaDataForFile()]
+        let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: task)
         metaDataRequest.performRequestWithCompletion(completionBlock)
         
     }
     
-    func updateMetaDataForFile(metaData : BOXMetadata) -> Bool{
+    func updateMetaDataForFile() ->BOXMetadataUpdateTask{
         
-        let dict : [NSObject : AnyObject] = [:]
+        let dict : [NSObject : AnyObject] = ["Checked":"true"]
         let data : BOXMetadata = BOXMetadata.init(JSON: dict)
-        let op : BOXMetadataUpdateOperation = BOXMetadataUpdateOperation.init(0)
-        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: op, path: "", value: "")
-        return true
+        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init()
+        task.operation = BOXMetadataUpdateADD
+        return task
+        
+    }
+    
+    func readFolder(completionBlock : BOXItemsBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let request : BOXFolderItemsRequest = client.folderItemsRequestWithID("0")
+        request.performRequestWithCompletion(completionBlock)
         
     }
 

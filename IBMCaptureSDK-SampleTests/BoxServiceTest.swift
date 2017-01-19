@@ -14,10 +14,12 @@ class BoxServiceTest: XCTestCase {
     
     var service : BoxService?
     var folderID = "0"
+    let podFolder = "16978324036"
     
     override func setUp() {
         super.setUp()
         self.service = BoxService.init()
+        self.folderID = self.podFolder
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -27,6 +29,7 @@ class BoxServiceTest: XCTestCase {
     }
     
     func testAuthenticate() {
+        
         let exp = expectationWithDescription("Some Expectation To Be Filled")
         self.service?.authenticate(){
             (user,error) in
@@ -35,7 +38,6 @@ class BoxServiceTest: XCTestCase {
         }
         waitForExpectationsWithTimeout(60, handler: { error in
             XCTAssertNil(error, "Error")})
-    
     }
     
     func testUploadWithNSData() {
@@ -118,6 +120,22 @@ class BoxServiceTest: XCTestCase {
         
     }
     
+    func testReadFolder(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            self.service?.readFolder(){
+                (items, error) in
+                self.validateResults(items, error: error)
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+    }
+    
     func testUpdateMetaDataForFile(){
         
     }
@@ -160,6 +178,6 @@ class BoxServiceTest: XCTestCase {
     }
     
     func getMetaDataID(metaData: BOXMetadata) -> String{
-        return metaData.JSONData["id"]
+        return metaData.JSONData["$id"] as! String
     }
 }
