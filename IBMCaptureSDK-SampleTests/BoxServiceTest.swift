@@ -138,6 +138,27 @@ class BoxServiceTest: XCTestCase {
     
     func testUpdateMetaDataForFile(){
         
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            self.service?.upload(self.getImageData(), folderID: self.folderID, fileName: self.getFileName()){
+                (file,error) in
+                //3)Assert After Files being uploaded
+                self.service?.createMetadataOnFile(self.getFileID(file)){
+                    (metaData,error) in
+                    self.service?.updateMetaData(file.modelID){
+                        (item, error) in
+                        self.validateResults(metaData, error: error)
+                        exp.fulfill()
+                    }
+                }
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+
     }
     
     func validateResults(object : AnyObject?, error : NSError?){

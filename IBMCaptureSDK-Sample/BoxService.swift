@@ -78,19 +78,19 @@ class BoxService{
     func createMetadataOnFile(fileID : String, completionBlock : BOXMetadataBlock){
 
         let client = BOXContentClient.defaultClient()
-        let request : BOXFileUpdateRequest = client.fileUpdateRequestWithID(fileID)
-        let task : [AnyObject] = [self.updateMetaDataForFile()]
+        var task : [AnyObject] = [self.createMetaDataUpdateTask()]
+        task = []
         let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: task)
         metaDataRequest.performRequestWithCompletion(completionBlock)
         
     }
     
-    func updateMetaDataForFile() ->BOXMetadataUpdateTask{
+    func createMetaDataUpdateTask() ->BOXMetadataUpdateTask{
         
-        let dict : [NSObject : AnyObject] = ["Checked":"true"]
-        let data : BOXMetadata = BOXMetadata.init(JSON: dict)
+        let dict : [String : AnyObject] = ["checked":"true"]
         let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init()
         task.operation = BOXMetadataUpdateADD
+        task.setValuesForKeysWithDictionary(dict)
         return task
         
     }
@@ -99,6 +99,15 @@ class BoxService{
         
         let client = BOXContentClient.defaultClient()
         let request : BOXFolderItemsRequest = client.folderItemsRequestWithID("0")
+        request.performRequestWithCompletion(completionBlock)
+        
+    }
+    
+    func updateMetaData(fileID : String, completionBlock : BOXMetadataBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateADD, path: "/checked/", value: "true")
+        let request : BOXMetadataUpdateRequest = client.metadataUpdateRequestWithFileID(fileID, template: "poddemo", updateTasks: [task])
         request.performRequestWithCompletion(completionBlock)
         
     }
