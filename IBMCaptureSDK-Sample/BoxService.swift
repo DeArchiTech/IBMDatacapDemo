@@ -78,16 +78,16 @@ class BoxService{
     func createMetadataOnFile(fileID : String, completionBlock : BOXMetadataBlock){
 
         let client = BOXContentClient.defaultClient()
-        var task : [AnyObject] = [self.createMetaDataUpdateTask()]
-        task = []
-        let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: task)
+//        var task : [AnyObject] = [self.createMetaDataUpdateTask()]
+        var task = []
+        let metaDataRequest = client.metadataCreateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", tasks: task as [AnyObject])
         metaDataRequest.performRequestWithCompletion(completionBlock)
         
     }
     
     func createMetaDataUpdateTask() ->BOXMetadataUpdateTask{
         
-        let dict : [String : AnyObject] = ["checked":"true"]
+        let dict : [String : AnyObject] = ["/checked/":"true"]
         let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init()
         task.operation = BOXMetadataUpdateADD
         task.setValuesForKeysWithDictionary(dict)
