@@ -15,6 +15,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     var podData:PodData?
     var service : BoxService?
     let folderID = "0"
+    let imageEditor = ICPCoreImageImageEngine()
     
     //1 - For the id processing, we gonna use and tesseract OCR engine with a trained data specific for the passport font type
 //    lazy var ocrEngine = ICPTesseractOcrEngine(tessDataPrefixes: ["mrz"], andTessdataAbsolutePath: NSBundle.mainBundle().bundlePath)
@@ -44,7 +45,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
 
         let regconizePOD = true
         if regconizePOD {
-            self.recognizePOD()
+            self.applyFilterCode(self.imageView.image!){
+                self.recognizePOD()
+            }
         }else {
             let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
             idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
@@ -259,6 +262,27 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func getFileID(file :BOXFile) -> String{
         return file.modelID!
+    }
+    
+    
+    func applyFilterCode(image : UIImage, completion: () -> Void) -> Bool{
+        
+        self.blackAndWhite(image, completion: completion)
+        return true
+    
+    }
+    
+    func blackAndWhite(image:UIImage, completion: () -> Void) {
+        
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        imageEditor.applyFilter(.BlackAndWhite, toImage: image) { [weak self] (blackWhiteImage) -> Void in
+            hud.hide(true)
+            guard let blackWhiteImage = blackWhiteImage else {
+                return
+            }
+            self?.imageView.image = blackWhiteImage
+            completion()
+        }
     }
 }
 
