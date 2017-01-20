@@ -161,6 +161,25 @@ class BoxServiceTest: XCTestCase {
 
     }
     
+    func testCreateFolder(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            let folderName = "Generic Folder Name"
+            self.service?.createFolder(folderName){
+                (folder,error) in
+                self.validateResults(folder, error: error)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
     func validateResults(object : AnyObject?, error : NSError?){
         if error != nil {
             print(error)

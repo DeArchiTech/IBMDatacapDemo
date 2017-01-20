@@ -13,6 +13,7 @@ class BoxService{
     
     let client_id = "6rassr1x5u0zic78ra1r7n83grn0v5yd"
     let client_secret = "4Y9RpnpW2YVFpPwYytI0wLIEQWO9r6y5"
+    let folderID = "16978324036"
     var client : BOXContentClient?
     
     init() {
@@ -87,7 +88,7 @@ class BoxService{
     
     func createMetaDataUpdateTask() ->BOXMetadataUpdateTask{
         
-        let dict : [String : AnyObject] = ["/checked/":"true"]
+        let dict : [String : AnyObject] = ["/checked":"true"]
         let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init()
         task.operation = BOXMetadataUpdateADD
         task.setValuesForKeysWithDictionary(dict)
@@ -106,10 +107,18 @@ class BoxService{
     func updateMetaData(fileID : String, completionBlock : BOXMetadataBlock){
         
         let client = BOXContentClient.defaultClient()
-        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateADD, path: "/checked/", value: "true")
-        let request : BOXMetadataUpdateRequest = client.metadataUpdateRequestWithFileID(fileID, template: "poddemo", updateTasks: [task])
+        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateREPLACE, path: "/checked", value: "true")
+        let request : BOXMetadataUpdateRequest = client.metadataUpdateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", updateTasks: [task])
         request.performRequestWithCompletion(completionBlock)
         
+    }
+    
+    func createFolder(folderName : String, completionBlock : BOXFolderBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let request : BOXFolderCreateRequest = client.folderCreateRequestWithName(folderName, parentFolderID: self.folderID)
+        request.performRequestWithCompletion(completionBlock)
+    
     }
 
 }
