@@ -305,7 +305,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func getFileName() -> String{
-        return "Le File Name" + String(arc4random_uniform(100))
+        return BoxServiceUtil().getFileName()
     }
     
     func addPopUp() -> Bool{
@@ -328,13 +328,7 @@ class IBMEditPageImageViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func getDateString() -> String{
-        
-        let date = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd-HH-mm"
-        //"dd.MM.yy"
-        return formatter.stringFromDate(date)
-        
+        return BoxServiceUtil().getDateString()
     }
     
 }

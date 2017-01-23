@@ -10,7 +10,7 @@ import XCTest
 import BoxContentSDK
 @testable import IBMCaptureSDK_Sample
 
-class BoxServiceTest: XCTestCase {
+class BoxServiceFileTest: XCTestCase {
     
     var service : BoxService?
     var folderID = "0"
@@ -120,22 +120,6 @@ class BoxServiceTest: XCTestCase {
         
     }
     
-    func testReadFolder(){
-        
-        let exp = expectationWithDescription("Some Expectation To Be Filled")
-        //1)First Authenticate
-        self.service?.authenticate(){
-            (user,error) in
-            self.validateResults(user, error: error)
-            self.service?.readFolder(){
-                (items, error) in
-                self.validateResults(items, error: error)
-            }
-        }
-        waitForExpectationsWithTimeout(60, handler: { error in
-            XCTAssertNil(error, "Error")})
-    }
-    
     func testUpdateMetaDataForFile(){
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")
@@ -161,25 +145,6 @@ class BoxServiceTest: XCTestCase {
 
     }
     
-    func testCreateFolder(){
-        
-        let exp = expectationWithDescription("Some Expectation To Be Filled")
-        //1)First Authenticate
-        self.service?.authenticate(){
-            (user,error) in
-            self.validateResults(user, error: error)
-            let folderName = "Generic Folder Name"
-            self.service?.createFolder(folderName){
-                (folder,error) in
-                self.validateResults(folder, error: error)
-                exp.fulfill()
-            }
-        }
-        waitForExpectationsWithTimeout(60, handler: { error in
-            XCTAssertNil(error, "Error")})
-        
-    }
-    
     func validateResults(object : AnyObject?, error : NSError?){
         if error != nil {
             print(error)
@@ -190,7 +155,7 @@ class BoxServiceTest: XCTestCase {
     
     func getFileName() -> String{
         
-        return "The File Name" + String(arc4random_uniform(1000))
+        return BoxServiceUtil().getFileName()
         
     }
     
@@ -207,14 +172,14 @@ class BoxServiceTest: XCTestCase {
         print(file.modelID)
         print(file.sequenceID)
     }
-    
-    func getFileID(file :BOXFile) -> String{
-        return file.modelID!
-    }
 
     func printMetaDataInfo(metaData : BOXMetadata){
         print(metaData.JSONData)
         print(metaData.info)
+    }
+    
+    func getFileID(file :BOXFile) -> String{
+        return file.modelID!
     }
     
     func getMetaDataID(metaData: BOXMetadata) -> String{

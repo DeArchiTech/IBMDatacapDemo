@@ -13,6 +13,8 @@
 		2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */; };
 		2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */; };
 		2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */; };
+		2218B59F1E36907000C8E173 /* BoxServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */; };
+		2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */; };
 		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
@@ -22,7 +24,7 @@
 		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
 		225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD171E2FF1E600B1B82F /* podSample2.png */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
-		2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceTest.swift */; };
+		2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */; };
 		22A7E5C61E04C8E50075EF37 /* BoxContentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223CF3571E04C832004F2B48 /* BoxContentSDK.framework */; };
 		22A7E5C91E04C8F90075EF37 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		22A7E5CA1E04C8F90075EF37 /* IBMCaptureSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -34,7 +36,6 @@
 		22C63A261E2D920D00569F75 /* pod4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22C63A221E2D920D00569F75 /* pod4.jpg */; };
 		22C63A271E2D920D00569F75 /* pod5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22C63A231E2D920D00569F75 /* pod5.jpg */; };
 		22C63A291E2D94C600569F75 /* pod.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C63A281E2D94C600569F75 /* pod.png */; };
-		22C63A2B1E2D957000569F75 /* PodRegDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C63A2A1E2D957000569F75 /* PodRegDataHelper.swift */; };
 		22C63A2D1E2D958A00569F75 /* PodDataHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C63A2C1E2D958A00569F75 /* PodDataHelperTest.swift */; };
 		22C63A2F1E2D99A900569F75 /* PodDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C63A2E1E2D99A900569F75 /* PodDataHelper.swift */; };
 		22C65A601E27035F000E116B /* PODDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C65A5E1E27035F000E116B /* PODDemo.storyboard */; };
@@ -155,6 +156,8 @@
 		2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxUploadViewControllerTest.swift; sourceTree = "<group>"; };
 		2218AD9B1E09D660003B4E24 /* BoxLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewController.swift; sourceTree = "<group>"; };
 		2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxLoginViewControllerTest.swift; sourceTree = "<group>"; };
+		2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceUtil.swift; sourceTree = "<group>"; };
+		2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceFolderTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
 		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
@@ -162,7 +165,7 @@
 		225EBD171E2FF1E600B1B82F /* podSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample2.png; sourceTree = "<group>"; };
 		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2279A1571E03294F00E453E8 /* BoxServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceTest.swift; sourceTree = "<group>"; };
+		2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceFileTest.swift; sourceTree = "<group>"; };
 		2279A1591E03294F00E453E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A7E5CE1E04C90D0075EF37 /* box-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "box-ios-sdk"; path = "Pods/box-ios-sdk"; sourceTree = "<group>"; };
 		22C63A1C1E2D5B2000569F75 /* PODPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PODPresenter.swift; sourceTree = "<group>"; };
@@ -171,7 +174,6 @@
 		22C63A221E2D920D00569F75 /* pod4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pod4.jpg; sourceTree = "<group>"; };
 		22C63A231E2D920D00569F75 /* pod5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pod5.jpg; sourceTree = "<group>"; };
 		22C63A281E2D94C600569F75 /* pod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pod.png; sourceTree = "<group>"; };
-		22C63A2A1E2D957000569F75 /* PodRegDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodRegDataHelper.swift; sourceTree = "<group>"; };
 		22C63A2C1E2D958A00569F75 /* PodDataHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodDataHelperTest.swift; sourceTree = "<group>"; };
 		22C63A2E1E2D99A900569F75 /* PodDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodDataHelper.swift; sourceTree = "<group>"; };
 		22C65A5F1E27035F000E116B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PODDemo.storyboard; sourceTree = "<group>"; };
@@ -317,7 +319,7 @@
 		2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2279A1571E03294F00E453E8 /* BoxServiceTest.swift */,
+				2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */,
 				2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */,
 				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
 				22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */,
@@ -325,6 +327,7 @@
 				2279A1591E03294F00E453E8 /* Info.plist */,
 				2211F03A1E287C1C0055CB19 /* IBMRegControllerTest.swift */,
 				22C63A2C1E2D958A00569F75 /* PodDataHelperTest.swift */,
+				2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
 			sourceTree = "<group>";
@@ -341,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				22F08B721E1491200081A0A9 /* ImageUtil.swift */,
-				22C63A2A1E2D957000569F75 /* PodRegDataHelper.swift */,
+				2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -872,7 +875,8 @@
 			files = (
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
-				2279A1581E03294F00E453E8 /* BoxServiceTest.swift in Sources */,
+				2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */,
+				2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */,
 				2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */,
 				22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
@@ -896,7 +900,6 @@
 				2218AD9C1E09D660003B4E24 /* BoxLoginViewController.swift in Sources */,
 				78766AC11C5A49BB0026DD68 /* UIImage+Extension.swift in Sources */,
 				78766ABB1C5A49BB0026DD68 /* IBMSelectionTableViewController.swift in Sources */,
-				22C63A2B1E2D957000569F75 /* PodRegDataHelper.swift in Sources */,
 				784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */,
 				22C65A621E270861000E116B /* MainViewController.swift in Sources */,
 				78766AB51C5A49BB0026DD68 /* IBMEditPageImageViewController.swift in Sources */,
@@ -907,6 +910,7 @@
 				2279A1501E03293800E453E8 /* BoxService.swift in Sources */,
 				78766AAE1C5A49BB0026DD68 /* IBMBarcodeTableViewController.swift in Sources */,
 				784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */,
+				2218B59F1E36907000C8E173 /* BoxServiceUtil.swift in Sources */,
 				78766AB01C5A49BB0026DD68 /* IBMBatchTableViewController.swift in Sources */,
 				78766AB71C5A49BB0026DD68 /* IBMLoginController.swift in Sources */,
 				78766ABA1C5A49BB0026DD68 /* IBMPageViewController.swift in Sources */,
