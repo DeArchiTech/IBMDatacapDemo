@@ -450,7 +450,7 @@
         <!--Recognition View Controller-->
         <scene sceneID="1Cw-mR-ngz">
             <objects>
-                <viewController storyboardIdentifier="recognitionViewController" id="QFM-fK-eZ7" customClass="IBMIDRecognitionViewController" customModule="IBMCaptureSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="recognitionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QFM-fK-eZ7" customClass="IBMIDRecognitionViewController" customModule="IBMCaptureSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KRZ-LM-6zP"/>
                         <viewControllerLayoutGuide type="bottom" id="jkC-bQ-HDE"/>

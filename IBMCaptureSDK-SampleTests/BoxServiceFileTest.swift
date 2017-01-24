@@ -123,6 +123,8 @@ class BoxServiceFileTest: XCTestCase {
     func testUpdateMetaDataForFile(){
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")
+        var dictionary : Dictionary<String, String> = Dictionary<String, String>()
+        dictionary["checked"] = "true"
         //1)First Authenticate
         self.service?.authenticate(){
             (user,error) in
@@ -132,7 +134,7 @@ class BoxServiceFileTest: XCTestCase {
                 //3)Assert After Files being uploaded
                 self.service?.createMetadataOnFile(self.getFileID(file)){
                     (metaData,error) in
-                    self.service?.updateMetaData(file.modelID){
+                    self.service?.updateMetaData(file.modelID , dictionary: dictionary){
                         (item, error) in
                         self.validateResults(metaData, error: error)
                         exp.fulfill()

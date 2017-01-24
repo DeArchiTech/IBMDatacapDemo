@@ -88,10 +88,7 @@ class BoxService{
     
     func createMetaDataUpdateTask() ->BOXMetadataUpdateTask{
         
-        let dict : [String : AnyObject] = ["/checked":"true"]
-        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init()
-        task.operation = BOXMetadataUpdateADD
-        task.setValuesForKeysWithDictionary(dict)
+        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateADD, path: "/checked", value: "true")
         return task
         
     }
@@ -104,11 +101,16 @@ class BoxService{
         
     }
     
-    func updateMetaData(fileID : String, completionBlock : BOXMetadataBlock){
+    func updateMetaData(fileID : String, dictionary : Dictionary<String,String>, completionBlock : BOXMetadataBlock){
         
         let client = BOXContentClient.defaultClient()
-        let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateREPLACE, path: "/checked", value: "true")
-        let request : BOXMetadataUpdateRequest = client.metadataUpdateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", updateTasks: [task])
+        var tasks : [AnyObject] = []
+        for key in dictionary.keys{
+            //We need the "/" for a valid JSON pointer
+            let task : BOXMetadataUpdateTask = BOXMetadataUpdateTask.init(operation: BOXMetadataUpdateADD, path: "/"+key, value: dictionary[key])
+            tasks.append(task)
+        }
+        let request : BOXMetadataUpdateRequest = client.metadataUpdateRequestWithFileID(fileID, scope: "enterprise", template: "poddemo", updateTasks: tasks)
         request.performRequestWithCompletion(completionBlock)
         
     }

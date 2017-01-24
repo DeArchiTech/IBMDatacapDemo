@@ -249,21 +249,26 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     }
     
     func getDateString() -> String{
-        
-        let date = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd-HH-mm"
-        //"dd.MM.yy"
-        return formatter.stringFromDate(date)
-        
+        return BoxServiceUtil().getDateString()
     }
     
+    func addMetaData(fileID : String, dictionary : Dictionary<String, String>, completionBlock : BOXMetadataBlock){
+        
+        self.service?.createMetadataOnFile(fileID){
+            (data, error) in
+            self.service?.updateMetaData(fileID, dictionary: dictionary){
+                (updatedData, error) in
+                completionBlock(updatedData,error)
+            }
+        }
+    }
+        
     func addMetaDataTemplate(file : BOXFile, completionBlock : BOXMetadataBlock){
         self.service?.createMetadataOnFile(self.getFileID(file), completionBlock: completionBlock)
     }
     
     func getFileID(file :BOXFile) -> String{
-        return file.modelID!
+        return BoxServiceUtil().getFileID(file)
     }
     
     func applyFilterCode(image : UIImage, completion: () -> Void) -> Bool{
@@ -285,6 +290,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             completion()
         }
     }
+    
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {

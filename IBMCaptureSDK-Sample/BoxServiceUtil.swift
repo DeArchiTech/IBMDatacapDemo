@@ -25,11 +25,11 @@ class BoxServiceUtil{
     }
     
     func getFileName() -> String{
-        return "Le File Name" + String(arc4random_uniform(100))
+        return "Le File Name" + String(arc4random_uniform(1000))
     }
     
     func getFolderName() -> String{
-        return "Generic Folder name" + String(arc4random_uniform(100))
+        return "Generic Folder name" + String(arc4random_uniform(1000))
     }
     
     func getFileID(file :BOXFile) -> String{

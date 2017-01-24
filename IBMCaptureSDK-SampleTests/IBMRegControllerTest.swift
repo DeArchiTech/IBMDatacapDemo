@@ -9,16 +9,21 @@ import XCTest
 import BoxContentSDK
 @testable import IBMCaptureSDK_Sample
 
-class IBMIDRecognitionViewController: XCTestCase{
-    @IBAction func uploadButtonClicked(sender: AnyObject) {
-    }
+class IBMIDRecognitionViewControllerTest: XCTestCase{
 
     var vc : IBMIDRecognitionViewController?
+    var service : BoxService?
+    var folderID = "0"
+    let podFolder = "16978324036"
     
     override func setUp() {
         super.setUp()
         var storyboard: UIStoryboard = UIStoryboard(name: "PODDemo", bundle: nil)
-        self.vc = storyboard.instantiateViewControllerWithIdentifier("recognitionViewController") as! IBMIDRecognitionViewController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("recognitionViewController")
+        self.vc = controller as! IBMIDRecognitionViewController
+        self.service = BoxService.init()
+        self.vc?.service = self.service
+        self.folderID = self.podFolder
     }
     
     override func tearDown() {
@@ -26,7 +31,55 @@ class IBMIDRecognitionViewController: XCTestCase{
         super.tearDown()
     }
     
-    func testRegconize(){
+    func testAddMetaData(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            let fileName = BoxServiceUtil().getFileName()
+            self.service?.upload(self.getImageData(), folderID: self.folderID, fileName: fileName){
+                (file,error) in
+                self.validateResults(fileName, error: error)
+                //3)Assert After Files being uploaded
+                self.vc?.addMetaData(file.modelID!, dictionary: self.createDictionary()){
+                    (data, error) in
+                    self.validateResults(data, error: error)
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
+    func createDictionary() -> Dictionary<String,String>{
+        
+        var dictionary : Dictionary<String,String> = Dictionary<String,String>()
+        //dictionary["customerSalesOrder"] = "testString"
+        //dictionary["customerId"] = "testString"
+        dictionary["checked"] = "testString"
+        return dictionary
+        
+    }
+    
+    func validateResults(object : AnyObject?, error : NSError?){
+        if error != nil {
+            print(error)
+        }
+        XCTAssertNotNil(object)
+        XCTAssertNil(error)
     }
 
+    func getImageData() -> NSData{
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let img = UIImage(named: "testImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)
+        let imgData:NSData = UIImageJPEGRepresentation(img!, 1.0)! as NSData
+        return imgData
+        
+    }
+    
 }
