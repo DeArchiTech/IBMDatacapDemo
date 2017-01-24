@@ -25,7 +25,7 @@ class BoxServiceUtil{
     }
     
     func getFileName() -> String{
-        return "Le File Name" + String(arc4random_uniform(1000))
+        return "Le File Name" + String(arc4random_uniform(1000)) + ".jpg"
     }
     
     func getFolderName() -> String{

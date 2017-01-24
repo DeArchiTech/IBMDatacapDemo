@@ -14,6 +14,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     var data:ICPMRZData?
     var podData:PodData?
     var service : BoxService?
+    var metaDataDictionary : Dictionary<String,String>?
     var folderID = "0"
     let podFolderID = "16978324036"
     let imageEditor = ICPCoreImageImageEngine()
@@ -36,6 +37,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         imageView.image = UIImage(named: "pod")
         let action = UIBarButtonItem(title: "Recognize", style: .Plain, target: self, action: #selector(IBMIDRecognitionViewController.recognizeId(_:)))
         self.navigationItem.rightBarButtonItem = action
+        self.metaDataDictionary = Dictionary<String,String>()
     }
     
     func recognizeId(sender:UIBarButtonItem) {
@@ -74,6 +76,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             a,b,c in
             hud.hide(true)
             self.podData = self.createPODData(a,input: b,dict: c)
+            self.setUpMetaData(self.podData!)
             self.tableView?.reloadData()
             self.pushAlertController()
         }
@@ -91,6 +94,15 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             ppmShipment: ICPMRZField.init(value: "", confidence: 1, checked: true),
             carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
             shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true))
+    }
+    
+    func setUpMetaData(podData : PodData){
+        
+        self.metaDataDictionary!["checked"] = "true"
+        self.metaDataDictionary!["accuracy"] = "90"
+        self.metaDataDictionary!["customersalesorder"] = podData.customerSalesOrder.value
+        self.metaDataDictionary!["customerid"] = podData.customerId.value
+        
     }
     
     func pushAlertController() {
@@ -174,7 +186,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
         //Upload It
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        let fileName = fileNamePrefix + " "  + self.getDateString()
+        let fileName = self.addSuffixToFileName(fileNamePrefix)
         self.uploadImage(self.getImageData(), fileName: fileName){
             (file, error) in
             hud.hide(true)
@@ -183,6 +195,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
+    func addSuffixToFileName(prefix : String) -> String{
+        return prefix + self.getDateString() + ".jpg"
+    }
     func getImageData() -> NSData{
         let util = ImageUtil.init()
         return util.createBase64(self.getImageFile()!)
@@ -195,7 +210,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func handleUploadResponse(file : BOXFile?, error: NSError?){
         if file != nil{
             let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-            self.addMetaDataTemplate(file!){
+            self.addMetaData((file?.modelID)!, dictionary: self.metaDataDictionary!){
                 (data,error) in
                 hud.hide(true)
                 self.presentsUploadSuccess("")

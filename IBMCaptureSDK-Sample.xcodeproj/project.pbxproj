@@ -82,6 +82,7 @@
 		22F946B61E36A44E006B5E06 /* CustomerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F946B51E36A44E006B5E06 /* CustomerRepository.swift */; };
 		22F946B81E36A560006B5E06 /* CustomerRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F946B71E36A560006B5E06 /* CustomerRepositoryTest.swift */; };
 		22F946BB1E36BEB6006B5E06 /* IBMIDRegHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F946BA1E36BEB6006B5E06 /* IBMIDRegHelper.swift */; };
+		22F946BE1E37E460006B5E06 /* BoxServiceUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F946BD1E37E460006B5E06 /* BoxServiceUtilTest.swift */; };
 		784BFEE31CB6A386001AB54A /* IBMIDRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE21CB6A386001AB54A /* IBMIDRecognitionViewController.swift */; };
 		784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */; };
 		784BFEE71CB6B431001AB54A /* IBMPassportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */; };
@@ -223,6 +224,7 @@
 		22F946B51E36A44E006B5E06 /* CustomerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerRepository.swift; sourceTree = "<group>"; };
 		22F946B71E36A560006B5E06 /* CustomerRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerRepositoryTest.swift; sourceTree = "<group>"; };
 		22F946BA1E36BEB6006B5E06 /* IBMIDRegHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMIDRegHelper.swift; sourceTree = "<group>"; };
+		22F946BD1E37E460006B5E06 /* BoxServiceUtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceUtilTest.swift; sourceTree = "<group>"; };
 		4CDC7BDE804CFA84B4EEEC72 /* Pods-IBMCaptureSDK-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-SampleTests/Pods-IBMCaptureSDK-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58AEB377E78E5D0DF8099895 /* Pods-IBMCaptureSDK-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMCaptureSDK-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMCaptureSDK-Sample/Pods-IBMCaptureSDK-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		5C3B3B1F911FE57122C9890F /* Pods_IBMCaptureSDK_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMCaptureSDK_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,6 +332,7 @@
 				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
 				22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */,
 				22C65A631E2708CE000E116B /* MainViewControllerTest.swift */,
+				22F946BD1E37E460006B5E06 /* BoxServiceUtilTest.swift */,
 				2279A1591E03294F00E453E8 /* Info.plist */,
 				2211F03A1E287C1C0055CB19 /* IBMRegControllerTest.swift */,
 				22C63A2C1E2D958A00569F75 /* PodDataHelperTest.swift */,
@@ -903,6 +906,7 @@
 				2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */,
 				2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */,
 				2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */,
+				22F946BE1E37E460006B5E06 /* BoxServiceUtilTest.swift in Sources */,
 				22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
 				22F946B81E36A560006B5E06 /* CustomerRepositoryTest.swift in Sources */,
