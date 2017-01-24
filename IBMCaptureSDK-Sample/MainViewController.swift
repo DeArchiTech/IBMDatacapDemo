@@ -36,8 +36,12 @@ import Foundation
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func buttonClicked(sender: AnyObject) {
+    @IBAction func cameraBtnClicked(sender: AnyObject) {
         self.presentCamera()
+    }
+    
+    
+    @IBAction func galleryBtnClicked(sender: AnyObject) {
     }
     
     func presentCamera(){

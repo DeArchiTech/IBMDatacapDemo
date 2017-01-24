@@ -23,27 +23,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-pS-0jx">
-                                <rect key="frame" x="36" y="90" width="303" height="549"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Scan New POD">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-TC-bUN">
+                                <rect key="frame" x="67" y="64" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://revasolutions.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="822-El-bc8">
+                                <rect key="frame" x="94" y="622" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.88304084539413452" green="0.39320194721221924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMM-ej-1OJ">
+                                <rect key="frame" x="81" y="389" width="212" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="gallary.png"/>
                                 <connections>
-                                    <action selector="buttonClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="qRo-Qg-O2n"/>
+                                    <action selector="galleryBtnClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="Z0k-y4-3pc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-Ku-B8x">
+                                <rect key="frame" x="81" y="170" width="212" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="camera.png"/>
+                                <connections>
+                                    <action selector="cameraBtnClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="ywL-TI-n3C"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9BF-Yg-GAG" firstAttribute="top" secondItem="8qj-pS-0jx" secondAttribute="bottom" constant="10" id="QQx-Vc-1Es"/>
-                            <constraint firstItem="8qj-pS-0jx" firstAttribute="top" secondItem="6SV-Js-EnB" secondAttribute="bottom" constant="10" id="Wmo-24-0aY"/>
-                            <constraint firstItem="8qj-pS-0jx" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="10" id="YcV-Ld-6Vx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8qj-pS-0jx" secondAttribute="trailing" constant="10" id="uf9-c5-KPW"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Proof Of Delivery" id="2RS-TT-UAx"/>
+                    <navigationItem key="navigationItem" title="Proof Of Delivery Demo" id="2RS-TT-UAx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlW-ve-5Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +181,7 @@
                                         <rect key="frame" x="0.0" y="28" width="292" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHq-84-vUJ" id="yFD-OF-dn1">
-                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -400,7 +410,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nVH-rj-cY1" id="J8j-rz-nFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCo-mn-fIl">
@@ -495,4 +505,9 @@
             <point key="canvasLocation" x="4" y="296.40179910044981"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.png" width="512" height="512"/>
+        <image name="gallary.png" width="512" height="411"/>
+        <image name="logo.png" width="136" height="90"/>
+    </resources>
 </document>
