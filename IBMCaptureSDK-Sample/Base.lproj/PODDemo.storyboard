@@ -23,35 +23,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-TC-bUN">
-                                <rect key="frame" x="67" y="64" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-TC-bUN">
+                                <rect key="frame" x="87" y="77" width="200" height="107"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://revasolutions.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="822-El-bc8">
-                                <rect key="frame" x="94" y="622" width="186" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.88304084539413452" green="0.39320194721221924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMM-ej-1OJ">
-                                <rect key="frame" x="81" y="389" width="212" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMM-ej-1OJ">
+                                <rect key="frame" x="102" y="369" width="170" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="AmC-ir-Vq5"/>
+                                    <constraint firstAttribute="width" constant="170" id="Eeg-mC-Tto"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="gallary.png"/>
                                 <connections>
                                     <action selector="galleryBtnClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="Z0k-y4-3pc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-Ku-B8x">
-                                <rect key="frame" x="81" y="170" width="212" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-Ku-B8x">
+                                <rect key="frame" x="102" y="195" width="170" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="JjL-kc-UJG"/>
+                                    <constraint firstAttribute="height" constant="154" id="RnA-xK-jv4"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="camera.png"/>
                                 <connections>
                                     <action selector="cameraBtnClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="ywL-TI-n3C"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="http://revasolutions.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="822-El-bc8">
+                                <rect key="frame" x="94" y="550" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.88304084539413452" green="0.39320194721221924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kp6-Ku-B8x" firstAttribute="centerX" secondItem="iLQ-2B-3fR" secondAttribute="centerX" id="JLj-qK-1RP"/>
+                            <constraint firstItem="822-El-bc8" firstAttribute="centerX" secondItem="iLQ-2B-3fR" secondAttribute="centerX" id="Jdf-RU-6AB"/>
+                            <constraint firstItem="X2h-TC-bUN" firstAttribute="top" secondItem="6SV-Js-EnB" secondAttribute="bottom" constant="13" id="QIf-OR-5d6"/>
+                            <constraint firstItem="X2h-TC-bUN" firstAttribute="centerX" secondItem="iLQ-2B-3fR" secondAttribute="centerX" id="UGB-Wi-TxE"/>
+                            <constraint firstItem="NMM-ej-1OJ" firstAttribute="top" secondItem="kp6-Ku-B8x" secondAttribute="bottom" constant="20" id="XJD-YJ-Agz"/>
+                            <constraint firstItem="NMM-ej-1OJ" firstAttribute="centerX" secondItem="iLQ-2B-3fR" secondAttribute="centerX" id="f6y-ch-c9s"/>
+                            <constraint firstItem="kp6-Ku-B8x" firstAttribute="top" secondItem="X2h-TC-bUN" secondAttribute="bottom" constant="11" id="kS4-j1-oR9"/>
+                            <constraint firstItem="822-El-bc8" firstAttribute="top" secondItem="NMM-ej-1OJ" secondAttribute="bottom" constant="27" id="pSD-wt-pU2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Proof Of Delivery Demo" id="2RS-TT-UAx"/>
                 </viewController>
