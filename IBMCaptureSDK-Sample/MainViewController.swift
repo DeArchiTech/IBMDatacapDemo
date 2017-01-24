@@ -72,11 +72,14 @@ import Foundation
         self.pushImageEditViewController(pickedImage!)
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imagePickerController(picker, pickedImage: image)
+    }
+    
     func pushImageEditViewController(pickedImage: UIImage) -> Bool{
         
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("recognitionViewController") as! IBMIDRecognitionViewController
-        // TODO: refactor
-        //vc.imageView.image = pickedImage
+        vc.pickedImage = pickedImage
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         return true

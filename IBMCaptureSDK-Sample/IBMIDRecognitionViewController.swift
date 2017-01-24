@@ -18,6 +18,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     var folderID = "0"
     let podFolderID = "16978324036"
     let imageEditor = ICPCoreImageImageEngine()
+    var pickedImage : UIImage? = nil
     
     //1 - For the id processing, we gonna use and tesseract OCR engine with a trained data specific for the passport font type
 //    lazy var ocrEngine = ICPTesseractOcrEngine(tessDataPrefixes: ["mrz"], andTessdataAbsolutePath: NSBundle.mainBundle().bundlePath)
@@ -31,13 +32,19 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: refactor
-//        imageView.image = UIImage(named: "us_passport")
         self.folderID = self.podFolderID
-        imageView.image = UIImage(named: "pod")
         let action = UIBarButtonItem(title: "Recognize", style: .Plain, target: self, action: #selector(IBMIDRecognitionViewController.recognizeId(_:)))
         self.navigationItem.rightBarButtonItem = action
         self.metaDataDictionary = Dictionary<String,String>()
+        self.setUpImageViewImage()
+    }
+    
+    func setUpImageViewImage(){
+        if pickedImage == nil{
+            imageView.image = UIImage(named: "pod")
+        }else{
+            imageView.image = self.pickedImage!
+        }
     }
     
     func recognizeId(sender:UIBarButtonItem) {
