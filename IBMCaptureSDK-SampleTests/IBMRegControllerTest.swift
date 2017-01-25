@@ -24,6 +24,7 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
         self.service = BoxService.init()
         self.vc?.service = self.service
         self.folderID = self.podFolder
+        self.vc?.folderID = self.folderID
     }
     
     override func tearDown() {
@@ -62,6 +63,49 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
         
     }
     
+    //With No Folder On Box
+    func testGetFolderFromBox(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            let folderName = BoxServiceUtil().getFolderName()
+            self.vc?.getFolderFromBox(folderName){
+                (folder) in
+                XCTAssertNotNil(folder)
+                exp.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+
+    }
+
+    //With Folder On Box
+    func testGetFolderFromBoxTwo(){
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        let folderName = BoxServiceUtil().getFolderName()
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            self.service?.createFolder(folderName){
+                (folder, error) in
+                self.vc?.getFolderFromBox(folderName){
+                    (foundFolder) in
+                    XCTAssertNotNil(foundFolder)
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+
     func createDictionary() -> Dictionary<String,String>{
         
         var dictionary : Dictionary<String,String> = Dictionary<String,String>()

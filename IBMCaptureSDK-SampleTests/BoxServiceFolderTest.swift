@@ -41,6 +41,7 @@ class BoxServiceFolderTest: XCTestCase {
             self.service?.createFolder(folderName){
                 (folder,error) in
                 self.validateResults(folder, error: error)
+                print(self.folderID)
                 self.service?.findFolderWithName(self.folderID, folderName:folderName){
                     (folder) in
                     XCTAssertNotNil(folder)

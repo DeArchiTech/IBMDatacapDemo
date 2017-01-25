@@ -206,10 +206,19 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
-    func createFolderAction(completionBlock : BOXFolderBlock){
+    func getFolderFromBox(folderName: String, completion: ((AnyObject) -> Void)!){
         
-        let folderName = "name"
-        self.service?.createFolder(folderName, completionBlock: completionBlock)
+        self.service?.findFolderWithName(self.folderID, folderName: folderName){
+            (folder) in
+            if folder != nil{
+                completion(folder)
+            }else{
+                self.service?.createFolder(folderName){
+                    (folder, error) in
+                    completion(folder)
+                }
+            }
+        }
         
     }
     

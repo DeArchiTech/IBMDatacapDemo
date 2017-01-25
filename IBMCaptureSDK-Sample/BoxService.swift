@@ -143,8 +143,10 @@ class BoxService{
     func getFolderWithName(folderName: String, items: [AnyObject]) -> AnyObject?{
         
         for item in items{
-            if(item.name == folderName){
-                return item
+            if let folder = item as? BOXFolder {
+                if(folder.name == folderName){
+                    return item
+                }
             }
         }
         return nil
