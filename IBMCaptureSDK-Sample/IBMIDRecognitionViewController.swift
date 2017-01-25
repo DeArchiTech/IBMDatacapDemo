@@ -41,7 +41,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func setUpImageViewImage(){
         if pickedImage == nil{
-            imageView.image = UIImage(named: "pod")
+            imageView.image = UIImage(named: "factureNum")
         }else{
             imageView.image = self.pickedImage!
         }
@@ -82,6 +82,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
             a,b,c in
             hud.hide(true)
+            print(a)
+            print(b)
+            print(c)
             self.podData = self.createPODData(a,input: b,dict: c)
             self.setUpMetaData(self.podData!)
             self.tableView?.reloadData()
@@ -100,7 +103,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             deliveryAddress: ICPMRZField.init(value: "", confidence: 1, checked: true),
             ppmShipment: ICPMRZField.init(value: "", confidence: 1, checked: true),
             carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
-            shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true))
+            shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true),
+            facture: ICPMRZField.init(value: "", confidence: 1, checked: true))
     }
     
     func setUpMetaData(podData : PodData){
@@ -295,7 +299,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func applyFilterCode(image : UIImage, completion: () -> Void) -> Bool{
         
-        self.blackAndWhite(image, completion: completion)
+        self.deskew(image, completion: completion)
         return true
     
     }
@@ -309,6 +313,19 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
                 return
             }
             self?.imageView.image = blackWhiteImage
+            completion()
+        }
+    }
+    
+    func deskew(image:UIImage, completion: () -> Void){
+        
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        imageEditor.detectEdgesAndDeskewImage(image, withValidator:  nil) { [weak self] (deskedImage) -> Void in
+            hud.hide(true)
+            guard let deskedImage = deskedImage else {
+                return
+            }
+            self?.imageView.image = deskedImage
             completion()
         }
     }

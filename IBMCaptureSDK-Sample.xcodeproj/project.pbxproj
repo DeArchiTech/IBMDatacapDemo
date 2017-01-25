@@ -44,6 +44,7 @@
 		22EFF0351E37F90B00D76E32 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0341E37F90B00D76E32 /* logo.png */; };
 		22EFF0371E37F91B00D76E32 /* gallary.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0361E37F91B00D76E32 /* gallary.png */; };
 		22EFF0391E37F92300D76E32 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0381E37F92300D76E32 /* camera.png */; };
+		22EFF03B1E3820DE00D76E32 /* factureNum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF03A1E3820DE00D76E32 /* factureNum.jpg */; };
 		22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */; };
 		22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */; };
 		22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B721E1491200081A0A9 /* ImageUtil.swift */; };
@@ -189,6 +190,7 @@
 		22EFF0341E37F90B00D76E32 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		22EFF0361E37F91B00D76E32 /* gallary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallary.png; sourceTree = "<group>"; };
 		22EFF0381E37F92300D76E32 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		22EFF03A1E3820DE00D76E32 /* factureNum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = factureNum.jpg; sourceTree = "<group>"; };
 		22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadVCProtocol.swift; sourceTree = "<group>"; };
 		22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMEditPageImageViewControllerTest.swift; sourceTree = "<group>"; };
 		22F08B721E1491200081A0A9 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				78766A6E1C5A49BB0026DD68 /* Assets.xcassets */,
+				22EFF03A1E3820DE00D76E32 /* factureNum.jpg */,
 				22EFF0381E37F92300D76E32 /* camera.png */,
 				22EFF0361E37F91B00D76E32 /* gallary.png */,
 				22EFF0341E37F90B00D76E32 /* logo.png */,
@@ -733,6 +736,7 @@
 				22F510F61E1EEC640024E7B2 /* Images.xcassets in Resources */,
 				22F5111B1E1EEEFF0024E7B2 /* AppIcon58x58.png in Resources */,
 				22F5111D1E1EEEFF0024E7B2 /* AppIcon72x72.png in Resources */,
+				22EFF03B1E3820DE00D76E32 /* factureNum.jpg in Resources */,
 				22F511201E1EEEFF0024E7B2 /* AppIcon76x76~ipad.png in Resources */,
 				22C63A271E2D920D00569F75 /* pod5.jpg in Resources */,
 				22F511151E1EEEFF0024E7B2 /* AppIcon29x29@2x~ipad.png in Resources */,

@@ -10,7 +10,8 @@ import Foundation
 import IBMCaptureSDK
 
 enum PODRowData:Int {
-    case CustomerSalesOrder = 0,
+    case Facture = 0,
+    CustomerSalesOrder,
     CustomerId,
     Owner,
     CustomerName,
@@ -39,7 +40,7 @@ extension PODPresenter {
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        return 8
+        return 1
 //        return PODRowData.Count.rawValue
         //return (section == 0 ? FirstRowData.Count.rawValue : SecondRowData.Count.rawValue)
     }
@@ -94,6 +95,8 @@ extension PODPresenter {
             return "Carrier"
         case .ShipmentDate:
             return "Shipment Date"
+        case .Facture:
+            return "Facture Number"
         }
         
     }
@@ -119,6 +122,8 @@ extension PODPresenter {
         case .Carrier:
             return ("To Be Implemented", data.customerSalesOrder.checked)
         case .ShipmentDate:
+            return ("To Be Implemented", data.customerSalesOrder.checked)
+        case .Facture:
             return ("To Be Implemented", data.customerSalesOrder.checked)
         }
         

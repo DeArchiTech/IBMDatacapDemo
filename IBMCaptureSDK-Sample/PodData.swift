@@ -20,8 +20,9 @@ public class PodData : NSObject {
     public var ppmShipment: ICPMRZField
     public var carrier: ICPMRZField
     public var shipmentDate: ICPMRZField
+    public var facture: ICPMRZField
     
-    public init(customerSalesOrder: ICPMRZField, customerId: ICPMRZField, owner: ICPMRZField, customerName: ICPMRZField, deliveryAddress: ICPMRZField, ppmShipment: ICPMRZField, carrier: ICPMRZField, shipmentDate: ICPMRZField){
+    public init(customerSalesOrder: ICPMRZField, customerId: ICPMRZField, owner: ICPMRZField, customerName: ICPMRZField, deliveryAddress: ICPMRZField, ppmShipment: ICPMRZField, carrier: ICPMRZField, shipmentDate: ICPMRZField, facture : ICPMRZField){
         self.customerSalesOrder = customerSalesOrder
         self.customerId = customerId
         self.owner = owner
@@ -30,6 +31,7 @@ public class PodData : NSObject {
         self.ppmShipment = ppmShipment
         self.carrier = carrier
         self.shipmentDate = shipmentDate
+        self.facture = facture
     }
     
 }
