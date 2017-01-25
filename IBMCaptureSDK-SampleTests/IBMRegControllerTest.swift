@@ -55,12 +55,20 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
         
     }
     
+    func testGetFolderName(){
+        
+        let folderName = self.vc?.getFolderName(self.createDictionary())
+        XCTAssertEqual(folderName, "aCustomerName")
+        
+    }
+    
     func createDictionary() -> Dictionary<String,String>{
         
         var dictionary : Dictionary<String,String> = Dictionary<String,String>()
-        //dictionary["customerSalesOrder"] = "testString"
-        //dictionary["customerId"] = "testString"
+        dictionary["customerSalesOrder"] = "testString"
+        dictionary["customerId"] = "testString"
         dictionary["checked"] = "testString"
+        dictionary["customerName"] = "aCustomerName"
         return dictionary
         
     }

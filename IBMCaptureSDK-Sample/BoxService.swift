@@ -101,6 +101,14 @@ class BoxService{
         
     }
     
+    func readFolder(folderID : String, completionBlock : BOXItemsBlock){
+        
+        let client = BOXContentClient.defaultClient()
+        let request : BOXFolderItemsRequest = client.folderItemsRequestWithID(folderID)
+        request.performRequestWithCompletion(completionBlock)
+        
+    }
+    
     func updateMetaData(fileID : String, dictionary : Dictionary<String,String>, completionBlock : BOXMetadataBlock){
         
         let client = BOXContentClient.defaultClient()
@@ -121,6 +129,26 @@ class BoxService{
         let request : BOXFolderCreateRequest = client.folderCreateRequestWithName(folderName, parentFolderID: self.folderID)
         request.performRequestWithCompletion(completionBlock)
     
+    }
+    
+    func findFolderWithName(folderID: String, folderName: String, completion: ((AnyObject!) -> Void)!){
+
+        self.readFolder(folderID){
+            (items, error) in
+            let folder = self.getFolderWithName(folderName, items: items)
+            completion(folder)
+        }
+    }
+    
+    func getFolderWithName(folderName: String, items: [AnyObject]) -> AnyObject?{
+        
+        for item in items{
+            if(item.name == folderName){
+                return item
+            }
+        }
+        return nil
+
     }
 
 }

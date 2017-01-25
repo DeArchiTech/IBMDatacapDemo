@@ -30,6 +30,29 @@ class BoxServiceFolderTest: XCTestCase {
         super.tearDown()
     }
     
+    func testReadFolderWithName() {
+        
+        let exp = expectationWithDescription("Some Expectation To Be Filled")
+        let folderName = BoxServiceUtil().getFolderName()
+        //1)First Authenticate
+        self.service?.authenticate(){
+            (user,error) in
+            self.validateResults(user, error: error)
+            self.service?.createFolder(folderName){
+                (folder,error) in
+                self.validateResults(folder, error: error)
+                self.service?.findFolderWithName(self.folderID, folderName:folderName){
+                    (folder) in
+                    XCTAssertNotNil(folder)
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectationsWithTimeout(60, handler: { error in
+            XCTAssertNil(error, "Error")})
+        
+    }
+    
     func testReadFolder(){
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")

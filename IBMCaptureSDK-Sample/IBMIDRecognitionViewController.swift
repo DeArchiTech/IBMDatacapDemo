@@ -206,6 +206,21 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
+    func createFolderAction(completionBlock : BOXFolderBlock){
+        
+        let folderName = "name"
+        self.service?.createFolder(folderName, completionBlock: completionBlock)
+        
+    }
+    
+    func getFolderName(dictionary : Dictionary<String,String>) -> String{
+        if !dictionary.isEmpty {
+            let name = dictionary["customerName"]
+            return name! as String
+        }
+        return "Other"
+    }
+    
     func addSuffixToFileName(prefix : String) -> String{
         return prefix + self.getDateString() + ".jpg"
     }
