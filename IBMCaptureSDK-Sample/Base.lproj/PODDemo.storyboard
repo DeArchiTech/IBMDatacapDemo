@@ -195,7 +195,7 @@
                                         <rect key="frame" x="0.0" y="28" width="292" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHq-84-vUJ" id="yFD-OF-dn1">
-                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -265,13 +265,13 @@
                                 <rect key="frame" x="26" y="55" width="323" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of images to be uploaded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-pr-bbe">
-                                        <rect key="frame" x="39" y="0.0" width="246" height="44"/>
+                                        <rect key="frame" x="39" y="0.0" width="245.5" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-eO-7Co">
-                                        <rect key="frame" x="151" y="58" width="22" height="42"/>
+                                        <rect key="frame" x="150.5" y="58" width="22" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -424,11 +424,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nVH-rj-cY1" id="J8j-rz-nFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCo-mn-fIl">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -490,20 +490,32 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pTU-cg-5sx">
-                                <rect key="frame" x="0.0" y="356" width="375" height="311"/>
+                                <rect key="frame" x="0.0" y="356" width="375" height="224"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="QFM-fK-eZ7" id="O91-BU-Gjd"/>
                                     <outlet property="delegate" destination="QFM-fK-eZ7" id="JEP-wn-0F2"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-R2-aJ5">
+                                <rect key="frame" x="0.0" y="588" width="375" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88304084540000005" green="0.39320194720000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" red="0.97393212048221256" green="0.98993633849479812" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="UploadBtnClicked:" destination="QFM-fK-eZ7" eventType="touchUpInside" id="Zuh-E0-Frc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="leading" secondItem="K40-oM-Z4V" secondAttribute="leadingMargin" id="9nE-08-APQ"/>
+                            <constraint firstItem="jkC-bQ-HDE" firstAttribute="top" secondItem="pTU-cg-5sx" secondAttribute="bottom" constant="87" id="ImN-4y-RXE"/>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="trailing" secondItem="K40-oM-Z4V" secondAttribute="trailingMargin" id="NIr-BR-wKb"/>
                             <constraint firstItem="pTU-cg-5sx" firstAttribute="top" secondItem="vJ0-Mw-Nns" secondAttribute="bottom" constant="8" id="ctT-AB-wLg"/>
-                            <constraint firstItem="jkC-bQ-HDE" firstAttribute="top" secondItem="pTU-cg-5sx" secondAttribute="bottom" id="eYt-Rt-6G5"/>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="top" secondItem="KRZ-LM-6zP" secondAttribute="bottom" constant="8" id="fjO-1K-p0P"/>
                             <constraint firstItem="pTU-cg-5sx" firstAttribute="leading" secondItem="K40-oM-Z4V" secondAttribute="leading" id="gbo-CT-nuv"/>
                             <constraint firstAttribute="trailing" secondItem="pTU-cg-5sx" secondAttribute="trailing" id="oUo-z5-Vji"/>

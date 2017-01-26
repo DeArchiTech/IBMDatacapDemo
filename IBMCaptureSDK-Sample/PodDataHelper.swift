@@ -37,27 +37,32 @@ class PodDataHelper : NSObject{
     
     func getCustomerId() -> String {
         
+        let nutsAndBolt = false
         var result = ""
-        var firstSetOfLettersFound = false
-        var firstSetOfDigitsFound = false
-        var secondSetOfLetttersFound = false
-        for char in podString.unicodeScalars{
-            let value = char.value
-            if (value >= 48 && value <= 57){
-                if !firstSetOfDigitsFound {
-                    firstSetOfDigitsFound = true
-                }
-                if secondSetOfLetttersFound {
-                    result.append(Character.init(char))
-                }
-            }else{
-                if result.characters.count == 0 {
-                    firstSetOfLettersFound = true
-                }
-                if firstSetOfLettersFound && firstSetOfDigitsFound{
-                    secondSetOfLetttersFound = true
+        if nutsAndBolt {
+            var firstSetOfLettersFound = false
+            var firstSetOfDigitsFound = false
+            var secondSetOfLetttersFound = false
+            for char in podString.unicodeScalars{
+                let value = char.value
+                if (value >= 48 && value <= 57){
+                    if !firstSetOfDigitsFound {
+                        firstSetOfDigitsFound = true
+                    }
+                    if secondSetOfLetttersFound {
+                        result.append(Character.init(char))
+                    }
+                }else{
+                    if result.characters.count == 0 {
+                        firstSetOfLettersFound = true
+                    }
+                    if firstSetOfLettersFound && firstSetOfDigitsFound{
+                        secondSetOfLetttersFound = true
+                    }
                 }
             }
+        }else{
+            result = "Sample Customer Name"
         }
         return result
         

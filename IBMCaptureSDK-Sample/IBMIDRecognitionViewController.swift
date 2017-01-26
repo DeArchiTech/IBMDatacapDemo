@@ -155,8 +155,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
         if error == nil{
-            let fileName = "Facture Number"
-            self.uploadAction(fileName)
+            self.presentsSuccess()
         }else{
             self.presentsFailure()
         }
@@ -410,6 +409,11 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         alertController.addAction(alertAction)
         return alertController
+    }
+    
+    @IBAction func UploadBtnClicked(sender: AnyObject) {
+        let fileName = self.metaDataDictionary!["facture"]
+        self.uploadAction(fileName!)
     }
 }
 
