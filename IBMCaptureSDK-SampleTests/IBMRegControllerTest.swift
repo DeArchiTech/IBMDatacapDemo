@@ -102,10 +102,13 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
     func createDictionary() -> Dictionary<String,String>{
         
         var dictionary : Dictionary<String,String> = Dictionary<String,String>()
-        dictionary["customerSalesOrder"] = "testString"
-        dictionary["customerId"] = "testString"
-        dictionary["checked"] = "testString"
-        dictionary["customerName"] = "aCustomerName"
+        dictionary["checked"] = "true"
+        dictionary["accuracy"] = "90"
+        dictionary["customersalesorder"] = "testString"
+        dictionary["customerid"] = "testString"
+        dictionary["customername"] = "testString"
+        dictionary["facture"] = "testString"
+        dictionary["ocr"] = "testString"
         return dictionary
         
     }

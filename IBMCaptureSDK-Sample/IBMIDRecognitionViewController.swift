@@ -82,9 +82,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
             a,b,c in
             hud.hide(true)
-            print(a)
+            //print(a)
             print(b)
-            print(c)
+            //print(c)
             self.podData = self.createPODData(a,input: b,dict: c)
             self.setUpMetaData(self.podData!, ocr: b)
             self.tableView?.reloadData()
@@ -115,7 +115,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         self.metaDataDictionary!["accuracy"] = "90"
         self.metaDataDictionary!["customersalesorder"] = podData.customerSalesOrder.value
         self.metaDataDictionary!["customerid"] = podData.customerId.value
-        self.metaDataDictionary!["customerName"] = podData.customerName.value
+        self.metaDataDictionary!["customername"] = podData.customerName.value
         self.metaDataDictionary!["facture"] = podData.facture.value
         self.metaDataDictionary!["ocr"] = ocr
         
@@ -323,6 +323,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             (data, error) in
             self.service?.updateMetaData(fileID, dictionary: dictionary){
                 (updatedData, error) in
+                print(dictionary)
+                print(updatedData)
                 completionBlock(updatedData,error)
             }
         }
@@ -369,6 +371,46 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         }
     }
     
+    func detectEdges(image:UIImage) {
+        
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        imageEditor.detectEdgePointsInImage(image, withValidator:nil) { [weak self] (points) -> Void in
+            hud.hide(true)
+            
+            let alertMessage:String
+            
+            defer {
+                if let alert = self?.alertController(title: "Edges", message: alertMessage) {
+                    self?.presentViewController(alert, animated: true, completion: nil)
+                }
+            }
+            
+            guard let nsPoints = points where nsPoints.count > 0 else {
+                alertMessage = "Couldn't detect the edges"
+                return
+            }
+            
+            var messageString = ""
+            
+            for (index, nsPoint) in nsPoints.enumerate() {
+                let cgPoint = nsPoint.CGPointValue()
+                let x = String(format: "%.2f", cgPoint.x)
+                let y = String(format: "%.2f", cgPoint.y)
+                
+                messageString = "\(messageString)\n Edge \(index): \(x) x \(y)"
+            }
+            
+            alertMessage = messageString
+        }
+        
+    }
+    
+    func alertController(title title:String, message:String) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alertController.addAction(alertAction)
+        return alertController
+    }
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {
