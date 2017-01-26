@@ -53,7 +53,7 @@ import Foundation
             imagePicker.delegate = self
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }else{
-            self.pushImageEditViewController(UIImage(named: "factureNum")!)
+            self.pushImageEditViewController(UIImage(named: "podSample20")!)
         }
         
     }

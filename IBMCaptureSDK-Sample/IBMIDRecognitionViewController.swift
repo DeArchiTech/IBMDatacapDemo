@@ -41,7 +41,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func setUpImageViewImage(){
         if pickedImage == nil{
-            imageView.image = UIImage(named: "factureNum")
+            imageView.image = UIImage(named: "podSample20")
         }else{
             imageView.image = self.pickedImage!
         }
@@ -76,7 +76,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         let height = aimage?.size.height
         let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
         let whiteList : String? = ""
-        let highLightChars : Bool? = true
+        let highLightChars : Bool? = false
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
@@ -86,7 +86,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             print(b)
             print(c)
             self.podData = self.createPODData(a,input: b,dict: c)
-            self.setUpMetaData(self.podData!)
+            self.setUpMetaData(self.podData!, ocr: b)
             self.tableView?.reloadData()
             self.pushAlertController()
         }
@@ -109,7 +109,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         return data
     }
     
-    func setUpMetaData(podData : PodData){
+    func setUpMetaData(podData : PodData, ocr : String){
         
         self.metaDataDictionary!["checked"] = "true"
         self.metaDataDictionary!["accuracy"] = "90"
@@ -117,6 +117,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         self.metaDataDictionary!["customerid"] = podData.customerId.value
         self.metaDataDictionary!["customerName"] = podData.customerName.value
         self.metaDataDictionary!["facture"] = podData.facture.value
+        self.metaDataDictionary!["ocr"] = ocr
         
     }
     
@@ -160,6 +161,14 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             self.presentsFailure()
         }
         return true
+    }
+    
+    func getFactureNumber(dictionary: Dictionary<String,String>) -> String{
+        
+        if let num = dictionary["facture"]{
+            return num
+        }
+        return "facture Number"
     }
     
     func presentsSuccess(){

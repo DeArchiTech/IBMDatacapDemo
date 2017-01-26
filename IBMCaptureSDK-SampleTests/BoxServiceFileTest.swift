@@ -125,9 +125,10 @@ class BoxServiceFileTest: XCTestCase {
         let exp = expectationWithDescription("Some Expectation To Be Filled")
         var dictionary : Dictionary<String, String> = Dictionary<String, String>()
         dictionary["checked"] = "true"
-        dictionary["accuracy"] = "90"
+        dictionary["accuracy"] = "85"
         dictionary["customersalesorder"] = "orderString"
         dictionary["customerid"] = "orderIdString"
+        dictionary["ocr"] = "ocrString"
         //1)First Authenticate
         self.service?.authenticate(){
             (user,error) in
