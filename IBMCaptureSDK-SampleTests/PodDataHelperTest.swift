@@ -40,4 +40,18 @@ class PodDataHelperTest: XCTestCase{
         XCTAssertEqual(result, expected)
     }
     
+    func testGetFactureNumber(){
+        
+        let parsedString = "ABCDEASE1229082ABCDEASE2515167"
+        let helper = PodDataHelper.init(podString: parsedString)
+        XCTAssertNotNil(helper.getFactureNumber())
+    }
+
+    func testGetCustomerName(){
+        
+        let parsedString = "ABCDEASE1229082ABCDEASE2515167"
+        let helper = PodDataHelper.init(podString: parsedString)
+        XCTAssertNotNil(helper.getCustomerName())
+        
+    }
 }

@@ -95,7 +95,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func createPODData(image : UIImage, input : String, dict : [String : [AnyObject]]) -> PodData {
         let helper = PodDataHelper.init(podString: input)
-        return PodData.init(
+        let data = PodData.init(
             customerSalesOrder: ICPMRZField.init(value: helper.getCustomerSalesOrder(), confidence: 1, checked: true),
             customerId: ICPMRZField.init(value: helper.getCustomerId(), confidence: 1, checked: true),
             owner: ICPMRZField.init(value: "", confidence: 1, checked: true),
@@ -105,6 +105,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
             shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true),
             facture: ICPMRZField.init(value: "", confidence: 1, checked: true))
+        data.setUpMockData()
+        return data
     }
     
     func setUpMetaData(podData : PodData){
@@ -113,6 +115,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         self.metaDataDictionary!["accuracy"] = "90"
         self.metaDataDictionary!["customersalesorder"] = podData.customerSalesOrder.value
         self.metaDataDictionary!["customerid"] = podData.customerId.value
+        self.metaDataDictionary!["customerName"] = podData.customerName.value
+        self.metaDataDictionary!["facture"] = podData.facture.value
         
     }
     
@@ -150,8 +154,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
         if error == nil{
-//            self.presentsSuccess()
-            self.addPopUp()
+            let fileName = "Facture Number"
+            self.uploadAction(fileName)
         }else{
             self.presentsFailure()
         }
@@ -222,17 +226,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
-    func getFolderName(dictionary : Dictionary<String,String>) -> String{
-        if !dictionary.isEmpty {
-            let name = dictionary["customerName"]
-            return name! as String
-        }
-        return "Other"
+    func addSuffixToFileName(prefix : String) -> String{
+        return prefix + " " + self.getDateString() + ".jpg"
     }
     
-    func addSuffixToFileName(prefix : String) -> String{
-        return prefix + self.getDateString() + ".jpg"
-    }
     func getImageData() -> NSData{
         let util = ImageUtil.init()
         return util.createBase64(self.getImageFile()!)
@@ -292,9 +289,18 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     //Pass in self.handleUploadResponse when calling this
     func uploadImage(data : NSData, fileName : String, completion: ((BOXFile!, NSError!) -> Void)!){
-        self.service!.upload(data, folderID : self.folderID, fileName: fileName){
-            (file, error) in
-            completion(file, error)
+        let customerName = BoxServiceUtil().getFolderName(self.metaDataDictionary!)
+        self.getFolderFromBox(customerName){
+            (object) in
+            if let folder = object as? BOXFolder {
+                self.service!.upload(data, folderID : folder.modelID!, fileName: fileName){
+                    (file, error) in
+                    completion(file, error)
+                }
+            }else{
+                self.presentsUploadFailure("An error has occured when trying to create the folder")
+                completion(nil,nil)
+            }
         }
     }
     

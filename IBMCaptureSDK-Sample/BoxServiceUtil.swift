@@ -44,4 +44,13 @@ class BoxServiceUtil{
         return folder.modelID!
     }
     
+    func getFolderName(dictionary : Dictionary<String,String>) -> String{
+        if !dictionary.isEmpty {
+            if dictionary["customerName"] != nil{
+                return dictionary["customerName"]!
+            }
+        }
+        return "Other"
+    }
+    
 }

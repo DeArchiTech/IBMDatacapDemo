@@ -79,9 +79,7 @@ class IBMEditPageImageViewControllerTest : XCTestCase{
     func testGetDateString(){
         
         let result : String = (self.vc?.getDateString())!
-        print("The test string is")
         print(result)
-        print("That is the test string")
         let count = result.characters.count
         XCTAssert(count > 0)
         

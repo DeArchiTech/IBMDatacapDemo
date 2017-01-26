@@ -11,10 +11,10 @@ import IBMCaptureSDK
 
 enum PODRowData:Int {
     case Facture = 0,
+    CustomerName,
     CustomerSalesOrder,
     CustomerId,
     Owner,
-    CustomerName,
     DeliveryAddress,
     PPMShipment,
     Carrier,
@@ -40,7 +40,7 @@ extension PODPresenter {
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        return 1
+        return 2
 //        return PODRowData.Count.rawValue
         //return (section == 0 ? FirstRowData.Count.rawValue : SecondRowData.Count.rawValue)
     }
@@ -112,21 +112,20 @@ extension PODPresenter {
         case .CustomerId:
             return (data.customerId.value, data.customerSalesOrder.checked)
         case .Owner:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.owner.checked)
         case .CustomerName:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return (data.customerName.value, data.customerName.checked)
         case .DeliveryAddress:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.deliveryAddress.checked)
         case .PPMShipment:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.ppmShipment.checked)
         case .Carrier:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.carrier.checked)
         case .ShipmentDate:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return ("To Be Implemented", data.shipmentDate.checked)
         case .Facture:
-            return ("To Be Implemented", data.customerSalesOrder.checked)
+            return (data.facture.value, data.customerSalesOrder.checked)
         }
-        
 
     }
     
@@ -138,4 +137,5 @@ extension PODPresenter {
         dateFormatter.dateFormat = "dd/MM/YYYY"
         return (dateFormatter.stringFromDate(date), input.checked)
     }
+    
 }

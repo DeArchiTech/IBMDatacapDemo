@@ -63,4 +63,12 @@ class PodDataHelper : NSObject{
         
     }
     
+    func getFactureNumber() -> String {
+        return "1234567"
+    }
+    
+    func getCustomerName() -> String {
+        return "A Generic Custoemr Name"
+    }
+    
 }

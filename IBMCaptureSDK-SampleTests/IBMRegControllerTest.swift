@@ -56,13 +56,6 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
         
     }
     
-    func testGetFolderName(){
-        
-        let folderName = self.vc?.getFolderName(self.createDictionary())
-        XCTAssertEqual(folderName, "aCustomerName")
-        
-    }
-    
     //With No Folder On Box
     func testGetFolderFromBox(){
         

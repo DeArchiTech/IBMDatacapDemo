@@ -144,6 +144,7 @@ class BoxService{
         
         for item in items{
             if let folder = item as? BOXFolder {
+                print(folder.name)
                 if(folder.name == folderName){
                     return item
                 }
