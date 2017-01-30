@@ -29,4 +29,12 @@ class BoxServiceUtilTest: XCTestCase {
         XCTAssertTrue(fileName!.hasSuffix(".jpg"))
     }
     
+    func testGetFolderName(){
+        
+        var dictionary : Dictionary<String,String> = Dictionary<String,String>()
+        let leetCustomerName = "Le Customer name"
+        dictionary["customername"] = leetCustomerName
+        XCTAssertEqual(self.util?.getFolderName(dictionary), leetCustomerName)
+    }
+    
 }

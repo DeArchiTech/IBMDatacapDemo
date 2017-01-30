@@ -98,6 +98,12 @@ class IBMIDRecognitionViewControllerTest: XCTestCase{
             XCTAssertNil(error, "Error")})
         
     }
+    
+    func testAddFactureNameFieldPopUp(){
+        
+        let result = self.vc?.addFactureNameFieldPopUp()
+        XCTAssertTrue(result!)
+    }
 
     func createDictionary() -> Dictionary<String,String>{
         

@@ -90,7 +90,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             self.podData = self.createPODData(a,input: b,dict: c)
             self.setUpMetaData(self.podData!, ocr: b)
             self.tableView?.reloadData()
-            self.pushAlertController()
+            self.pushImageRegonitionIsNowCompleteAlert()
         }
         
     }
@@ -123,14 +123,15 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
-    func pushAlertController() {
+    func pushImageRegonitionIsNowCompleteAlert() {
         
-        var refreshAlert = UIAlertController(title: "Image Regonition Complete", message: "Image Regonition Is Now Complete", preferredStyle: UIAlertControllerStyle.Alert)
+        var refreshAlert = UIAlertController(title: "Image Regonition Complete", message: "Do you want to manually enter the facture number?", preferredStyle: UIAlertControllerStyle.Alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
+            self.addFactureNameFieldPopUp()
         }))
         
-        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { (action: UIAlertAction!) in
         }))
         
         presentViewController(refreshAlert, animated: true, completion: nil)
@@ -170,7 +171,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
-    func addPopUp() -> Bool{
+    func addNameFieldPopUp() -> Bool{
+        
         //1. Create the alert controller.
         var alert = UIAlertController(title: "Alert", message: "Please enter a name", preferredStyle: .Alert)
         //2. Add the text field. You can configure it however you need.
@@ -186,6 +188,34 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
         return true
+        
+    }
+    
+    func addFactureNameFieldPopUp() -> Bool{
+        
+        //1. Create the alert controller.
+        var alert = UIAlertController(title: "Please Insert Facture Number", message: "Please enter a valid facture number", preferredStyle: .Alert)
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            //textField.text = "iOS Image"
+        })
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [weak alert] (action) -> Void in
+            let textField = alert!.textFields![0] as UITextField
+            let factureNumber : String = textField.text!
+            self.updateFactureNumber(factureNumber)
+            }))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+        return true
+        
+    }
+    
+    func updateFactureNumber(factureNumber : String) {
+        self.metaDataDictionary!["facture"] = factureNumber
+        self.podData?.facture = ICPMRZField.init(value: factureNumber, confidence: 1, checked: true)
+        self.tableView?.reloadData()
     }
     
     func authenticate(completion: ((BOXUser!, NSError!) -> Void)!){
@@ -276,7 +306,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         }
         let alertController = UIAlertController(title: "Upload Success", message:
             message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: { (action: UIAlertAction!) in
+            self.navigationController?.popViewControllerAnimated(true)
+        }))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     

@@ -46,8 +46,8 @@ class BoxServiceUtil{
     
     func getFolderName(dictionary : Dictionary<String,String>) -> String{
         if !dictionary.isEmpty {
-            if dictionary["customerName"] != nil{
-                return dictionary["customerName"]!
+            if dictionary["customername"] != nil{
+                return dictionary["customername"]!
             }
         }
         return "Other"
