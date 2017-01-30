@@ -54,6 +54,7 @@ import Foundation
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }else{
             self.pushImageEditViewController(UIImage(named: "metroClearImg")!)
+//            self.pushImageEditViewController(UIImage(named: "podSampleMetro")!)
         }
         
     }

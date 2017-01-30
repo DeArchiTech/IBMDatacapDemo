@@ -399,10 +399,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         }
     }
     
-    func detectEdges(image:UIImage) {
+    func detectEdges(image:UIImage, completion: () -> Void){
         
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.labelText = "Applying deskew filter"
+        hud.labelText = "Applying detect edge filter"
         imageEditor.detectEdgePointsInImage(image, withValidator:nil) { [weak self] (points) -> Void in
             hud.hide(true)
             
@@ -430,6 +430,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             }
             
             alertMessage = messageString
+            completion()
         }
         
     }
