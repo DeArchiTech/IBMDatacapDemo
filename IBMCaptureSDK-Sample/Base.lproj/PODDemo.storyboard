@@ -489,7 +489,7 @@
                                     <constraint firstAttribute="height" constant="320" id="9mM-Sd-fbv"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pTU-cg-5sx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pTU-cg-5sx">
                                 <rect key="frame" x="0.0" y="356" width="375" height="224"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
@@ -497,27 +497,36 @@
                                     <outlet property="delegate" destination="QFM-fK-eZ7" id="JEP-wn-0F2"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-R2-aJ5">
-                                <rect key="frame" x="0.0" y="588" width="375" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88304084540000005" green="0.39320194720000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-R2-aJ5">
+                                <rect key="frame" x="144" y="581" width="86" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="XiY-k3-iJU"/>
+                                    <constraint firstAttribute="width" constant="86" id="ZHD-XS-ZGJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Upload">
+                                <state key="normal" backgroundImage="uploadBtn">
                                     <color key="titleColor" red="0.97393212048221256" green="0.98993633849479812" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="UploadBtnClicked:" destination="QFM-fK-eZ7" eventType="touchUpInside" id="Zuh-E0-Frc"/>
+                                    <action selector="uploadBtnClicked:" destination="QFM-fK-eZ7" eventType="touchUpInside" id="adi-r5-05r"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="leading" secondItem="K40-oM-Z4V" secondAttribute="leadingMargin" id="9nE-08-APQ"/>
-                            <constraint firstItem="jkC-bQ-HDE" firstAttribute="top" secondItem="pTU-cg-5sx" secondAttribute="bottom" constant="87" id="ImN-4y-RXE"/>
+                            <constraint firstItem="kom-R2-aJ5" firstAttribute="top" secondItem="pTU-cg-5sx" secondAttribute="bottom" id="G37-60-DfE"/>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="trailing" secondItem="K40-oM-Z4V" secondAttribute="trailingMargin" id="NIr-BR-wKb"/>
                             <constraint firstItem="pTU-cg-5sx" firstAttribute="top" secondItem="vJ0-Mw-Nns" secondAttribute="bottom" constant="8" id="ctT-AB-wLg"/>
+                            <constraint firstItem="kom-R2-aJ5" firstAttribute="centerX" secondItem="K40-oM-Z4V" secondAttribute="centerX" id="eqQ-nv-Mc7"/>
                             <constraint firstItem="vJ0-Mw-Nns" firstAttribute="top" secondItem="KRZ-LM-6zP" secondAttribute="bottom" constant="8" id="fjO-1K-p0P"/>
                             <constraint firstItem="pTU-cg-5sx" firstAttribute="leading" secondItem="K40-oM-Z4V" secondAttribute="leading" id="gbo-CT-nuv"/>
+                            <constraint firstItem="jkC-bQ-HDE" firstAttribute="top" secondItem="kom-R2-aJ5" secondAttribute="bottom" id="k6x-zH-nHC"/>
                             <constraint firstAttribute="trailing" secondItem="pTU-cg-5sx" secondAttribute="trailing" id="oUo-z5-Vji"/>
                         </constraints>
                     </view>
@@ -535,5 +544,6 @@
         <image name="camera.png" width="512" height="512"/>
         <image name="gallary.png" width="512" height="411"/>
         <image name="logo.png" width="136" height="90"/>
+        <image name="uploadBtn" width="512" height="512"/>
     </resources>
 </document>

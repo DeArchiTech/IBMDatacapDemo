@@ -33,6 +33,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.folderID = self.podFolderID
+        self.service = BoxService.init()
         let action = UIBarButtonItem(title: "Recognize", style: .Plain, target: self, action: #selector(IBMIDRecognitionViewController.recognizeId(_:)))
         self.navigationItem.rightBarButtonItem = action
         self.metaDataDictionary = Dictionary<String,String>()
@@ -78,6 +79,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         let whiteList : String? = ""
         let highLightChars : Bool? = false
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.labelText = "Performing OCR on the Image"
         
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
             a,b,c in
@@ -123,10 +125,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func pushAlertController() {
         
-        var refreshAlert = UIAlertController(title: "Box Upload", message: "Would you like to upload to BOX?", preferredStyle: UIAlertControllerStyle.Alert)
+        var refreshAlert = UIAlertController(title: "Image Regonition Complete", message: "Image Regonition Is Now Complete", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
-            self.uploadToBox()
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
@@ -136,26 +137,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
-    func uploadToBox() {
-        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        self.authenticate(){
-            (user,error) in
-            hud.hide(true)
-            self.handleAuthenticateResponse(user, error: error)
-        }
-    }
-    
-    func authenticate(completion: ((BOXUser!, NSError!) -> Void)!){
-        self.service = BoxService.init()
-        self.service?.authenticate(){
-            (user, error) in
-            completion(user,error)
-        }
-    }
-    
     func handleAuthenticateResponse(user : BOXUser?, error : NSError?) -> Bool{
         if error == nil{
-            self.presentsSuccess()
+            //self.presentsSuccess()
         }else{
             self.presentsFailure()
         }
@@ -193,11 +177,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.text = "iOS Image"
         })
-        
         //3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [weak alert] (action) -> Void in
-            let textField = alert!.textFields![0] as UITextField
-            self.uploadAction(textField.text!)
+            //let textField = alert!.textFields![0] as UITextField
+            //self.uploadAction(textField.text!)
             }))
         
         // 4. Present the alert.
@@ -205,15 +188,27 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         return true
     }
     
+    func authenticate(completion: ((BOXUser!, NSError!) -> Void)!){
+        self.service?.authenticate(){
+            (user, error) in
+            completion(user,error)
+        }
+    }
+    
     func uploadAction(fileNamePrefix : String) {
         
         //Upload It
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.labelText = "Uploading image to box"
         let fileName = self.addSuffixToFileName(fileNamePrefix)
-        self.uploadImage(self.getImageData(), fileName: fileName){
-            (file, error) in
-            hud.hide(true)
-            self.handleUploadResponse(file, error: error)
+        self.authenticate(){
+            (user,error) in
+            self.handleAuthenticateResponse(user, error: error)
+            self.uploadImage(self.getImageData(), fileName: fileName){
+                (file, error) in
+                hud.hide(true)
+                self.handleUploadResponse(file, error: error)
+            }
         }
         
     }
@@ -250,6 +245,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func handleUploadResponse(file : BOXFile?, error: NSError?){
         if file != nil{
             let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            hud.labelText = "Adding metadata to the file instance"
             self.addMetaData((file?.modelID)!, dictionary: self.metaDataDictionary!){
                 (data,error) in
                 hud.hide(true)
@@ -322,7 +318,6 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
             (data, error) in
             self.service?.updateMetaData(fileID, dictionary: dictionary){
                 (updatedData, error) in
-                print(dictionary)
                 print(updatedData)
                 completionBlock(updatedData,error)
             }
@@ -347,6 +342,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func blackAndWhite(image:UIImage, completion: () -> Void) {
         
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Applying black and white Filter"
         imageEditor.applyFilter(.BlackAndWhite, toImage: image) { [weak self] (blackWhiteImage) -> Void in
             hud.hide(true)
             guard let blackWhiteImage = blackWhiteImage else {
@@ -360,6 +356,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func deskew(image:UIImage, completion: () -> Void){
         
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Applying deskew filter"
         imageEditor.detectEdgesAndDeskewImage(image, withValidator:  nil) { [weak self] (deskedImage) -> Void in
             hud.hide(true)
             guard let deskedImage = deskedImage else {
@@ -373,6 +370,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     func detectEdges(image:UIImage) {
         
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Applying deskew filter"
         imageEditor.detectEdgePointsInImage(image, withValidator:nil) { [weak self] (points) -> Void in
             hud.hide(true)
             
@@ -404,6 +402,19 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         
     }
     
+    @IBAction func uploadBtnClicked(sender: AnyObject) {
+        if let fileName = self.metaDataDictionary!["facture"]{
+            self.uploadAction(fileName)
+        }else{
+            let message = "Please first apply OCR onto the image"
+            let alertController = UIAlertController(title: "Upload Failure", message:
+                message, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+    }
+    
     func alertController(title title:String, message:String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
@@ -411,10 +422,6 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         return alertController
     }
     
-    @IBAction func UploadBtnClicked(sender: AnyObject) {
-        let fileName = self.metaDataDictionary!["facture"]
-        self.uploadAction(fileName!)
-    }
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {
