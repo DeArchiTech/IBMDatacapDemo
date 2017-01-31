@@ -46,13 +46,30 @@ extension PODPresenter {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> UITableViewCell {
-        let identifier = String(self.dynamicType)
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(identifier) else {
+        var identifier = String(self.dynamicType)
+        identifier = "PodCell"
+        guard let cell : PodCell = tableView.dequeueReusableCellWithIdentifier(identifier) as! PodCell else {
             let cell = UITableViewCell(style: .Value1, reuseIdentifier: identifier)
             return configCell(cell, forRowAtIndexPath: indexPath, withData: data)
         }
+        return configPodCell(cell, forRowAtIndexPath: indexPath, withData: data)
+    }
+    
+    func configPodCell(cell: PodCell, forRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> PodCell {
         
-        return configCell(cell, forRowAtIndexPath: indexPath, withData: data)
+        cell.itemLabel.text = titleForFieldAtIndex(indexPath)
+        guard let data = data else {
+            cell.detailTextLabel?.text = ""
+            cell.accessoryType = .None
+            return cell
+        }
+        
+        let field:FieldDisplay?
+        field = podRowFieldAtIndex(indexPath.row, onData: data)
+        cell.itemValue?.text = field?.value
+        //cell.accessoryType = (field?.checked == true ? .Checkmark : .None)
+        return cell
+    
     }
     
     func configCell(cell: UITableViewCell, forRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> UITableViewCell {
@@ -68,8 +85,7 @@ extension PODPresenter {
         let field:FieldDisplay?
         field = podRowFieldAtIndex(indexPath.row, onData: data)
         cell.detailTextLabel?.text = field?.value
-        cell.accessoryType = (field?.checked == true ? .Checkmark : .None)
-        
+        //cell.accessoryType = (field?.checked == true ? .Checkmark : .None)
         return cell
     }
     

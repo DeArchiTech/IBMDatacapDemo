@@ -19,6 +19,9 @@
 		223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		223FCFBC1E032FAC00CF05E2 /* IBMCaptureUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
+		2241D7271E413C8F00D5CB0E /* editSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2241D7261E413C8F00D5CB0E /* editSmall.png */; };
+		2241D7291E413D8800D5CB0E /* PodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241D7281E413D8800D5CB0E /* PodCell.swift */; };
+		2241D72B1E4150D300D5CB0E /* save.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2241D72A1E4150D300D5CB0E /* save.jpeg */; };
 		224D759D1E28453A004AB51C /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 224D759C1E28453A004AB51C /* Frameworks */; };
 		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
 		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
@@ -171,6 +174,9 @@
 		2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceUtil.swift; sourceTree = "<group>"; };
 		2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceFolderTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
+		2241D7261E413C8F00D5CB0E /* editSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editSmall.png; sourceTree = "<group>"; };
+		2241D7281E413D8800D5CB0E /* PodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodCell.swift; sourceTree = "<group>"; };
+		2241D72A1E4150D300D5CB0E /* save.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = save.jpeg; sourceTree = "<group>"; };
 		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		225EBD161E2FF1E600B1B82F /* podSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample.png; sourceTree = "<group>"; };
@@ -474,6 +480,7 @@
 				784BFEE41CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift */,
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
 				22F510F51E1EEC640024E7B2 /* Images.xcassets */,
+				2241D7281E413D8800D5CB0E /* PodCell.swift */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -541,7 +548,9 @@
 		78766AD21C5A4A740026DD68 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2241D7261E413C8F00D5CB0E /* editSmall.png */,
 				78766A6E1C5A49BB0026DD68 /* Assets.xcassets */,
+				2241D72A1E4150D300D5CB0E /* save.jpeg */,
 				22881E3D1E3ACB57005E49AC /* uploadBtn.png */,
 				22881E3B1E3AAE34005E49AC /* metroClearImg.jpg */,
 				22881E391E3AA912005E49AC /* podSampleMetro.png */,
@@ -736,6 +745,7 @@
 				22F5111A1E1EEEFF0024E7B2 /* AppIcon57x57~2x.png in Resources */,
 				22F5113C1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png in Resources */,
 				22881E381E3A8247005E49AC /* podSample20.png in Resources */,
+				2241D72B1E4150D300D5CB0E /* save.jpeg in Resources */,
 				78766AA71C5A49BB0026DD68 /* barcode_upc_a.jpg in Resources */,
 				78766AA21C5A49BB0026DD68 /* barcode_ean_13_sup.jpg in Resources */,
 				78766AA51C5A49BB0026DD68 /* barcode_itf.jpg in Resources */,
@@ -764,6 +774,7 @@
 				22F511251E1EEEFF0024E7B2 /* AppIcon120x120-1.png in Resources */,
 				78766AAB1C5A49BB0026DD68 /* IBMStoryboard.storyboard in Resources */,
 				22C63A251E2D920D00569F75 /* pod3.jpg in Resources */,
+				2241D7271E413C8F00D5CB0E /* editSmall.png in Resources */,
 				225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */,
 				78766A9C1C5A49BB0026DD68 /* barcode_aztec.jpg in Resources */,
 				22EFF0351E37F90B00D76E32 /* logo.png in Resources */,
@@ -981,6 +992,7 @@
 				78766AB31C5A49BB0026DD68 /* IBMDemo.swift in Sources */,
 				78766AB81C5A49BB0026DD68 /* IBMMainTableViewController.swift in Sources */,
 				78766ABE1C5A49BB0026DD68 /* IBMUIImageEffects.swift in Sources */,
+				2241D7291E413D8800D5CB0E /* PodCell.swift in Sources */,
 				22500B6B1E295E4C00443D93 /* PodData.swift in Sources */,
 				78766A9A1C5A49BB0026DD68 /* MBProgressHUD.m in Sources */,
 				22C63A2F1E2D99A900569F75 /* PodDataHelper.swift in Sources */,
