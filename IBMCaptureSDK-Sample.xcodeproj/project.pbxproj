@@ -22,6 +22,7 @@
 		2241D7271E413C8F00D5CB0E /* editSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2241D7261E413C8F00D5CB0E /* editSmall.png */; };
 		2241D7291E413D8800D5CB0E /* PodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241D7281E413D8800D5CB0E /* PodCell.swift */; };
 		2241D72B1E4150D300D5CB0E /* save.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2241D72A1E4150D300D5CB0E /* save.jpeg */; };
+		2241D72F1E4157E700D5CB0E /* PodDataSaveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241D72E1E4157E700D5CB0E /* PodDataSaveProtocol.swift */; };
 		224D759D1E28453A004AB51C /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 224D759C1E28453A004AB51C /* Frameworks */; };
 		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
 		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
@@ -177,6 +178,7 @@
 		2241D7261E413C8F00D5CB0E /* editSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editSmall.png; sourceTree = "<group>"; };
 		2241D7281E413D8800D5CB0E /* PodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodCell.swift; sourceTree = "<group>"; };
 		2241D72A1E4150D300D5CB0E /* save.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = save.jpeg; sourceTree = "<group>"; };
+		2241D72E1E4157E700D5CB0E /* PodDataSaveProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodDataSaveProtocol.swift; sourceTree = "<group>"; };
 		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		225EBD161E2FF1E600B1B82F /* podSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample.png; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */,
+				2241D72E1E4157E700D5CB0E /* PodDataSaveProtocol.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78766ABD1C5A49BB0026DD68 /* IBMTextFieldCell.swift in Sources */,
+				2241D72F1E4157E700D5CB0E /* PodDataSaveProtocol.swift in Sources */,
 				22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */,
 				78766AB21C5A49BB0026DD68 /* IBMCheckCountrySelectionController.swift in Sources */,
 				78766AB41C5A49BB0026DD68 /* IBMDocumentTableViewController.swift in Sources */,

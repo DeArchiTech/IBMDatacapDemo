@@ -9,7 +9,7 @@ import UIKit
 import IBMCaptureSDK
 import BoxContentSDK
 
-class IBMIDRecognitionViewController: UIViewController, PODPresenter{
+class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSaveProtocol{
 
     var data:ICPMRZData?
     var podData:PodData?
@@ -85,9 +85,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
             a,b,c in
             hud.hide(true)
-            //print(a)
-            print(b)
-            //print(c)
+            self.imageView.image = a
             self.podData = self.createPODData(a,input: b,dict: c)
             self.setUpMetaData(self.podData!, ocr: b)
             self.tableView?.reloadData()
@@ -126,14 +124,14 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
     
     func pushImageRegonitionIsNowCompleteAlert() {
         
-        var refreshAlert = UIAlertController(title: "Image Regonition Complete", message: "Do you want to manually enter the facture number?", preferredStyle: UIAlertControllerStyle.Alert)
+        var refreshAlert = UIAlertController(title: "Image Regonition Complete", message: "Success", preferredStyle: UIAlertControllerStyle.Alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
-            self.addFactureNameFieldPopUp()
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            //self.addFactureNameFieldPopUp()
         }))
         
-        refreshAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { (action: UIAlertAction!) in
-        }))
+        //refreshAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { (action: UIAlertAction!) in
+        //}))
         
         presentViewController(refreshAlert, animated: true, completion: nil)
         
@@ -456,6 +454,28 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter{
         return alertController
     }
     
+    func savePodData(key : String, value : String){
+        
+        //1 Update POD Data
+        if(key == "Customer Name"){
+            self.podData?.customerName = ICPMRZField.init(value: value, confidence: 1, checked: true)
+            self.metaDataDictionary!["customername"] = value
+        }else if(key == "Facture Number"){
+            self.podData?.facture = ICPMRZField.init(value: value, confidence: 1, checked: true)
+            self.metaDataDictionary!["facture"] = value
+        }
+        //2 Update Dictionary
+        //3 Presents Success View Controller Alert
+        self.presentPodDataSaveSuccessAlert(key)
+    }
+    
+    func presentPodDataSaveSuccessAlert(name : String){
+        let message = name + " is saved and ready to be uploaded"
+        let alertController = UIAlertController(title: "POD Data Saved", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 }
 
 extension IBMIDRecognitionViewController : UITableViewDelegate {
@@ -479,6 +499,6 @@ extension IBMIDRecognitionViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return self.tableView(tableView, cellForRowAtIndexPath: indexPath, withData: self.podData)
+        return self.tableView(tableView, cellForRowAtIndexPath: indexPath, withData: self.podData, proto: self)
     }
 }

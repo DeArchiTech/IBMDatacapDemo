@@ -24,7 +24,7 @@ enum PODRowData:Int {
 protocol PODPresenter {
     func numberOfSections() -> Int
     func numberOfRowsInSection(section: Int) -> Int
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> UITableViewCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?, proto: PodDataSaveProtocol) -> UITableViewCell
 }
 
 extension PODPresenter {
@@ -45,28 +45,29 @@ extension PODPresenter {
         //return (section == 0 ? FirstRowData.Count.rawValue : SecondRowData.Count.rawValue)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> UITableViewCell {
-        var identifier = String(self.dynamicType)
-        identifier = "PodCell"
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?, proto: PodDataSaveProtocol) -> UITableViewCell {
+        var identifier = "PodCell"
         guard let cell : PodCell = tableView.dequeueReusableCellWithIdentifier(identifier) as! PodCell else {
             let cell = UITableViewCell(style: .Value1, reuseIdentifier: identifier)
             return configCell(cell, forRowAtIndexPath: indexPath, withData: data)
         }
-        return configPodCell(cell, forRowAtIndexPath: indexPath, withData: data)
+        return configPodCell(cell, forRowAtIndexPath: indexPath, withData: data, proto: proto)
     }
     
-    func configPodCell(cell: PodCell, forRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?) -> PodCell {
+    func configPodCell(cell: PodCell, forRowAtIndexPath indexPath:NSIndexPath, withData data: PodData?, proto: PodDataSaveProtocol) -> PodCell {
         
         cell.itemLabel.text = titleForFieldAtIndex(indexPath)
         guard let data = data else {
             cell.detailTextLabel?.text = ""
             cell.accessoryType = .None
+            cell.vc = proto
             return cell
         }
         
         let field:FieldDisplay?
         field = podRowFieldAtIndex(indexPath.row, onData: data)
         cell.itemValue?.text = field?.value
+        cell.vc = proto
         //cell.accessoryType = (field?.checked == true ? .Checkmark : .None)
         return cell
     
