@@ -27,6 +27,8 @@
 		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
 		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
 		225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD171E2FF1E600B1B82F /* podSample2.png */; };
+		22769A561E4BBE3C006BF162 /* DatacapBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22769A551E4BBE3C006BF162 /* DatacapBackendService.swift */; };
+		22769A581E4BBEC0006BF162 /* DatacapBackendServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22769A571E4BBEC0006BF162 /* DatacapBackendServiceTest.swift */; };
 		2279A1501E03293800E453E8 /* BoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A14F1E03293800E453E8 /* BoxService.swift */; };
 		2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */; };
 		22881E381E3A8247005E49AC /* podSample20.png in Resources */ = {isa = PBXBuildFile; fileRef = 22881E371E3A8247005E49AC /* podSample20.png */; };
@@ -183,6 +185,8 @@
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		225EBD161E2FF1E600B1B82F /* podSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample.png; sourceTree = "<group>"; };
 		225EBD171E2FF1E600B1B82F /* podSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample2.png; sourceTree = "<group>"; };
+		22769A551E4BBE3C006BF162 /* DatacapBackendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatacapBackendService.swift; sourceTree = "<group>"; };
+		22769A571E4BBEC0006BF162 /* DatacapBackendServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatacapBackendServiceTest.swift; sourceTree = "<group>"; };
 		2279A14F1E03293800E453E8 /* BoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxService.swift; sourceTree = "<group>"; };
 		2279A1551E03294E00E453E8 /* IBMCaptureSDK-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IBMCaptureSDK-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxServiceFileTest.swift; sourceTree = "<group>"; };
@@ -334,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				2279A14F1E03293800E453E8 /* BoxService.swift */,
+				22769A551E4BBE3C006BF162 /* DatacapBackendService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				2279A1571E03294F00E453E8 /* BoxServiceFileTest.swift */,
+				22769A571E4BBEC0006BF162 /* DatacapBackendServiceTest.swift */,
 				2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */,
 				2215FF321E0B506800521973 /* BoxUploadViewControllerTest.swift */,
 				22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */,
@@ -657,11 +663,11 @@
 				F908CD361C3E7553009CBCCB /* Sources */,
 				F908CD371C3E7553009CBCCB /* Frameworks */,
 				F908CD381C3E7553009CBCCB /* Resources */,
-				B76076241C68B04500927117 /* Strip Frameworks */,
 				EBDBA301327083EB4C1399FE /* [CP] Embed Pods Frameworks */,
 				F071FD056C81A1057C1FEBE9 /* [CP] Copy Pods Resources */,
 				22A7E5CD1E04C8F90075EF37 /* Embed Frameworks */,
 				22F5113A1E1F15810024E7B2 /* ShellScript */,
+				229A2A8E1E42870800FE7CC1 /* Strip Frameworks */,
 			);
 			buildRules = (
 			);
@@ -808,6 +814,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		229A2A8E1E42870800FE7CC1 /* Strip Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Frameworks/IBMCaptureSDK.framework/strip_framework.sh\"\n\"${SRCROOT}/Frameworks/IBMCaptureUISDK.framework/strip_framework.sh\"";
+		};
 		22F5113A1E1F15810024E7B2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -865,20 +885,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
-		};
-		B76076241C68B04500927117 /* Strip Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Frameworks/IBMCaptureSDK.framework/strip_framework.sh\"\n\"${SRCROOT}/Frameworks/IBMCaptureUISDK.framework/strip_framework.sh\" ";
 		};
 		B76076471C68FFDA00927117 /* Check presence of frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -952,6 +958,7 @@
 				2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */,
 				2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */,
 				2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */,
+				22769A581E4BBEC0006BF162 /* DatacapBackendServiceTest.swift in Sources */,
 				22F946BE1E37E460006B5E06 /* BoxServiceUtilTest.swift in Sources */,
 				22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */,
 				22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */,
@@ -967,6 +974,7 @@
 				78766ABD1C5A49BB0026DD68 /* IBMTextFieldCell.swift in Sources */,
 				2241D72F1E4157E700D5CB0E /* PodDataSaveProtocol.swift in Sources */,
 				22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */,
+				22769A561E4BBE3C006BF162 /* DatacapBackendService.swift in Sources */,
 				78766AB21C5A49BB0026DD68 /* IBMCheckCountrySelectionController.swift in Sources */,
 				78766AB41C5A49BB0026DD68 /* IBMDocumentTableViewController.swift in Sources */,
 				78766AB61C5A49BB0026DD68 /* IBMImageViewController.swift in Sources */,
