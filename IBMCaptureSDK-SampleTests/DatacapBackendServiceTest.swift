@@ -13,15 +13,25 @@ import BoxContentSDK
 
 class DatacapBackendServiceTest: XCTestCase {
     
-    //var service : DatacapBackendService?
+    var service : DatacapBackendService?
     
     override func setUp() {
         super.setUp()
-//        self.service
+        self.service = DatacapBackendService.init()
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func testCreateRect(){
+        let x = 50.0
+        let y = 100.0
+        let width = 125.0
+        let height = 155.0
+        let rect = self.service?.createRect(x, y: y, width: width, height: height)
+        XCTAssertEqual(rect?.origin.x, x)
+        XCTAssertEqual(rect?.origin.y, y)
     }
     
     func testCreatePage(){
