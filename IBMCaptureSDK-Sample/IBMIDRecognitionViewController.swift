@@ -76,9 +76,9 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
         let width = aimage?.size.width
         let height = aimage?.size.height
         let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
-        let whiteList : String? = ""
-        //whitelist: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()", highlightChars: false) 
+        let whiteList : String? = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()"
         let highLightChars : Bool? = false
+        //whitelist: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()", highlightChars: false)
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         hud.labelText = "Performing OCR on the Image"
         

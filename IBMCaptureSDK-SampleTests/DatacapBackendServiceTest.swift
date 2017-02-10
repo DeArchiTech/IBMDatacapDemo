@@ -34,6 +34,10 @@ class DatacapBackendServiceTest: XCTestCase {
         XCTAssertEqual(rect?.origin.y, y)
     }
     
+    func testCreateCredential(){
+        
+    }
+    
     func testCreatePage(){
         
     }
@@ -45,4 +49,7 @@ class DatacapBackendServiceTest: XCTestCase {
     func testPerformOcrOnBackEnd(){
         
     }
+    
+    /* Check out IBMLoginController for how it really works */
+    
 }

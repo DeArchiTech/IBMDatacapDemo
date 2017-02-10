@@ -11,8 +11,12 @@ import BoxContentSDK
 import IBMCaptureSDK
 class DatacapBackendService{
     
+    let serverUrl = "http://demo.revasolutions.com:8085"
+    let userID = "admin"
+    let password = "admin"
+    let station = "1"
+    
     init() {
-        
     }
     
     func createPage(image : UIImage) -> ICPPage?{
