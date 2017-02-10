@@ -35,7 +35,23 @@ class DatacapBackendServiceTest: XCTestCase {
     }
     
     func testCreateCredential(){
-        
+        let credential = self.service?.createCredential()
+        XCTAssertNotNil(credential)
+    }
+    
+    func testCreateICPCapture() {
+        let ICPCapture = self.service?.createCredential()
+        XCTAssertNotNil(ICPCapture)
+    }
+    
+    func testCreateICPDatacapService() {
+        let ICPdatacapService = self.service?.createICPDatacapService()
+        XCTAssertNotNil(ICPdatacapService)
+    }
+    
+    func testCreateDatacapHelper() {
+        let ICPDatacapHelper = self.service?.createDatacapHelper()
+        XCTAssertNotNil(ICPDatacapHelper)
     }
     
     func testCreatePage(){

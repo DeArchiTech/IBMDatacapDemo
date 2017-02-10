@@ -16,6 +16,11 @@ class DatacapBackendService{
     let password = "admin"
     let station = "1"
     
+    let capture : ICPCapture? = nil
+    let dataCapHelper : ICPDatacapHelper? = nil
+    let service : ICPDatacapService? = nil
+    let sessionManager : ICPSessionManager? = nil
+    
     init() {
     }
     
@@ -62,6 +67,31 @@ class DatacapBackendService{
          *  @param recognitionEngine The OCR recognition engine to use
          *  @param completionBlock   The completion block
          */
+    }
+    
+    func createICPCapture() -> ICPCapture{
+        return ICPCapture.instanceWithObjectFactoryType(.NonPersistent)!
+    }
+    
+    func createCredential() -> NSURLCredential{
+        return NSURLCredential(user: self.userID, password: self.password, persistence: .None)
+    }
+    
+    func createICPDatacapService() -> ICPDatacapService{
+        let capture = self.createICPCapture()
+        let baseURL = NSURL.init(string: self.serverUrl)
+        let service = capture.objectFactory?.datacapServiceWithBaseURL(baseURL!)
+        service!.allowInvalidCertificates = true
+        return service!
+    }
+    
+    func createDatacapHelper() -> ICPDatacapHelper {
+        
+        let credential = self.createCredential()
+        let service = self.createICPDatacapService()
+        let capture = self.createICPCapture()
+        let datacapHelper = ICPDatacapHelper(datacapService: service, objectFactory: capture.objectFactory!, credential: credential)
+        return datacapHelper
     }
     
     func createFields() -> [ICPField] {
