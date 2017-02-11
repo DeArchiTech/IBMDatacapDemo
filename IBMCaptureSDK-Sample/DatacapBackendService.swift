@@ -14,12 +14,16 @@ class DatacapBackendService{
     let serverUrl = "http://demo.revasolutions.com:8085"
     let userID = "admin"
     let password = "admin"
-    let station = "1"
+    let stationId = "1"
     
-    let capture : ICPCapture? = nil
-    let dataCapHelper : ICPDatacapHelper? = nil
-    let service : ICPDatacapService? = nil
-    let sessionManager : ICPSessionManager? = nil
+    var dataCapHelper : ICPDatacapHelper? = nil
+    var sessionManager : ICPSessionManager? = nil
+    var computationManager : ICPRemoteComputationManager? = nil
+    
+    var capture : ICPCapture? = nil
+    var credential : NSURLCredential? = nil
+    var service : ICPDatacapService? = nil
+    //let dataCap : ICPDatacapRemoteComputationProvider
     
     init() {
     }
@@ -33,40 +37,33 @@ class DatacapBackendService{
     }
     
     func performOcrOnBackend() -> Bool {
+        
+        let serivce = self.createICPDatacapService()
+        let helper = self.createDatacapHelper()
         return false
+    }
+    
+    func createComputationManager() -> ICPRemoteComputationManager{
         
-        /**
-         *  Recognize Page Fields
-         *
-         *  @param page                 The page with fields pre-populated with Position
-         *  @param locale               Locale to be used by recognition. Default is (en-US)
-         *  @param timeout              Timeout for transaction execution on server side.
-         *  @param recognitionEngine    The engine to use for OCR recogntion on server side
-         *  @param completionBlock      The completion block
-         */
+        let helper = self.createDatacapHelper()
         
-        /**
-         *  Process Check by default. If the DCO at page level has the following variables (i.e. TransactionApplication,
-         * TransactionRulesets, TransactionWorkflow), these will be used for the executeTransaction parameters.
-         *
-         *  @param checkFrontPage  ICPPage for the front of the check
-         *  @param checkCountry    The country for the check
-         *  @param keepAlive        Keep the connection alive, transaction will not be ended causing files to stay on server
-         *  @param locale            Locale to be used by recognition. Default is (en-US)
-         *  @param timeout         Timeout for transaction execution on server side.
-         *  @param completionBlock The completion block
-         */
+        let loginProvider : ICPLoginProvider? = nil
+        let remoteComputationProvider : ICPRemoteComputationProvider? = nil
+        let manager = ICPRemoteComputationManager.init(loginProvider: loginProvider!, andRemoteComputationProvider: remoteComputationProvider!)
+        return manager
+    }
+    
+    func createSessionManager() -> ICPSessionManager{
         
-        
-        /**
-         *  Recognize text in fields
-         *
-         *  @param field             The field with position to OCR
-         *  @param locale            Locale to be used by recognition. Default is (en-US)
-         *  @param timeout           Timeout for transaction execution on server side.
-         *  @param recognitionEngine The OCR recognition engine to use
-         *  @param completionBlock   The completion block
-         */
+        self.capture = self.createICPCapture()
+        self.service = self.createICPDatacapService()
+        self.credential = self.createCredential()
+        if let sessionManager = self.capture?.datacapSessionManagerForService(self.service!, withCredential: self.credential!) {
+            return sessionManager
+        }
+        let sessionManager = ICPSessionManager(objectFactory: (self.capture?.objectFactory)!, service: self.service!, andCredentials: self.credential!)
+        return sessionManager
+    
     }
     
     func createICPCapture() -> ICPCapture{
@@ -79,8 +76,9 @@ class DatacapBackendService{
     
     func createICPDatacapService() -> ICPDatacapService{
         let capture = self.createICPCapture()
-        let baseURL = NSURL.init(string: self.serverUrl)
-        let service = capture.objectFactory?.datacapServiceWithBaseURL(baseURL!)
+        let baseURL = self.createBaseUrl(self.serverUrl)
+        let service = self.capture?.objectFactory?.datacapServiceWithBaseURL(baseURL)
+        service!.station = self.capture!.objectFactory?.stationWithStationId(self.stationId, andIndex: 0, andDescription: "")
         service!.allowInvalidCertificates = true
         return service!
     }
@@ -107,5 +105,9 @@ class DatacapBackendService{
         let origin = ICPPoint.init(x: x, y: y)
         let size = ICPSize.init(width: width, height: height)
         return ICPRect.init(origin: origin, size: size)
+    }
+    
+    func createBaseUrl(url : String) -> NSURL{
+        return NSURL(string: url)!
     }
 }

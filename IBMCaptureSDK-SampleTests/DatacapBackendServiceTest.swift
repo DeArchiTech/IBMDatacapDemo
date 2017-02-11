@@ -34,13 +34,18 @@ class DatacapBackendServiceTest: XCTestCase {
         XCTAssertEqual(rect?.origin.y, y)
     }
     
+    func testCreateUrl(){
+        let url = self.service?.createBaseUrl((self.service?.serverUrl)!)
+        XCTAssertNotNil(url)
+    }
+    
     func testCreateCredential(){
         let credential = self.service?.createCredential()
         XCTAssertNotNil(credential)
     }
     
     func testCreateICPCapture() {
-        let ICPCapture = self.service?.createCredential()
+        let ICPCapture = self.service?.createICPCapture()
         XCTAssertNotNil(ICPCapture)
     }
     
@@ -52,6 +57,11 @@ class DatacapBackendServiceTest: XCTestCase {
     func testCreateDatacapHelper() {
         let ICPDatacapHelper = self.service?.createDatacapHelper()
         XCTAssertNotNil(ICPDatacapHelper)
+    }
+    
+    func testCreateSessionManager(){
+        let sessionManager = self.service?.createSessionManager()
+        XCTAssertNotNil(sessionManager)
     }
     
     func testCreatePage(){
