@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (3.5.1)
   - box-ios-sdk (1.0.14):
     - box-ios-sdk/logger (= 1.0.14)
     - box-ios-sdk/no-arc (= 1.0.14)
@@ -7,11 +8,13 @@ PODS:
     - box-ios-sdk/logger
 
 DEPENDENCIES:
+  - Alamofire (~> 3.5)
   - box-ios-sdk
 
 SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
   box-ios-sdk: 8034a7b0fcac562105725afa744011c81da99398
 
-PODFILE CHECKSUM: 3c11062b029ddceb84450b7d15a59c3f50a22834
+PODFILE CHECKSUM: 32103852f3f96461903666998b8399f72c125b94
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

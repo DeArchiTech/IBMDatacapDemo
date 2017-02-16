@@ -5,6 +5,7 @@ workspace 'MyWorkspace'
 
 target 'IBMCaptureSDK-Sample' do
 pod 'box-ios-sdk'
+pod 'Alamofire', '~> 3.5'
 end
 
 target 'IBMCaptureSDK-SampleTests' do

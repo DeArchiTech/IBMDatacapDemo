@@ -15,6 +15,15 @@
 		2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218AD9D1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift */; };
 		2218B59F1E36907000C8E173 /* BoxServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */; };
 		2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */; };
+		223F2AD61E54DF3500475CED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F2AD51E54DF3500475CED /* Constants.swift */; };
+		223F2AD81E54DFBC00475CED /* OCRservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F2AD71E54DFBC00475CED /* OCRservice.swift */; };
+		223F2ADA1E54EAC400475CED /* OCRserviceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F2AD91E54EAC400475CED /* OCRserviceTest.swift */; };
+		223F2ADB1E54FE4E00475CED /* metroClearImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22881E3B1E3AAE34005E49AC /* metroClearImg.jpg */; };
+		223F2ADF1E55101400475CED /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 223F2ADE1E55101400475CED /* Frameworks */; };
+		223F2AE11E55266A00475CED /* OCRTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F2AE01E55266A00475CED /* OCRTextParser.swift */; };
+		223F2AE31E55269C00475CED /* OCRTextParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F2AE21E55269C00475CED /* OCRTextParserTest.swift */; };
+		223F2AE51E55287700475CED /* parseText.json in Resources */ = {isa = PBXBuildFile; fileRef = 223F2AE41E55287700475CED /* parseText.json */; };
+		223F2AE61E55287A00475CED /* parseText.json in Resources */ = {isa = PBXBuildFile; fileRef = 223F2AE41E55287700475CED /* parseText.json */; };
 		223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
 		223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = B76076211C68B03C00927117 /* IBMCaptureUISDK.framework */; };
 		223FCFBB1E032FAC00CF05E2 /* IBMCaptureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76076201C68B03C00927117 /* IBMCaptureSDK.framework */; };
@@ -23,7 +32,6 @@
 		2241D7291E413D8800D5CB0E /* PodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241D7281E413D8800D5CB0E /* PodCell.swift */; };
 		2241D72B1E4150D300D5CB0E /* save.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2241D72A1E4150D300D5CB0E /* save.jpeg */; };
 		2241D72F1E4157E700D5CB0E /* PodDataSaveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241D72E1E4157E700D5CB0E /* PodDataSaveProtocol.swift */; };
-		224D759D1E28453A004AB51C /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 224D759C1E28453A004AB51C /* Frameworks */; };
 		22500B6B1E295E4C00443D93 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22500B6A1E295E4C00443D93 /* PodData.swift */; };
 		225EBD181E2FF1E600B1B82F /* podSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD161E2FF1E600B1B82F /* podSample.png */; };
 		225EBD191E2FF1E600B1B82F /* podSample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 225EBD171E2FF1E600B1B82F /* podSample2.png */; };
@@ -177,11 +185,17 @@
 		2218B59E1E36907000C8E173 /* BoxServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceUtil.swift; sourceTree = "<group>"; };
 		2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxServiceFolderTest.swift; sourceTree = "<group>"; };
 		223CF3571E04C832004F2B48 /* BoxContentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoxContentSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/MyWorkspace-bcwhivycfzqkzebejcyxqmgcppyj/Build/Products/Debug-iphoneos/box-ios-sdk/BoxContentSDK.framework"; sourceTree = "<group>"; };
+		223F2AD51E54DF3500475CED /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		223F2AD71E54DFBC00475CED /* OCRservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRservice.swift; sourceTree = "<group>"; };
+		223F2AD91E54EAC400475CED /* OCRserviceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRserviceTest.swift; sourceTree = "<group>"; };
+		223F2ADE1E55101400475CED /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		223F2AE01E55266A00475CED /* OCRTextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRTextParser.swift; sourceTree = "<group>"; };
+		223F2AE21E55269C00475CED /* OCRTextParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRTextParserTest.swift; sourceTree = "<group>"; };
+		223F2AE41E55287700475CED /* parseText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parseText.json; sourceTree = "<group>"; };
 		2241D7261E413C8F00D5CB0E /* editSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editSmall.png; sourceTree = "<group>"; };
 		2241D7281E413D8800D5CB0E /* PodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodCell.swift; sourceTree = "<group>"; };
 		2241D72A1E4150D300D5CB0E /* save.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = save.jpeg; sourceTree = "<group>"; };
 		2241D72E1E4157E700D5CB0E /* PodDataSaveProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodDataSaveProtocol.swift; sourceTree = "<group>"; };
-		224D759C1E28453A004AB51C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		22500B6A1E295E4C00443D93 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		225EBD161E2FF1E600B1B82F /* podSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample.png; sourceTree = "<group>"; };
 		225EBD171E2FF1E600B1B82F /* podSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podSample2.png; sourceTree = "<group>"; };
@@ -339,6 +353,8 @@
 			children = (
 				2279A14F1E03293800E453E8 /* BoxService.swift */,
 				22769A551E4BBE3C006BF162 /* DatacapBackendService.swift */,
+				223F2AD71E54DFBC00475CED /* OCRservice.swift */,
+				223F2AE01E55266A00475CED /* OCRTextParser.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -368,6 +384,9 @@
 				22C63A2C1E2D958A00569F75 /* PodDataHelperTest.swift */,
 				2218B5A01E3694A500C8E173 /* BoxServiceFolderTest.swift */,
 				22F946B71E36A560006B5E06 /* CustomerRepositoryTest.swift */,
+				223F2AD91E54EAC400475CED /* OCRserviceTest.swift */,
+				223F2AE21E55269C00475CED /* OCRTextParserTest.swift */,
+				FDAEDC497529D82B2245F387 /* Pods */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
 			sourceTree = "<group>";
@@ -490,6 +509,7 @@
 				784BFEE61CB6B431001AB54A /* IBMPassportPresenter.swift */,
 				22F510F51E1EEC640024E7B2 /* Images.xcassets */,
 				2241D7281E413D8800D5CB0E /* PodCell.swift */,
+				223F2AD51E54DF3500475CED /* Constants.swift */,
 			);
 			path = "IBMCaptureSDK-Sample";
 			sourceTree = "<group>";
@@ -557,6 +577,7 @@
 		78766AD21C5A4A740026DD68 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				223F2AE41E55287700475CED /* parseText.json */,
 				2241D7261E413C8F00D5CB0E /* editSmall.png */,
 				78766A6E1C5A49BB0026DD68 /* Assets.xcassets */,
 				2241D72A1E4150D300D5CB0E /* save.jpeg */,
@@ -600,12 +621,11 @@
 		F908CD311C3E7553009CBCCB = {
 			isa = PBXGroup;
 			children = (
-				224D759C1E28453A004AB51C /* Frameworks */,
+				223F2ADE1E55101400475CED /* Frameworks */,
 				22A7E5CE1E04C90D0075EF37 /* box-ios-sdk */,
 				2279A1561E03294F00E453E8 /* IBMCaptureSDK-SampleTests */,
 				78766A691C5A49BB0026DD68 /* IBMCaptureSDK-Sample */,
 				F908CD3B1C3E7553009CBCCB /* Products */,
-				FDAEDC497529D82B2245F387 /* Pods */,
 				8D4335DC7068194F798415A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -628,6 +648,7 @@
 				E83B8B7CC1DA1CBFDB901435 /* Pods-IBMCaptureSDK-SampleTests.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -728,6 +749,8 @@
 				223FCFB91E032EE800CF05E2 /* IBMCaptureSDK.framework in Resources */,
 				2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */,
 				223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */,
+				223F2AE61E55287A00475CED /* parseText.json in Resources */,
+				223F2ADB1E54FE4E00475CED /* metroClearImg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,13 +771,13 @@
 				22F511181E1EEEFF0024E7B2 /* AppIcon50x50.png in Resources */,
 				22F511331E1EEF130024E7B2 /* reva640960-1.png in Resources */,
 				22F511361E1EEF130024E7B2 /* reva6401136-3.png in Resources */,
-				224D759D1E28453A004AB51C /* Frameworks in Resources */,
 				78766AD01C5A4A4C0026DD68 /* tessdata in Resources */,
 				22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */,
 				22F5111A1E1EEEFF0024E7B2 /* AppIcon57x57~2x.png in Resources */,
 				22F5113C1E1F30BA0024E7B2 /* AppIcon83.5x83.5@2x~ipad_.png in Resources */,
 				22881E381E3A8247005E49AC /* podSample20.png in Resources */,
 				2241D72B1E4150D300D5CB0E /* save.jpeg in Resources */,
+				223F2ADF1E55101400475CED /* Frameworks in Resources */,
 				78766AA71C5A49BB0026DD68 /* barcode_upc_a.jpg in Resources */,
 				78766AA21C5A49BB0026DD68 /* barcode_ean_13_sup.jpg in Resources */,
 				78766AA51C5A49BB0026DD68 /* barcode_itf.jpg in Resources */,
@@ -795,6 +818,7 @@
 				78766A9E1C5A49BB0026DD68 /* barcode_code_39.jpg in Resources */,
 				78766AA61C5A49BB0026DD68 /* barcode_qr_code.png in Resources */,
 				22F511391E1EEF130024E7B2 /* revaDefault.png in Resources */,
+				223F2AE51E55287700475CED /* parseText.json in Resources */,
 				22F511261E1EEEFF0024E7B2 /* AppIcon120x120.png in Resources */,
 				22C63A261E2D920D00569F75 /* pod4.jpg in Resources */,
 				22F511381E1EEF130024E7B2 /* reva12422208.png in Resources */,
@@ -957,6 +981,8 @@
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */,
 				2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */,
+				223F2AE31E55269C00475CED /* OCRTextParserTest.swift in Sources */,
+				223F2ADA1E54EAC400475CED /* OCRserviceTest.swift in Sources */,
 				2211F03B1E287C1C0055CB19 /* IBMRegControllerTest.swift in Sources */,
 				22769A581E4BBEC0006BF162 /* DatacapBackendServiceTest.swift in Sources */,
 				22F946BE1E37E460006B5E06 /* BoxServiceUtilTest.swift in Sources */,
@@ -971,6 +997,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223F2AD81E54DFBC00475CED /* OCRservice.swift in Sources */,
 				78766ABD1C5A49BB0026DD68 /* IBMTextFieldCell.swift in Sources */,
 				2241D72F1E4157E700D5CB0E /* PodDataSaveProtocol.swift in Sources */,
 				22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */,
@@ -991,6 +1018,7 @@
 				78766AB51C5A49BB0026DD68 /* IBMEditPageImageViewController.swift in Sources */,
 				784BFEE51CB6A3A7001AB54A /* IBMMRZDecodingViewController.swift in Sources */,
 				22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */,
+				223F2AD61E54DF3500475CED /* Constants.swift in Sources */,
 				78766AB91C5A49BB0026DD68 /* IBMOCRViewController.swift in Sources */,
 				22C63A1D1E2D5B2000569F75 /* PODPresenter.swift in Sources */,
 				22F946B61E36A44E006B5E06 /* CustomerRepository.swift in Sources */,
@@ -1000,6 +1028,7 @@
 				2218B59F1E36907000C8E173 /* BoxServiceUtil.swift in Sources */,
 				78766AB01C5A49BB0026DD68 /* IBMBatchTableViewController.swift in Sources */,
 				78766AB71C5A49BB0026DD68 /* IBMLoginController.swift in Sources */,
+				223F2AE11E55266A00475CED /* OCRTextParser.swift in Sources */,
 				78766ABA1C5A49BB0026DD68 /* IBMPageViewController.swift in Sources */,
 				78766AB31C5A49BB0026DD68 /* IBMDemo.swift in Sources */,
 				78766AB81C5A49BB0026DD68 /* IBMMainTableViewController.swift in Sources */,

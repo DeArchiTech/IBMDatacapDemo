@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_IBMCaptureSDK_SampleTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_IBMCaptureSDK_SampleTestsVersionString[];
+FOUNDATION_EXPORT double AlamofireVersionNumber;
+FOUNDATION_EXPORT const unsigned char AlamofireVersionString[];
 
