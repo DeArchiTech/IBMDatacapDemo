@@ -10,9 +10,19 @@ import Foundation
 
 class OCRTextParser{
     
-    func parseText(key : String, ocrText : String){
+    func parseText(key : String, ocrText : String) -> String{
         
- //       let index = ocrText.indexOf
+        let text = ocrText
+        let range = text.rangeOfString("FACTURE #")
+        //1 Find the last index of a substring
+        let last = range?.endIndex
+        //2 Cut out a substring starting from the key(excluding) and to the end of the string
+        let substring = text.substringFromIndex(last!)
+        let secondRange = substring.rangeOfString(" ")
+        //3 Cut out a substring starting from the start index to the first SPACE character
+        let innerString = substring.substringToIndex((secondRange?.startIndex)!)
+        return innerString
+        
     }
     
 }
