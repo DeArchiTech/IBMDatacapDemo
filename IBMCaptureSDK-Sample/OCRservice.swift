@@ -61,8 +61,9 @@ class OCRservice{
     
     func createImageData(img : UIImage) -> NSData{
         
-        return ImageUtil().createBase64(img)
-        
+        let data = UIImageJPEGRepresentation(img ,0.7 )! as NSData
+        print(data.length)
+        return data
     }
     
 }

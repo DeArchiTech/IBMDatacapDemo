@@ -80,6 +80,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
         service.performOCR(aimage!){
             (result) in
             hud.hide(true)
+            print(result)
             let parsedString = self.getParseStringFromDictionary(result as! NSDictionary)
             self.podData = self.createPODData(parsedString)
             self.setUpMetaData(self.podData!, ocr: parsedString)
