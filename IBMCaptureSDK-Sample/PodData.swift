@@ -36,6 +36,5 @@ public class PodData : NSObject {
     
     func setUpMockData(){
         self.customerName = ICPMRZField.init(value: "Labatt", confidence: 1, checked: true)
-        self.facture = ICPMRZField.init(value: "0007518729", confidence: 1, checked: true)
     }
 }

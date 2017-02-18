@@ -13,49 +13,55 @@ class OCRservice{
     
     let endpoint = Constants.ocrEndPt
     let apiKey = Constants.ocrApiKey
-    let languyage = "fin"
-    var img : UIImage?
-    //var manager:
+    let language = "eng"
     
-    func performOCR(completion: ((AnyObject!) -> Void)!){
-        
-        Alamofire.request(.POST, self.endpoint, parameters: self.createParam())//, encoding: URLEncoding.default)
-        .validate()
-        .responseJSON{ response in
-            switch response.result{
-            case Result.Success(let result):
-                completion(result)
-            case Result.Failure(let error):
-                completion(error)
-            }
-        }
+    func performOCR(image : UIImage, completion: ((AnyObject!) -> Void)!){
+
+        Alamofire.upload(.POST, self.endpoint, multipartFormData: self.createMultipart(image), encodingCompletion: self.createCompletion(completion))
     }
     
-    func getHeaders() -> [String:String]{
-        let headers = [
-            "Authorization": self.apiKey,
-            "Accept": "application/json",
-            "Accept-Language": "en-US",
-//            "Content-Type": "application/vnd.emc.captiva+json; charset=utf-8"
-        ]
-        return headers
+    func createMultipart(image : UIImage) -> (MultipartFormData -> Void){
         
+        let params = self.createParam()
+        return {MultipartFormData in
+            for (key, value) in params {
+                MultipartFormData.appendBodyPart(data: value.dataUsingEncoding(NSUTF8StringEncoding)!, name: key)
+            }
+            MultipartFormData.appendBodyPart(data: self.createImageData(image), name: "image", fileName: "metroClearImg.jpg", mimeType: "image/jpg")
+        }
+        
+    }
+
+    func createCompletion(completion: ((AnyObject!) -> Void)!) -> (Manager.MultipartFormDataEncodingResult -> Void)?{
+        
+        return { (result) in
+            
+            switch result {
+            case Manager.MultipartFormDataEncodingResult.Success(request: let upload, streamingFromDisk: _, streamFileURL: _):
+                
+                upload.responseJSON { response in
+                    completion(response.result.value)
+                }
+                
+            case Manager.MultipartFormDataEncodingResult.Failure(let encodingError):
+                print(encodingError)
+            }
+        }
     }
     
     func createParam() -> [String : AnyObject]{
         
         var dictionary = [String : AnyObject]()
-        dictionary["language"] = self.languyage
+        dictionary["language"] = self.language
         dictionary["apikey"] = self.apiKey
-        dictionary["isOverlayRequired"] = "True"
-        dictionary["base64Image"] = self.createBase64String()
+        dictionary["isoverlayrequired"] = "false"
         return dictionary
         
     }
     
-    func createBase64String() -> String{
+    func createImageData(img : UIImage) -> NSData{
         
-        return ImageUtil().createBase64String(img!)
+        return ImageUtil().createBase64(img)
         
     }
     

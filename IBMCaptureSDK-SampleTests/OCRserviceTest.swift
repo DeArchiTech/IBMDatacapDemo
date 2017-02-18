@@ -15,7 +15,6 @@ class OCRserviceTest: XCTestCase{
     override func setUp() {
         super.setUp()
         self.service = OCRservice.init()
-        self.service!.img = self.getTestImg()
     }
     
     override func tearDown() {
@@ -25,11 +24,10 @@ class OCRserviceTest: XCTestCase{
     func testPerformOcr(){
         
         let exp = expectationWithDescription("Some Expectation To Be Filled")
-        self.service?.performOCR(){
+        self.service?.performOCR(self.getTestImg()){
             (object) in
             XCTAssertNotNil(object)
             print(object)
-            print(object["ParsedResults"])
             exp.fulfill()
         }
         waitForExpectationsWithTimeout(60, handler: { error in
@@ -44,17 +42,10 @@ class OCRserviceTest: XCTestCase{
         
     }
     
-    func testGetImgString() {
-        
-        let string = self.service?.createBase64String()
-        XCTAssertNotNil(string)
-        
-    }
-    
     func getTestImg() -> UIImage{
         
         let bundle = NSBundle(forClass: self.dynamicType)
-        return UIImage(named: "metroClearImg.jpg", inBundle: bundle, compatibleWithTraitCollection: nil)!
+        return UIImage(named: "metroPod2.png", inBundle: bundle, compatibleWithTraitCollection: nil)!
         
     }
 }

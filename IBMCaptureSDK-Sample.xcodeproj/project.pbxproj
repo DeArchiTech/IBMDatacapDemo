@@ -66,6 +66,9 @@
 		22F08B6B1E0C872B0081A0A9 /* UploadVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */; };
 		22F08B6E1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */; };
 		22F08B731E1491200081A0A9 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F08B721E1491200081A0A9 /* ImageUtil.swift */; };
+		22F16EF01E57B99300E49F1C /* metroPod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EEF1E57B99300E49F1C /* metroPod.jpg */; };
+		22F16EF51E57C14C00E49F1C /* metroPod2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EF41E57C14C00E49F1C /* metroPod2.png */; };
+		22F16EF61E57C2CF00E49F1C /* metroPod2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EF41E57C14C00E49F1C /* metroPod2.png */; };
 		22F510F61E1EEC640024E7B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F51E1EEC640024E7B2 /* Images.xcassets */; };
 		22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */; };
 		22F511111E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */; };
@@ -228,6 +231,8 @@
 		22F08B6A1E0C872B0081A0A9 /* UploadVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadVCProtocol.swift; sourceTree = "<group>"; };
 		22F08B6D1E0C884B0081A0A9 /* IBMEditPageImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBMEditPageImageViewControllerTest.swift; sourceTree = "<group>"; };
 		22F08B721E1491200081A0A9 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		22F16EEF1E57B99300E49F1C /* metroPod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metroPod.jpg; sourceTree = "<group>"; };
+		22F16EF41E57C14C00E49F1C /* metroPod2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metroPod2.png; sourceTree = "<group>"; };
 		22F510F51E1EEC640024E7B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x.png"; sourceTree = "<group>"; };
 		22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x~ipad.png"; sourceTree = "<group>"; };
@@ -580,10 +585,12 @@
 				223F2AE41E55287700475CED /* parseText.json */,
 				2241D7261E413C8F00D5CB0E /* editSmall.png */,
 				78766A6E1C5A49BB0026DD68 /* Assets.xcassets */,
+				22F16EF41E57C14C00E49F1C /* metroPod2.png */,
 				2241D72A1E4150D300D5CB0E /* save.jpeg */,
 				22881E3D1E3ACB57005E49AC /* uploadBtn.png */,
 				22881E3B1E3AAE34005E49AC /* metroClearImg.jpg */,
 				22881E391E3AA912005E49AC /* podSampleMetro.png */,
+				22F16EEF1E57B99300E49F1C /* metroPod.jpg */,
 				22881E371E3A8247005E49AC /* podSample20.png */,
 				22EFF03A1E3820DE00D76E32 /* factureNum.jpg */,
 				22EFF0381E37F92300D76E32 /* camera.png */,
@@ -750,6 +757,7 @@
 				2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */,
 				223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */,
 				223F2AE61E55287A00475CED /* parseText.json in Resources */,
+				22F16EF61E57C2CF00E49F1C /* metroPod2.png in Resources */,
 				223F2ADB1E54FE4E00475CED /* metroClearImg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,6 +810,7 @@
 				78766A9D1C5A49BB0026DD68 /* barcode_code_128.jpg in Resources */,
 				78766AAC1C5A49BB0026DD68 /* LaunchScreen.storyboard in Resources */,
 				22C63A291E2D94C600569F75 /* pod.png in Resources */,
+				22F16EF51E57C14C00E49F1C /* metroPod2.png in Resources */,
 				22881E3E1E3ACB57005E49AC /* uploadBtn.png in Resources */,
 				22F511251E1EEEFF0024E7B2 /* AppIcon120x120-1.png in Resources */,
 				78766AAB1C5A49BB0026DD68 /* IBMStoryboard.storyboard in Resources */,
@@ -823,6 +832,7 @@
 				22C63A261E2D920D00569F75 /* pod4.jpg in Resources */,
 				22F511381E1EEF130024E7B2 /* reva12422208.png in Resources */,
 				22F511231E1EEEFF0024E7B2 /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
+				22F16EF01E57B99300E49F1C /* metroPod.jpg in Resources */,
 				22F511351E1EEF130024E7B2 /* reva6401136-1.png in Resources */,
 				22F5111E1E1EEEFF0024E7B2 /* AppIcon72x72@2x.png in Resources */,
 				22F511211E1EEEFF0024E7B2 /* AppIcon80x80.png in Resources */,

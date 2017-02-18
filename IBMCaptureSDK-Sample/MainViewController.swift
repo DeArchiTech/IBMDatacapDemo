@@ -53,8 +53,7 @@ import Foundation
             imagePicker.delegate = self
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }else{
-            self.pushImageEditViewController(UIImage(named: "metroClearImg")!)
-//            self.pushImageEditViewController(UIImage(named: "podSampleMetro")!)
+            self.pushImageEditViewController(UIImage(named: "metroPod")!)
         }
         
     }

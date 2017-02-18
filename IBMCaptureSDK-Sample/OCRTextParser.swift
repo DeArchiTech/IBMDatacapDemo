@@ -13,7 +13,10 @@ class OCRTextParser{
     func parseText(key : String, ocrText : String) -> String{
         
         let text = ocrText
-        let range = text.rangeOfString(key)
+        var range = text.rangeOfString(key)
+        if range == nil{
+            range = text.rangeOfString("FACTIRE #")
+        }
         //1 Find the last index of a substring
         let last = range?.endIndex
         //2 Cut out a substring starting from the key(excluding) and to the end of the string

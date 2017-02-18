@@ -69,7 +69,9 @@ class PodDataHelper : NSObject{
     }
     
     func getFactureNumber() -> String {
-        return "1234567"
+        
+        let factureNum = OCRTextParser().parseText("FACTURE #", ocrText: self.podString)
+        return factureNum
     }
     
     func getCustomerName() -> String {

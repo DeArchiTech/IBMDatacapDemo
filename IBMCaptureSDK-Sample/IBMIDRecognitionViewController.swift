@@ -42,10 +42,11 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
     
     func setUpImageViewImage(){
         if pickedImage == nil{
-            imageView.image = UIImage(named: "podSample20")
+            imageView.image = UIImage(named: "metroPod")
         }else{
             imageView.image = self.pickedImage!
         }
+        imageView.contentMode = .ScaleAspectFit
     }
     
     func recognizeId(sender:UIBarButtonItem) {
@@ -58,7 +59,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
         let regconizePOD = true
         if regconizePOD {
             self.applyFilterCode(self.imageView.image!){
-                self.recognizePOD()
+                self.callOCRWebService()
             }
         }else {
             let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
@@ -70,32 +71,36 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
         }
     }
     
-    func recognizePOD(){
+    func callOCRWebService(){
         
         let aimage : UIImage? = self.imageView.image
-        let width = aimage?.size.width
-        let height = aimage?.size.height
-        let rect : CGRect? = CGRect.init(x: 0, y: 0, width: width!, height: height!)
-        let whiteList : String? = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()"
-        let highLightChars : Bool? = false
-        //whitelist: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()", highlightChars: false)
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         hud.labelText = "Performing OCR on the Image"
-        
-        ocrEngine.recognizeTextInImage(aimage!, withRect: rect!, whitelist: whiteList!, highlightChars: highLightChars!){
-            a,b,c in
+        let service = OCRservice()
+        service.performOCR(aimage!){
+            (result) in
             hud.hide(true)
-            self.imageView.image = a
-            self.podData = self.createPODData(a,input: b,dict: c)
-            self.setUpMetaData(self.podData!, ocr: b)
+            let parsedString = self.getParseStringFromDictionary(result as! NSDictionary)
+            self.podData = self.createPODData(parsedString)
+            self.setUpMetaData(self.podData!, ocr: parsedString)
             self.tableView?.reloadData()
             self.pushImageRegonitionIsNowCompleteAlert()
         }
+    }
+    
+    func getParseStringFromDictionary(dict : NSDictionary) -> String{
+        
+        let innerArray : NSArray = dict["ParsedResults"] as! NSArray
+        let innerDict : NSDictionary = innerArray.firstObject as! NSDictionary
+        let parsedText : String = innerDict["ParsedText"] as! String
+        return parsedText
         
     }
     
-    func createPODData(image : UIImage, input : String, dict : [String : [AnyObject]]) -> PodData {
+    func createPODData(input : String) -> PodData {
         let helper = PodDataHelper.init(podString: input)
+        print(input)
+        print(helper.getFactureNumber())
         let data = PodData.init(
             customerSalesOrder: ICPMRZField.init(value: helper.getCustomerSalesOrder(), confidence: 1, checked: true),
             customerId: ICPMRZField.init(value: helper.getCustomerId(), confidence: 1, checked: true),
@@ -105,7 +110,7 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
             ppmShipment: ICPMRZField.init(value: "", confidence: 1, checked: true),
             carrier: ICPMRZField.init(value: "", confidence: 1, checked: true),
             shipmentDate: ICPMRZField.init(value: "", confidence: 1, checked: true),
-            facture: ICPMRZField.init(value: "", confidence: 1, checked: true))
+            facture: ICPMRZField.init(value: helper.getFactureNumber(), confidence: 1, checked: true))
         data.setUpMockData()
         return data
     }

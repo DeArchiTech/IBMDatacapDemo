@@ -10,5 +10,5 @@ import Foundation
 struct Constants{
     
     static let ocrApiKey = "aa1cff75c488957"
-    static let ocrEndPt = "https://api.ocr.space/parse/image"
+    static let ocrEndPt = "http://api.ocr.space/parse/image"
 }
