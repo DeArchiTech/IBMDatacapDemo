@@ -69,6 +69,7 @@
 		22F16EF01E57B99300E49F1C /* metroPod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EEF1E57B99300E49F1C /* metroPod.jpg */; };
 		22F16EF51E57C14C00E49F1C /* metroPod2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EF41E57C14C00E49F1C /* metroPod2.png */; };
 		22F16EF61E57C2CF00E49F1C /* metroPod2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EF41E57C14C00E49F1C /* metroPod2.png */; };
+		22F16EF81E5B5A6A00E49F1C /* ImageUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F16EF71E5B5A6A00E49F1C /* ImageUtilTest.swift */; };
 		22F510F61E1EEC640024E7B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F51E1EEC640024E7B2 /* Images.xcassets */; };
 		22F511101E1EEEFF0024E7B2 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */; };
 		22F511111E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */; };
@@ -233,6 +234,7 @@
 		22F08B721E1491200081A0A9 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		22F16EEF1E57B99300E49F1C /* metroPod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metroPod.jpg; sourceTree = "<group>"; };
 		22F16EF41E57C14C00E49F1C /* metroPod2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metroPod2.png; sourceTree = "<group>"; };
+		22F16EF71E5B5A6A00E49F1C /* ImageUtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilTest.swift; sourceTree = "<group>"; };
 		22F510F51E1EEC640024E7B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22F510F81E1EEEFF0024E7B2 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x.png"; sourceTree = "<group>"; };
 		22F510F91E1EEEFF0024E7B2 /* AppIcon20x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon20x20@2x~ipad.png"; path = "../../../Downloads/Images.xcassets/AppIcon.appiconset/AppIcon20x20@2x~ipad.png"; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				22F946B71E36A560006B5E06 /* CustomerRepositoryTest.swift */,
 				223F2AD91E54EAC400475CED /* OCRserviceTest.swift */,
 				223F2AE21E55269C00475CED /* OCRTextParserTest.swift */,
+				22F16EF71E5B5A6A00E49F1C /* ImageUtilTest.swift */,
 				FDAEDC497529D82B2245F387 /* Pods */,
 			);
 			path = "IBMCaptureSDK-SampleTests";
@@ -988,6 +991,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2215FF331E0B506800521973 /* BoxUploadViewControllerTest.swift in Sources */,
+				22F16EF81E5B5A6A00E49F1C /* ImageUtilTest.swift in Sources */,
 				2218AD9E1E09ECBB003B4E24 /* BoxLoginViewControllerTest.swift in Sources */,
 				2279A1581E03294F00E453E8 /* BoxServiceFileTest.swift in Sources */,
 				2218B5A11E3694A500C8E173 /* BoxServiceFolderTest.swift in Sources */,

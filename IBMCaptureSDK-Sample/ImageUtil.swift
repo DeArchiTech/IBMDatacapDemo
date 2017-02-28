@@ -56,4 +56,29 @@ class ImageUtil{
         return result;
     }
     
+    func createSmallFileSize(img : UIImage, size : Double) -> NSData{
+        
+        var fileSize = 1.1
+        var imageQuality = 1.0
+        var imageData : NSData?
+        while(fileSize > imageQuality){
+            imageData = UIImageJPEGRepresentation(img , CGFloat(imageQuality))! as NSData
+            fileSize = self.getDataSize(imageData!)
+            print(fileSize)
+            if fileSize < size{
+                break
+            }
+            imageQuality = imageQuality - 0.1
+        }
+        return imageData!
+    }
+    
+    func getDataSize(data : NSData) -> Double{
+        
+        let size:Int = data.length
+        let result = Double(size)/(1024.0)
+        return result
+
+    }
+    
 }
