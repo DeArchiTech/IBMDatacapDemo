@@ -92,6 +92,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
     
     func getParseStringFromDictionary(dict : NSDictionary) -> String{
         
+        
+        //#Add Error Handling Here
         let innerArray : NSArray = dict["ParsedResults"] as! NSArray
         let innerDict : NSDictionary = innerArray.firstObject as! NSDictionary
         let parsedText : String = innerDict["ParsedText"] as! String

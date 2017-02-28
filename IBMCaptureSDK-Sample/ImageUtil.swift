@@ -75,7 +75,20 @@ class ImageUtil{
     
     func createSmallDataFile(img: UIImage, size : Double) -> UIImage{
         
-        return UIImage.init(data: self.createSmallFileSize(img, size: size))!
+        var fileSize = self.getDataSize(img)
+        var imageQuality = 1.0
+        var imageData : NSData? = UIImageJPEGRepresentation(img , CGFloat(imageQuality))! as NSData
+        
+        while(fileSize > size){
+            imageData = UIImageJPEGRepresentation(img , CGFloat(imageQuality))! as NSData
+            var pressedImg = UIImage.init(data: imageData!, scale: CGFloat(imageQuality))!
+            fileSize = self.getDataSize(pressedImg)
+            imageQuality = imageQuality - 0.1
+            if fileSize < size{
+                return pressedImg
+            }
+        }
+        return UIImage.init(data: imageData!, scale: CGFloat(imageQuality))!
     
     }
     
@@ -85,6 +98,15 @@ class ImageUtil{
         let result = Double(size)/(1024.0)
         return result
 
+    }
+    
+    func getDataSize(img : UIImage) -> Double{
+        
+        let data = UIImageJPEGRepresentation(img , CGFloat(1.0))! as NSData
+        let size:Int = data.length
+        let result = Double(size)/(1024.0)
+        return result
+        
     }
     
 }
