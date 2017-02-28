@@ -73,6 +73,12 @@ class ImageUtil{
         return imageData!
     }
     
+    func createSmallDataFile(img: UIImage, size : Double) -> UIImage{
+        
+        return UIImage.init(data: self.createSmallFileSize(img, size: size))!
+    
+    }
+    
     func getDataSize(data : NSData) -> Double{
         
         let size:Int = data.length

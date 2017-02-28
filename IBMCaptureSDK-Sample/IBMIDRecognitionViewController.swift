@@ -73,10 +73,11 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
     
     func callOCRWebService(){
         
-        let aimage : UIImage? = self.imageView.image
+        var aimage : UIImage? = self.imageView.image
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         hud.labelText = "Performing OCR on the Image"
         let service = OCRservice()
+        aimage = ImageUtil().createSmallDataFile(aimage!, size: 1000.0)
         service.performOCR(aimage!){
             (result) in
             hud.hide(true)
