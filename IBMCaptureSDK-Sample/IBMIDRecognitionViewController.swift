@@ -58,9 +58,10 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
 
         let regconizePOD = true
         if regconizePOD {
-            self.applyFilterCode(self.imageView.image!){
-                self.callOCRWebService()
-            }
+            self.callOCRWebService()
+            //self.applyFilterCode(self.imageView.image!){
+            
+            //}
         }else {
             let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
             idProcessor.processPassportImage(image) { [weak self] (mrzString, mrzData) in
@@ -78,6 +79,8 @@ class IBMIDRecognitionViewController: UIViewController, PODPresenter, PodDataSav
         hud.labelText = "Performing OCR on the Image"
         let service = OCRservice()
         aimage = ImageUtil().createSmallDataFile(aimage!, size: 1000.0)
+        //Used to work around file size limit for non paid users
+        aimage = UIImage(named: "metroPod")!
         service.performOCR(aimage!){
             (result) in
             hud.hide(true)

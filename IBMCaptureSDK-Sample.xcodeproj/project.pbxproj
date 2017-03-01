@@ -59,6 +59,7 @@
 		22C65A601E27035F000E116B /* PODDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C65A5E1E27035F000E116B /* PODDemo.storyboard */; };
 		22C65A621E270861000E116B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C65A611E270861000E116B /* MainViewController.swift */; };
 		22C65A641E2708CE000E116B /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C65A631E2708CE000E116B /* MainViewControllerTest.swift */; };
+		22D8878B1E663C8B0059860C /* metroPod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F16EEF1E57B99300E49F1C /* metroPod.jpg */; };
 		22EFF0351E37F90B00D76E32 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0341E37F90B00D76E32 /* logo.png */; };
 		22EFF0371E37F91B00D76E32 /* gallary.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0361E37F91B00D76E32 /* gallary.png */; };
 		22EFF0391E37F92300D76E32 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EFF0381E37F92300D76E32 /* camera.png */; };
@@ -760,6 +761,7 @@
 				2215FF2E1E0B1DE900521973 /* Assets.xcassets in Resources */,
 				223FCFBA1E032EE800CF05E2 /* IBMCaptureUISDK.framework in Resources */,
 				223F2AE61E55287A00475CED /* parseText.json in Resources */,
+				22D8878B1E663C8B0059860C /* metroPod.jpg in Resources */,
 				22F16EF61E57C2CF00E49F1C /* metroPod2.png in Resources */,
 				223F2ADB1E54FE4E00475CED /* metroClearImg.jpg in Resources */,
 			);
